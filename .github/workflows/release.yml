@@ -1,0 +1,53 @@
+name: Publish v0.9.0 release
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install validation dependencies
+        run: pip install -r ontology/requirements-validation.txt
+      - name: Re-run ontology tests
+        run: |
+          python ontology/tests/audit_generated_json.py
+          python ontology/tests/run_shacl_tests.py
+      - name: Verify versioned release package
+        shell: bash
+        run: |
+          directory="public/artifacts/0.9.0"
+          archive="ontojourney-core-v0.9.0.zip"
+          test -d "${directory}"
+          test -f "${directory}/${archive}"
+          (cd "${directory}" && sha256sum --check SHA256SUMS && unzip -t "${archive}")
+      - name: Create tag and GitHub release if absent
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          if gh release view v0.9.0 >/dev/null 2>&1; then
+            echo "Release v0.9.0 already exists."
+            exit 0
+          fi
+          directory="public/artifacts/0.9.0"
+          gh release create v0.9.0 \
+            "${directory}/ontojourney-core-v0.9.0.zip" \
+            "${directory}/SHA256SUMS" \
+            "${directory}/ontojourney-core.ttl" \
+            "${directory}/ontojourney-core.rdf" \
+            "${directory}/ontojourney-core.jsonld" \
+            "${directory}/OntoJourneyCore.json" \
+            --target "${GITHUB_SHA}" \
+            --generate-notes \
+            --title "OntoJourney Core 0.9.0"

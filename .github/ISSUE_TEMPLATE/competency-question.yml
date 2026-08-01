@@ -1,0 +1,48 @@
+name: Competency question proposal
+description: Propose a question that the ontology may need to answer.
+title: "[CQ]: "
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Competency question
+      description: Write one question in language that a domain specialist can understand.
+    validations:
+      required: true
+  - type: textarea
+    id: usecase
+    attributes:
+      label: Use case
+      description: Describe the research, analysis, comparison, or design task that requires the answer.
+    validations:
+      required: true
+  - type: textarea
+    id: answer
+    attributes:
+      label: Expected answer pattern
+      description: Give a positive example and, if useful, a counterexample.
+    validations:
+      required: true
+  - type: textarea
+    id: gap
+    attributes:
+      label: Current gap
+      description: Explain why existing terms and constraints cannot answer the question.
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Likely scope
+      options:
+        - Unsure
+        - Core ontology
+        - Extension module
+        - Documentation or example only
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Domain evidence
+      description: Cite primary sources or empirical requirements.

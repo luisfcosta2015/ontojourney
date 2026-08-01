@@ -1,0 +1,252 @@
+@prefix : <https://w3id.org/ontojourney/core#>.
+@prefix gufo: <http://purl.org/nemo/gufo#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix vann: <http://purl.org/vocab/vann/>.
+
+<https://w3id.org/ontojourney/core> rdf:type owl:Ontology;
+    owl:imports gufo:;
+    owl:versionIRI <https://w3id.org/ontojourney/core/0.9>;
+    owl:versionInfo "0.9.0";
+    dcterms:title "OntoJourney Core"@en;
+    dcterms:description "A reference ontology for narrative-heroic learning journeys, modeled in OntoUML and grounded in UFO."@en;
+    dcterms:creator "Luis Felipe Coimbra Costa";
+    dcterms:issued "2026-08-01"^^xsd:date;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
+    vann:preferredNamespacePrefix "oj";
+    vann:preferredNamespaceUri "https://w3id.org/ontojourney/core#".
+:InformationObject rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "InformationObject"@en.
+:Description rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Description"@en.
+:NarrativeContent rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "NarrativeContent"@en.
+:NormativeDescription rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "NormativeDescription"@en.
+:PlanDescription rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "PlanDescription"@en.
+:GoalDescription rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "GoalDescription"@en.
+:ConditionDescription rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "ConditionDescription"@en.
+:JourneyModel rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "JourneyModel"@en.
+:NarrativeJourneyModel rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "NarrativeJourneyModel"@en.
+:HeroicNarrativeJourneyModel rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "HeroicNarrativeJourneyModel"@en.
+:LearningJourneyModel rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "LearningJourneyModel"@en.
+:HeroicNarrativeLearningJourneyModel rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "HeroicNarrativeLearningJourneyModel"@en.
+:StageSpecification rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "StageSpecification"@en.
+:JourneyNarrative rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "JourneyNarrative"@en.
+:NarrativeFraming rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "NarrativeFraming"@en.
+:IntendedTransformation rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "IntendedTransformation"@en.
+:IntendedLearningTransformation rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "IntendedLearningTransformation"@en.
+:EducationalPurpose rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "EducationalPurpose"@en.
+:MissionSpecification rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "MissionSpecification"@en.
+:ClosureSpecification rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "ClosureSpecification"@en.
+:ChallengeSpecification rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "ChallengeSpecification"@en.
+:AssistanceSpecification rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "AssistanceSpecification"@en.
+:JourneyExecution rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Event;
+    rdfs:label "JourneyExecution"@en.
+:NarrativeJourneyExecution rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:label "NarrativeJourneyExecution"@en.
+:HeroicNarrativeJourneyExecution rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:label "HeroicNarrativeJourneyExecution"@en.
+:LearningJourneyExecution rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:label "LearningJourneyExecution"@en.
+:HeroicNarrativeLearningJourneyExecution rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:label "HeroicNarrativeLearningJourneyExecution"@en.
+:SuccessfulHeroicNarrativeLearningJourneyExecution rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:label "SuccessfulHeroicNarrativeLearningJourneyExecution"@en.
+:StageExecution rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Event;
+    rdfs:label "StageExecution"@en.
+:HLJStageExecution rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:label "HLJStageExecution"@en.
+:TransformationEvent rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Event;
+    rdfs:label "TransformationEvent"@en.
+:ChallengeEncounter rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Event;
+    rdfs:label "ChallengeEncounter"@en.
+:ChallengePerformance rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Event;
+    rdfs:label "ChallengePerformance"@en.
+:AssistanceProvision rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Event;
+    rdfs:label "AssistanceProvision"@en.
+:RealizedTransformation rdf:type owl:Class, gufo:SituationType, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Situation;
+    rdfs:label "RealizedTransformation"@en.
+:ClosureSituation rdf:type owl:Class, gufo:SituationType, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Situation;
+    rdfs:label "ClosureSituation"@en.
+:Person rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Person"@en.
+:Protagonist rdf:type owl:Class, gufo:Role, owl:NamedIndividual;
+    rdfs:label "Protagonist"@en.
+:Learner rdf:type owl:Class, gufo:Role, owl:NamedIndividual;
+    rdfs:label "Learner"@en.
+:HLJStageSpecification rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "HLJStageSpecification"@en.
+:Description rdfs:subClassOf :InformationObject.
+:NarrativeContent rdfs:subClassOf :InformationObject.
+:NormativeDescription rdfs:subClassOf :Description.
+:PlanDescription rdfs:subClassOf :NormativeDescription.
+:GoalDescription rdfs:subClassOf :NormativeDescription.
+:ConditionDescription rdfs:subClassOf :NormativeDescription.
+:JourneyModel rdfs:subClassOf :Description.
+:NarrativeJourneyModel rdfs:subClassOf :JourneyModel.
+:HeroicNarrativeJourneyModel rdfs:subClassOf :NarrativeJourneyModel.
+:LearningJourneyModel rdfs:subClassOf :JourneyModel, :PlanDescription.
+:HeroicNarrativeLearningJourneyModel rdfs:subClassOf :HeroicNarrativeJourneyModel, :LearningJourneyModel.
+:StageSpecification rdfs:subClassOf :PlanDescription.
+:JourneyNarrative rdfs:subClassOf :NarrativeContent.
+:NarrativeFraming rdfs:subClassOf :NarrativeContent.
+:IntendedTransformation rdfs:subClassOf :GoalDescription.
+:IntendedLearningTransformation rdfs:subClassOf :IntendedTransformation.
+:EducationalPurpose rdfs:subClassOf :GoalDescription.
+:MissionSpecification rdfs:subClassOf :NormativeDescription.
+:ClosureSpecification rdfs:subClassOf :ConditionDescription.
+:ChallengeSpecification rdfs:subClassOf :NormativeDescription.
+:AssistanceSpecification rdfs:subClassOf :NormativeDescription.
+:NarrativeJourneyExecution rdfs:subClassOf :JourneyExecution.
+:HeroicNarrativeJourneyExecution rdfs:subClassOf :NarrativeJourneyExecution.
+:LearningJourneyExecution rdfs:subClassOf :JourneyExecution.
+:HeroicNarrativeLearningJourneyExecution rdfs:subClassOf :HeroicNarrativeJourneyExecution, :LearningJourneyExecution.
+:SuccessfulHeroicNarrativeLearningJourneyExecution rdfs:subClassOf :HeroicNarrativeLearningJourneyExecution.
+:HLJStageExecution rdfs:subClassOf :StageExecution.
+:Protagonist rdfs:subClassOf :Person.
+:Learner rdfs:subClassOf :Person.
+:HLJStageSpecification rdfs:subClassOf :StageSpecification.
+:hasStage rdf:type owl:ObjectProperty;
+    rdfs:domain :JourneyModel;
+    rdfs:range :StageSpecification;
+    rdfs:label "hasStage"@en.
+:directlyPrecedesStage rdf:type owl:ObjectProperty;
+    rdfs:domain :StageSpecification;
+    rdfs:range :StageSpecification;
+    rdfs:label "directlyPrecedesStage"@en.
+:hasNarrative rdf:type owl:ObjectProperty;
+    rdfs:domain :NarrativeJourneyModel;
+    rdfs:range :JourneyNarrative;
+    rdfs:label "hasNarrative"@en.
+:prescribesTransformation rdf:type owl:ObjectProperty;
+    rdfs:domain :JourneyModel;
+    rdfs:range :IntendedTransformation;
+    rdfs:label "prescribesTransformation"@en.
+:hasEducationalPurpose rdf:type owl:ObjectProperty;
+    rdfs:domain :LearningJourneyModel;
+    rdfs:range :EducationalPurpose;
+    rdfs:label "hasEducationalPurpose"@en.
+:definesClosure rdf:type owl:ObjectProperty;
+    rdfs:domain :JourneyModel;
+    rdfs:range :ClosureSpecification;
+    rdfs:label "definesClosure"@en.
+:isExecutionOfJourneyModel rdf:type owl:ObjectProperty;
+    rdfs:domain :JourneyExecution;
+    rdfs:range :JourneyModel;
+    rdfs:label "isExecutionOfJourneyModel"@en.
+:hasStageExecution rdf:type owl:ObjectProperty;
+    rdfs:domain :JourneyExecution;
+    rdfs:range :StageExecution;
+    rdfs:label "hasStageExecution"@en.
+:isExecutionOfStageSpecification rdf:type owl:ObjectProperty;
+    rdfs:domain :StageExecution;
+    rdfs:range :StageSpecification;
+    rdfs:label "isExecutionOfStageSpecification"@en.
+:participatesAsProtagonistIn rdf:type owl:ObjectProperty;
+    rdfs:domain :Protagonist;
+    rdfs:range :HeroicNarrativeJourneyExecution;
+    rdfs:label "participatesAsProtagonistIn"@en;
+    rdfs:subPropertyOf gufo:participatedIn.
+:participatesAsLearnerIn rdf:type owl:ObjectProperty;
+    rdfs:domain :Learner;
+    rdfs:range :LearningJourneyExecution;
+    rdfs:label "participatesAsLearnerIn"@en;
+    rdfs:subPropertyOf gufo:participatedIn.
+:hasTransformationEvent rdf:type owl:ObjectProperty;
+    rdfs:domain :JourneyExecution;
+    rdfs:range :TransformationEvent;
+    rdfs:label "hasTransformationEvent"@en.
+:producesTransformation rdf:type owl:ObjectProperty;
+    rdfs:domain :TransformationEvent;
+    rdfs:range :RealizedTransformation;
+    rdfs:label "producesTransformation"@en;
+    rdfs:subPropertyOf gufo:broughtAbout.
+:satisfiesIntendedTransformation rdf:type owl:ObjectProperty;
+    rdfs:domain :RealizedTransformation;
+    rdfs:range :IntendedTransformation;
+    rdfs:label "satisfiesIntendedTransformation"@en.
+:isTransformationOf rdf:type owl:ObjectProperty;
+    rdfs:domain :RealizedTransformation;
+    rdfs:range :Person;
+    rdfs:label "isTransformationOf"@en.
+:producesClosure rdf:type owl:ObjectProperty;
+    rdfs:domain :JourneyExecution;
+    rdfs:range :ClosureSituation;
+    rdfs:label "producesClosure"@en;
+    rdfs:subPropertyOf gufo:broughtAbout.
+:satisfiesClosureSpecification rdf:type owl:ObjectProperty;
+    rdfs:domain :ClosureSituation;
+    rdfs:range :ClosureSpecification;
+    rdfs:label "satisfiesClosureSpecification"@en.
+:hasNarrativeFraming rdf:type owl:ObjectProperty;
+    rdfs:domain :HLJStageSpecification;
+    rdfs:range :NarrativeFraming;
+    rdfs:label "hasNarrativeFraming"@en.
+:hasMission rdf:type owl:ObjectProperty;
+    rdfs:domain :HLJStageSpecification;
+    rdfs:range :MissionSpecification;
+    rdfs:label "hasMission"@en.
+:hasAssistance rdf:type owl:ObjectProperty;
+    rdfs:domain :HLJStageSpecification;
+    rdfs:range :AssistanceSpecification;
+    rdfs:label "hasAssistance"@en.
+:hasChallenge rdf:type owl:ObjectProperty;
+    rdfs:domain :StageSpecification;
+    rdfs:range :ChallengeSpecification;
+    rdfs:label "hasChallenge"@en.
+:hasChallengeEncounter rdf:type owl:ObjectProperty;
+    rdfs:domain :HLJStageExecution;
+    rdfs:range :ChallengeEncounter;
+    rdfs:label "hasChallengeEncounter"@en.
+:hasChallengePerformance rdf:type owl:ObjectProperty;
+    rdfs:domain :HLJStageExecution;
+    rdfs:range :ChallengePerformance;
+    rdfs:label "hasChallengePerformance"@en.
+:hasAssistanceProvision rdf:type owl:ObjectProperty;
+    rdfs:domain :HLJStageExecution;
+    rdfs:range :AssistanceProvision;
+    rdfs:label "hasAssistanceProvision"@en.
+:isEncounterOf rdf:type owl:ObjectProperty;
+    rdfs:domain :ChallengeEncounter;
+    rdfs:range :ChallengeSpecification;
+    rdfs:label "isEncounterOf"@en.
+:addressesChallenge rdf:type owl:ObjectProperty;
+    rdfs:domain :ChallengePerformance;
+    rdfs:range :ChallengeSpecification;
+    rdfs:label "addressesChallenge"@en.
+:realizesAssistance rdf:type owl:ObjectProperty;
+    rdfs:domain :AssistanceProvision;
+    rdfs:range :AssistanceSpecification;
+    rdfs:label "realizesAssistance"@en.

@@ -1,0 +1,10 @@
+{
+  "name": "OntoJourney Documentation",
+  "short_name": "OntoJourney",
+  "description": "A formal ontology for narrative-heroic learning journeys.",
+  "start_url": "/ontojourney/",
+  "display": "standalone",
+  "background_color": "#fbf8f1",
+  "theme_color": "#321d31",
+  "icons": []
+}

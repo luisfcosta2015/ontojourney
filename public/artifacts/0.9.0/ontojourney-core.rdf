@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#RealizedTransformation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#SituationType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Situation"/>
+    <rdfs:label xml:lang="en">RealizedTransformation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#hasChallengePerformance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#HLJStageExecution"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#ChallengePerformance"/>
+    <rdfs:label xml:lang="en">hasChallengePerformance</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#MissionSpecification">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">MissionSpecification</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#NormativeDescription"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#EducationalPurpose">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">EducationalPurpose</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#GoalDescription"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#NarrativeFraming">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">NarrativeFraming</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#NarrativeContent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#Description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">Description</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#InformationObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#LearningJourneyModel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">LearningJourneyModel</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#JourneyModel"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#PlanDescription"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#TransformationEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#EventType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Event"/>
+    <rdfs:label xml:lang="en">TransformationEvent</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#JourneyModel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">JourneyModel</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#Description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#hasStage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#JourneyModel"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#StageSpecification"/>
+    <rdfs:label xml:lang="en">hasStage</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#participatesAsLearnerIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#Learner"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#LearningJourneyExecution"/>
+    <rdfs:label xml:lang="en">participatesAsLearnerIn</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/nemo/gufo#participatedIn"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#StageExecution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#EventType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Event"/>
+    <rdfs:label xml:lang="en">StageExecution</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#HeroicNarrativeJourneyExecution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#EventType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">HeroicNarrativeJourneyExecution</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#NarrativeJourneyExecution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#IntendedTransformation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">IntendedTransformation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#GoalDescription"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#definesClosure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#JourneyModel"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#ClosureSpecification"/>
+    <rdfs:label xml:lang="en">definesClosure</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:imports rdf:resource="http://purl.org/nemo/gufo#"/>
+    <owl:versionIRI rdf:resource="https://w3id.org/ontojourney/core/0.9"/>
+    <owl:versionInfo>0.9.0</owl:versionInfo>
+    <dcterms:title xml:lang="en">OntoJourney Core</dcterms:title>
+    <dcterms:description xml:lang="en">A reference ontology for narrative-heroic learning journeys, modeled in OntoUML and grounded in UFO.</dcterms:description>
+    <dcterms:creator>Luis Felipe Coimbra Costa</dcterms:creator>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-08-01</dcterms:issued>
+    <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    <vann:preferredNamespacePrefix>oj</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri>https://w3id.org/ontojourney/core#</vann:preferredNamespaceUri>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#isEncounterOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#ChallengeEncounter"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#ChallengeSpecification"/>
+    <rdfs:label xml:lang="en">isEncounterOf</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#SuccessfulHeroicNarrativeLearningJourneyExecution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#EventType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">SuccessfulHeroicNarrativeLearningJourneyExecution</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyExecution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#Protagonist">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">Protagonist</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#addressesChallenge">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#ChallengePerformance"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#ChallengeSpecification"/>
+    <rdfs:label xml:lang="en">addressesChallenge</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#ChallengePerformance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#EventType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Event"/>
+    <rdfs:label xml:lang="en">ChallengePerformance</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#NarrativeJourneyModel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">NarrativeJourneyModel</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#JourneyModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#Learner">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">Learner</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#HeroicNarrativeJourneyModel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">HeroicNarrativeJourneyModel</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#NarrativeJourneyModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#prescribesTransformation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#JourneyModel"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#IntendedTransformation"/>
+    <rdfs:label xml:lang="en">prescribesTransformation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#NarrativeContent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">NarrativeContent</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#InformationObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#hasMission">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#HLJStageSpecification"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#MissionSpecification"/>
+    <rdfs:label xml:lang="en">hasMission</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#directlyPrecedesStage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#StageSpecification"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#StageSpecification"/>
+    <rdfs:label xml:lang="en">directlyPrecedesStage</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#hasNarrativeFraming">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#HLJStageSpecification"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#NarrativeFraming"/>
+    <rdfs:label xml:lang="en">hasNarrativeFraming</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#AssistanceSpecification">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">AssistanceSpecification</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#NormativeDescription"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#LearningJourneyExecution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#EventType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">LearningJourneyExecution</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#JourneyExecution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#satisfiesIntendedTransformation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#RealizedTransformation"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#IntendedTransformation"/>
+    <rdfs:label xml:lang="en">satisfiesIntendedTransformation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#NormativeDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">NormativeDescription</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#Description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyModel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">HeroicNarrativeLearningJourneyModel</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#HeroicNarrativeJourneyModel"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#LearningJourneyModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#HLJStageSpecification">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">HLJStageSpecification</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#StageSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#AssistanceProvision">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#EventType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Event"/>
+    <rdfs:label xml:lang="en">AssistanceProvision</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#IntendedLearningTransformation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">IntendedLearningTransformation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#IntendedTransformation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#ClosureSpecification">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">ClosureSpecification</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#ConditionDescription"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#ChallengeSpecification">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">ChallengeSpecification</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#NormativeDescription"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#hasAssistanceProvision">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#HLJStageExecution"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#AssistanceProvision"/>
+    <rdfs:label xml:lang="en">hasAssistanceProvision</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#hasChallenge">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#StageSpecification"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#ChallengeSpecification"/>
+    <rdfs:label xml:lang="en">hasChallenge</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#JourneyExecution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#EventType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Event"/>
+    <rdfs:label xml:lang="en">JourneyExecution</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#StageSpecification">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">StageSpecification</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#PlanDescription"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#realizesAssistance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#AssistanceProvision"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#AssistanceSpecification"/>
+    <rdfs:label xml:lang="en">realizesAssistance</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#InformationObject">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+    <rdfs:label xml:lang="en">InformationObject</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#participatesAsProtagonistIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#Protagonist"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#HeroicNarrativeJourneyExecution"/>
+    <rdfs:label xml:lang="en">participatesAsProtagonistIn</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/nemo/gufo#participatedIn"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#HLJStageExecution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#EventType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">HLJStageExecution</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#StageExecution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#hasStageExecution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#JourneyExecution"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#StageExecution"/>
+    <rdfs:label xml:lang="en">hasStageExecution</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#PlanDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">PlanDescription</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#NormativeDescription"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#JourneyNarrative">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">JourneyNarrative</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#NarrativeContent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#producesClosure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#JourneyExecution"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#ClosureSituation"/>
+    <rdfs:label xml:lang="en">producesClosure</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/nemo/gufo#broughtAbout"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#hasEducationalPurpose">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#LearningJourneyModel"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#EducationalPurpose"/>
+    <rdfs:label xml:lang="en">hasEducationalPurpose</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyExecution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#EventType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">HeroicNarrativeLearningJourneyExecution</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#HeroicNarrativeJourneyExecution"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#LearningJourneyExecution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#NarrativeJourneyExecution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#EventType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">NarrativeJourneyExecution</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#JourneyExecution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#hasAssistance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#HLJStageSpecification"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#AssistanceSpecification"/>
+    <rdfs:label xml:lang="en">hasAssistance</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#ConditionDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">ConditionDescription</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#NormativeDescription"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#hasNarrative">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#NarrativeJourneyModel"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#JourneyNarrative"/>
+    <rdfs:label xml:lang="en">hasNarrative</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#hasTransformationEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#JourneyExecution"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#TransformationEvent"/>
+    <rdfs:label xml:lang="en">hasTransformationEvent</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#GoalDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">GoalDescription</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/ontojourney/core#NormativeDescription"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+    <rdfs:label xml:lang="en">Person</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#isExecutionOfStageSpecification">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#StageExecution"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#StageSpecification"/>
+    <rdfs:label xml:lang="en">isExecutionOfStageSpecification</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#isExecutionOfJourneyModel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#JourneyExecution"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#JourneyModel"/>
+    <rdfs:label xml:lang="en">isExecutionOfJourneyModel</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#producesTransformation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#TransformationEvent"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#RealizedTransformation"/>
+    <rdfs:label xml:lang="en">producesTransformation</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/nemo/gufo#broughtAbout"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#ClosureSituation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#SituationType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Situation"/>
+    <rdfs:label xml:lang="en">ClosureSituation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#satisfiesClosureSpecification">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#ClosureSituation"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#ClosureSpecification"/>
+    <rdfs:label xml:lang="en">satisfiesClosureSpecification</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#isTransformationOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#RealizedTransformation"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#Person"/>
+    <rdfs:label xml:lang="en">isTransformationOf</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#ChallengeEncounter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://purl.org/nemo/gufo#EventType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Event"/>
+    <rdfs:label xml:lang="en">ChallengeEncounter</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ontojourney/core#hasChallengeEncounter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/ontojourney/core#HLJStageExecution"/>
+    <rdfs:range rdf:resource="https://w3id.org/ontojourney/core#ChallengeEncounter"/>
+    <rdfs:label xml:lang="en">hasChallengeEncounter</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

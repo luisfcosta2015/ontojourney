@@ -1,0 +1,1444 @@
+[
+  {
+    "@id": "https://w3id.org/ontojourney/core#HLJStageExecution",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#EventType",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "HLJStageExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#StageExecution"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#hasChallengeEncounter",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#HLJStageExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "hasChallengeEncounter"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#ChallengeEncounter"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#Person",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#Kind",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Person"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#FunctionalComplex"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#TransformationEvent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#EventType",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "TransformationEvent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#Event"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#MissionSpecification",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "MissionSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#NormativeDescription"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#EducationalPurpose",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "EducationalPurpose"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#GoalDescription"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#NarrativeContent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "NarrativeContent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#InformationObject"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#Learner",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#Role",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Learner"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#Person"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#definesClosure",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#JourneyModel"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "definesClosure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#ClosureSpecification"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#addressesChallenge",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#ChallengePerformance"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "addressesChallenge"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#ChallengeSpecification"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#participatesAsProtagonistIn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#Protagonist"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "participatesAsProtagonistIn"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#HeroicNarrativeJourneyExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#participatedIn"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#hasAssistance",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#HLJStageSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "hasAssistance"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#AssistanceSpecification"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#AssistanceSpecification",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "AssistanceSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#NormativeDescription"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#hasNarrative",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#NarrativeJourneyModel"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "hasNarrative"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#JourneyNarrative"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#participatesAsLearnerIn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#Learner"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "participatesAsLearnerIn"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#LearningJourneyExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#participatedIn"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#hasEducationalPurpose",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#LearningJourneyModel"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "hasEducationalPurpose"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#EducationalPurpose"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#ConditionDescription",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "ConditionDescription"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#NormativeDescription"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#HeroicNarrativeJourneyExecution",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#EventType",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "HeroicNarrativeJourneyExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#NarrativeJourneyExecution"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#JourneyModel",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "JourneyModel"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#Description"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#ChallengePerformance",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#EventType",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "ChallengePerformance"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#Event"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#satisfiesIntendedTransformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#RealizedTransformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "satisfiesIntendedTransformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#IntendedTransformation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#JourneyExecution",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#EventType",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "JourneyExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#Event"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#hasTransformationEvent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#JourneyExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "hasTransformationEvent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#TransformationEvent"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#producesClosure",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#JourneyExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "producesClosure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#ClosureSituation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#broughtAbout"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#isExecutionOfStageSpecification",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#StageExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "isExecutionOfStageSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#StageSpecification"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#hasStage",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#JourneyModel"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "hasStage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#StageSpecification"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#isExecutionOfJourneyModel",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#JourneyExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "isExecutionOfJourneyModel"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#JourneyModel"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyModel",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "HeroicNarrativeLearningJourneyModel"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#HeroicNarrativeJourneyModel"
+      },
+      {
+        "@id": "https://w3id.org/ontojourney/core#LearningJourneyModel"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#StageSpecification",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "StageSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#PlanDescription"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#ChallengeSpecification",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "ChallengeSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#NormativeDescription"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyExecution",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#EventType",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "HeroicNarrativeLearningJourneyExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#HeroicNarrativeJourneyExecution"
+      },
+      {
+        "@id": "https://w3id.org/ontojourney/core#LearningJourneyExecution"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#NarrativeFraming",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "NarrativeFraming"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#NarrativeContent"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#NarrativeJourneyExecution",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#EventType",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "NarrativeJourneyExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#JourneyExecution"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#StageExecution",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#EventType",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "StageExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#Event"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#isTransformationOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#RealizedTransformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "isTransformationOf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#Person"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#HLJStageSpecification",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "HLJStageSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#StageSpecification"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#satisfiesClosureSpecification",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#ClosureSituation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "satisfiesClosureSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#ClosureSpecification"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#ClosureSpecification",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "ClosureSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#ConditionDescription"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#hasStageExecution",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#JourneyExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "hasStageExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#StageExecution"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#ChallengeEncounter",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#EventType",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "ChallengeEncounter"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#Event"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#LearningJourneyModel",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "LearningJourneyModel"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#JourneyModel"
+      },
+      {
+        "@id": "https://w3id.org/ontojourney/core#PlanDescription"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#PlanDescription",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "PlanDescription"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#NormativeDescription"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#LearningJourneyExecution",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#EventType",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "LearningJourneyExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#JourneyExecution"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#directlyPrecedesStage",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#StageSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "directlyPrecedesStage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#StageSpecification"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#Description",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Description"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#InformationObject"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#NormativeDescription",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "NormativeDescription"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#Description"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#realizesAssistance",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#AssistanceProvision"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "realizesAssistance"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#AssistanceSpecification"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#Protagonist",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#Role",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Protagonist"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#Person"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#hasChallengePerformance",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#HLJStageExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "hasChallengePerformance"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#ChallengePerformance"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#RealizedTransformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#SituationType",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "RealizedTransformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#Situation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#InformationObject",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#Kind",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "InformationObject"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#FunctionalComplex"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#producesTransformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#TransformationEvent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "producesTransformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#RealizedTransformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#broughtAbout"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#IntendedTransformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "IntendedTransformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#GoalDescription"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#AssistanceProvision",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#EventType",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "AssistanceProvision"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#Event"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#hasAssistanceProvision",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#HLJStageExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "hasAssistanceProvision"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#AssistanceProvision"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#hasChallenge",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#StageSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "hasChallenge"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#ChallengeSpecification"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#ClosureSituation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#SituationType",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "ClosureSituation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#Situation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#prescribesTransformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#JourneyModel"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "prescribesTransformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#IntendedTransformation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#GoalDescription",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "GoalDescription"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#NormativeDescription"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#isEncounterOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#ChallengeEncounter"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "isEncounterOf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#ChallengeSpecification"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#HeroicNarrativeJourneyModel",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "HeroicNarrativeJourneyModel"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#NarrativeJourneyModel"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Luis Felipe Coimbra Costa"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "A reference ontology for narrative-heroic learning journeys, modeled in OntoUML and grounded in UFO."
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-08-01"
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "OntoJourney Core"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespacePrefix": [
+      {
+        "@value": "oj"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespaceUri": [
+      {
+        "@value": "https://w3id.org/ontojourney/core#"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "http://purl.org/nemo/gufo#"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionIRI": [
+      {
+        "@id": "https://w3id.org/ontojourney/core/0.9"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+      {
+        "@value": "0.9.0"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#SuccessfulHeroicNarrativeLearningJourneyExecution",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#EventType",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "SuccessfulHeroicNarrativeLearningJourneyExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyExecution"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#hasMission",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#HLJStageSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "hasMission"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#MissionSpecification"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#hasNarrativeFraming",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#HLJStageSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "hasNarrativeFraming"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#NarrativeFraming"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#JourneyNarrative",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "JourneyNarrative"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#NarrativeContent"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#IntendedLearningTransformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "IntendedLearningTransformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#IntendedTransformation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#NarrativeJourneyModel",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "NarrativeJourneyModel"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#JourneyModel"
+      }
+    ]
+  }
+]

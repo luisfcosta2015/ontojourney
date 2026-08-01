@@ -1,0 +1,471 @@
+[
+  {
+    "name": "addressesChallenge",
+    "kind": "relation",
+    "stereotype": "relation",
+    "detail": "ChallengePerformance [0..*] → ChallengeSpecification [1..1].",
+    "iri": "https://w3id.org/ontojourney/core#addressesChallenge"
+  },
+  {
+    "name": "AssistanceProvision",
+    "kind": "class",
+    "stereotype": "event",
+    "detail": "Top-level type in the OntoJourney domain model.",
+    "iri": "https://w3id.org/ontojourney/core#AssistanceProvision"
+  },
+  {
+    "name": "AssistanceSpecification",
+    "kind": "class",
+    "stereotype": "subkind",
+    "detail": "Specializes NormativeDescription.",
+    "iri": "https://w3id.org/ontojourney/core#AssistanceSpecification"
+  },
+  {
+    "name": "ChallengeEncounter",
+    "kind": "class",
+    "stereotype": "event",
+    "detail": "Top-level type in the OntoJourney domain model.",
+    "iri": "https://w3id.org/ontojourney/core#ChallengeEncounter"
+  },
+  {
+    "name": "ChallengePerformance",
+    "kind": "class",
+    "stereotype": "event",
+    "detail": "Top-level type in the OntoJourney domain model.",
+    "iri": "https://w3id.org/ontojourney/core#ChallengePerformance"
+  },
+  {
+    "name": "ChallengeSpecification",
+    "kind": "class",
+    "stereotype": "subkind",
+    "detail": "Specializes NormativeDescription.",
+    "iri": "https://w3id.org/ontojourney/core#ChallengeSpecification"
+  },
+  {
+    "name": "ClosureSituation",
+    "kind": "class",
+    "stereotype": "situation",
+    "detail": "Top-level type in the OntoJourney domain model.",
+    "iri": "https://w3id.org/ontojourney/core#ClosureSituation"
+  },
+  {
+    "name": "ClosureSpecification",
+    "kind": "class",
+    "stereotype": "subkind",
+    "detail": "Specializes ConditionDescription.",
+    "iri": "https://w3id.org/ontojourney/core#ClosureSpecification"
+  },
+  {
+    "name": "ConditionDescription",
+    "kind": "class",
+    "stereotype": "subkind",
+    "detail": "Specializes NormativeDescription.",
+    "iri": "https://w3id.org/ontojourney/core#ConditionDescription"
+  },
+  {
+    "name": "definesClosure",
+    "kind": "relation",
+    "stereotype": "relation",
+    "detail": "JourneyModel [1..1] → ClosureSpecification [1..1].",
+    "iri": "https://w3id.org/ontojourney/core#definesClosure"
+  },
+  {
+    "name": "Description",
+    "kind": "class",
+    "stereotype": "subkind",
+    "detail": "Specializes InformationObject.",
+    "iri": "https://w3id.org/ontojourney/core#Description"
+  },
+  {
+    "name": "directlyPrecedesStage",
+    "kind": "relation",
+    "stereotype": "relation",
+    "detail": "StageSpecification [0..*] → StageSpecification [0..*].",
+    "iri": "https://w3id.org/ontojourney/core#directlyPrecedesStage"
+  },
+  {
+    "name": "EducationalPurpose",
+    "kind": "class",
+    "stereotype": "subkind",
+    "detail": "Specializes GoalDescription.",
+    "iri": "https://w3id.org/ontojourney/core#EducationalPurpose"
+  },
+  {
+    "name": "GoalDescription",
+    "kind": "class",
+    "stereotype": "subkind",
+    "detail": "Specializes NormativeDescription.",
+    "iri": "https://w3id.org/ontojourney/core#GoalDescription"
+  },
+  {
+    "name": "hasAssistance",
+    "kind": "relation",
+    "stereotype": "relation",
+    "detail": "HLJStageSpecification [1..1] → AssistanceSpecification [1..1].",
+    "iri": "https://w3id.org/ontojourney/core#hasAssistance"
+  },
+  {
+    "name": "hasAssistanceProvision",
+    "kind": "relation",
+    "stereotype": "relation",
+    "detail": "HLJStageExecution [1..1] → AssistanceProvision [0..*].",
+    "iri": "https://w3id.org/ontojourney/core#hasAssistanceProvision"
+  },
+  {
+    "name": "hasChallenge",
+    "kind": "relation",
+    "stereotype": "relation",
+    "detail": "StageSpecification [1..1] → ChallengeSpecification [0..*].",
+    "iri": "https://w3id.org/ontojourney/core#hasChallenge"
+  },
+  {
+    "name": "hasChallengeEncounter",
+    "kind": "relation",
+    "stereotype": "relation",
+    "detail": "HLJStageExecution [1..1] → ChallengeEncounter [0..*].",
+    "iri": "https://w3id.org/ontojourney/core#hasChallengeEncounter"
+  },
+  {
+    "name": "hasChallengePerformance",
+    "kind": "relation",
+    "stereotype": "relation",
+    "detail": "HLJStageExecution [1..1] → ChallengePerformance [0..*].",
+    "iri": "https://w3id.org/ontojourney/core#hasChallengePerformance"
+  },
+  {
+    "name": "hasEducationalPurpose",
+    "kind": "relation",
+    "stereotype": "relation",
+    "detail": "LearningJourneyModel [1..1] → EducationalPurpose [1..*].",
+    "iri": "https://w3id.org/ontojourney/core#hasEducationalPurpose"
+  },
+  {
+    "name": "hasMission",
+    "kind": "relation",
+    "stereotype": "relation",
+    "detail": "HLJStageSpecification [1..1] → MissionSpecification [1..1].",
+    "iri": "https://w3id.org/ontojourney/core#hasMission"
+  },
+  {
+    "name": "hasNarrative",
+    "kind": "relation",
+    "stereotype": "relation",
+    "detail": "NarrativeJourneyModel [1..1] → JourneyNarrative [1..1].",
+    "iri": "https://w3id.org/ontojourney/core#hasNarrative"
+  },
+  {
+    "name": "hasNarrativeFraming",
+    "kind": "relation",
+    "stereotype": "relation",
+    "detail": "HLJStageSpecification [1..1] → NarrativeFraming [1..1].",
+    "iri": "https://w3id.org/ontojourney/core#hasNarrativeFraming"
+  },
+  {
+    "name": "hasStage",
+    "kind": "relation",
+    "stereotype": "relation",
+    "detail": "JourneyModel [1..1] → StageSpecification [1..*].",
+    "iri": "https://w3id.org/ontojourney/core#hasStage"
+  },
+  {
+    "name": "hasStageExecution",
+    "kind": "relation",
+    "stereotype": "relation",
+    "detail": "JourneyExecution [1..1] → StageExecution [1..*].",
+    "iri": "https://w3id.org/ontojourney/core#hasStageExecution"
+  },
+  {
+    "name": "hasTransformationEvent",
+    "kind": "relation",
+    "stereotype": "relation",
+    "detail": "JourneyExecution [1..1] → TransformationEvent [0..*].",
+    "iri": "https://w3id.org/ontojourney/core#hasTransformationEvent"
+  },
+  {
+    "name": "HeroicNarrativeJourneyExecution",
+    "kind": "class",
+    "stereotype": "event",
+    "detail": "Specializes NarrativeJourneyExecution.",
+    "iri": "https://w3id.org/ontojourney/core#HeroicNarrativeJourneyExecution"
+  },
+  {
+    "name": "HeroicNarrativeJourneyModel",
+    "kind": "class",
+    "stereotype": "subkind",
+    "detail": "Specializes NarrativeJourneyModel.",
+    "iri": "https://w3id.org/ontojourney/core#HeroicNarrativeJourneyModel"
+  },
+  {
+    "name": "HeroicNarrativeLearningJourneyExecution",
+    "kind": "class",
+    "stereotype": "event",
+    "detail": "Specializes HeroicNarrativeJourneyExecution and LearningJourneyExecution.",
+    "iri": "https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyExecution"
+  },
+  {
+    "name": "HeroicNarrativeLearningJourneyModel",
+    "kind": "class",
+    "stereotype": "subkind",
+    "detail": "Specializes HeroicNarrativeJourneyModel and LearningJourneyModel.",
+    "iri": "https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyModel"
+  },
+  {
+    "name": "HLJStageExecution",
+    "kind": "class",
+    "stereotype": "event",
+    "detail": "Specializes StageExecution.",
+    "iri": "https://w3id.org/ontojourney/core#HLJStageExecution"
+  },
+  {
+    "name": "HLJStageSpecification",
+    "kind": "class",
+    "stereotype": "subkind",
+    "detail": "Specializes StageSpecification.",
+    "iri": "https://w3id.org/ontojourney/core#HLJStageSpecification"
+  },
+  {
+    "name": "InformationObject",
+    "kind": "class",
+    "stereotype": "kind",
+    "detail": "Top-level type in the OntoJourney domain model.",
+    "iri": "https://w3id.org/ontojourney/core#InformationObject"
+  },
+  {
+    "name": "IntendedLearningTransformation",
+    "kind": "class",
+    "stereotype": "subkind",
+    "detail": "Specializes IntendedTransformation.",
+    "iri": "https://w3id.org/ontojourney/core#IntendedLearningTransformation"
+  },
+  {
+    "name": "IntendedTransformation",
+    "kind": "class",
+    "stereotype": "subkind",
+    "detail": "Specializes GoalDescription.",
+    "iri": "https://w3id.org/ontojourney/core#IntendedTransformation"
+  },
+  {
+    "name": "isEncounterOf",
+    "kind": "relation",
+    "stereotype": "relation",
+    "detail": "ChallengeEncounter [0..*] → ChallengeSpecification [1..1].",
+    "iri": "https://w3id.org/ontojourney/core#isEncounterOf"
+  },
+  {
+    "name": "isExecutionOfJourneyModel",
+    "kind": "relation",
+    "stereotype": "relation",
+    "detail": "JourneyExecution [0..*] → JourneyModel [1..1].",
+    "iri": "https://w3id.org/ontojourney/core#isExecutionOfJourneyModel"
+  },
+  {
+    "name": "isExecutionOfStageSpecification",
+    "kind": "relation",
+    "stereotype": "relation",
+    "detail": "StageExecution [0..*] → StageSpecification [1..1].",
+    "iri": "https://w3id.org/ontojourney/core#isExecutionOfStageSpecification"
+  },
+  {
+    "name": "isTransformationOf",
+    "kind": "relation",
+    "stereotype": "relation",
+    "detail": "RealizedTransformation [0..*] → Person [1..1].",
+    "iri": "https://w3id.org/ontojourney/core#isTransformationOf"
+  },
+  {
+    "name": "JourneyExecution",
+    "kind": "class",
+    "stereotype": "event",
+    "detail": "Top-level type in the OntoJourney domain model.",
+    "iri": "https://w3id.org/ontojourney/core#JourneyExecution"
+  },
+  {
+    "name": "JourneyModel",
+    "kind": "class",
+    "stereotype": "subkind",
+    "detail": "Specializes Description.",
+    "iri": "https://w3id.org/ontojourney/core#JourneyModel"
+  },
+  {
+    "name": "JourneyNarrative",
+    "kind": "class",
+    "stereotype": "subkind",
+    "detail": "Specializes NarrativeContent.",
+    "iri": "https://w3id.org/ontojourney/core#JourneyNarrative"
+  },
+  {
+    "name": "Learner",
+    "kind": "class",
+    "stereotype": "historicalRole",
+    "detail": "Specializes Person.",
+    "iri": "https://w3id.org/ontojourney/core#Learner"
+  },
+  {
+    "name": "LearningJourneyExecution",
+    "kind": "class",
+    "stereotype": "event",
+    "detail": "Specializes JourneyExecution.",
+    "iri": "https://w3id.org/ontojourney/core#LearningJourneyExecution"
+  },
+  {
+    "name": "LearningJourneyModel",
+    "kind": "class",
+    "stereotype": "subkind",
+    "detail": "Specializes JourneyModel and PlanDescription.",
+    "iri": "https://w3id.org/ontojourney/core#LearningJourneyModel"
+  },
+  {
+    "name": "MissionSpecification",
+    "kind": "class",
+    "stereotype": "subkind",
+    "detail": "Specializes NormativeDescription.",
+    "iri": "https://w3id.org/ontojourney/core#MissionSpecification"
+  },
+  {
+    "name": "NarrativeContent",
+    "kind": "class",
+    "stereotype": "subkind",
+    "detail": "Specializes InformationObject.",
+    "iri": "https://w3id.org/ontojourney/core#NarrativeContent"
+  },
+  {
+    "name": "NarrativeFraming",
+    "kind": "class",
+    "stereotype": "subkind",
+    "detail": "Specializes NarrativeContent.",
+    "iri": "https://w3id.org/ontojourney/core#NarrativeFraming"
+  },
+  {
+    "name": "NarrativeJourneyExecution",
+    "kind": "class",
+    "stereotype": "event",
+    "detail": "Specializes JourneyExecution.",
+    "iri": "https://w3id.org/ontojourney/core#NarrativeJourneyExecution"
+  },
+  {
+    "name": "NarrativeJourneyModel",
+    "kind": "class",
+    "stereotype": "subkind",
+    "detail": "Specializes JourneyModel.",
+    "iri": "https://w3id.org/ontojourney/core#NarrativeJourneyModel"
+  },
+  {
+    "name": "NormativeDescription",
+    "kind": "class",
+    "stereotype": "subkind",
+    "detail": "Specializes Description.",
+    "iri": "https://w3id.org/ontojourney/core#NormativeDescription"
+  },
+  {
+    "name": "participatesAsLearnerIn",
+    "kind": "relation",
+    "stereotype": "participation",
+    "detail": "Learner [1..*] → LearningJourneyExecution [1..*].",
+    "iri": "https://w3id.org/ontojourney/core#participatesAsLearnerIn"
+  },
+  {
+    "name": "participatesAsProtagonistIn",
+    "kind": "relation",
+    "stereotype": "participation",
+    "detail": "Protagonist [1..1] → HeroicNarrativeJourneyExecution [1..*].",
+    "iri": "https://w3id.org/ontojourney/core#participatesAsProtagonistIn"
+  },
+  {
+    "name": "Person",
+    "kind": "class",
+    "stereotype": "kind",
+    "detail": "Top-level type in the OntoJourney domain model.",
+    "iri": "https://w3id.org/ontojourney/core#Person"
+  },
+  {
+    "name": "PlanDescription",
+    "kind": "class",
+    "stereotype": "subkind",
+    "detail": "Specializes NormativeDescription.",
+    "iri": "https://w3id.org/ontojourney/core#PlanDescription"
+  },
+  {
+    "name": "prescribesTransformation",
+    "kind": "relation",
+    "stereotype": "relation",
+    "detail": "JourneyModel [1..1] → IntendedTransformation [0..*].",
+    "iri": "https://w3id.org/ontojourney/core#prescribesTransformation"
+  },
+  {
+    "name": "producesClosure",
+    "kind": "relation",
+    "stereotype": "bringsAbout",
+    "detail": "JourneyExecution [1..1] → ClosureSituation [0..1].",
+    "iri": "https://w3id.org/ontojourney/core#producesClosure"
+  },
+  {
+    "name": "producesTransformation",
+    "kind": "relation",
+    "stereotype": "bringsAbout",
+    "detail": "TransformationEvent [1..*] → RealizedTransformation [1..1].",
+    "iri": "https://w3id.org/ontojourney/core#producesTransformation"
+  },
+  {
+    "name": "Protagonist",
+    "kind": "class",
+    "stereotype": "historicalRole",
+    "detail": "Specializes Person.",
+    "iri": "https://w3id.org/ontojourney/core#Protagonist"
+  },
+  {
+    "name": "RealizedTransformation",
+    "kind": "class",
+    "stereotype": "situation",
+    "detail": "Top-level type in the OntoJourney domain model.",
+    "iri": "https://w3id.org/ontojourney/core#RealizedTransformation"
+  },
+  {
+    "name": "realizesAssistance",
+    "kind": "relation",
+    "stereotype": "relation",
+    "detail": "AssistanceProvision [0..*] → AssistanceSpecification [1..1].",
+    "iri": "https://w3id.org/ontojourney/core#realizesAssistance"
+  },
+  {
+    "name": "satisfiesClosureSpecification",
+    "kind": "relation",
+    "stereotype": "relation",
+    "detail": "ClosureSituation [0..*] → ClosureSpecification [1..1].",
+    "iri": "https://w3id.org/ontojourney/core#satisfiesClosureSpecification"
+  },
+  {
+    "name": "satisfiesIntendedTransformation",
+    "kind": "relation",
+    "stereotype": "relation",
+    "detail": "RealizedTransformation [0..*] → IntendedTransformation [1..1].",
+    "iri": "https://w3id.org/ontojourney/core#satisfiesIntendedTransformation"
+  },
+  {
+    "name": "StageExecution",
+    "kind": "class",
+    "stereotype": "event",
+    "detail": "Top-level type in the OntoJourney domain model.",
+    "iri": "https://w3id.org/ontojourney/core#StageExecution"
+  },
+  {
+    "name": "StageSpecification",
+    "kind": "class",
+    "stereotype": "subkind",
+    "detail": "Specializes PlanDescription.",
+    "iri": "https://w3id.org/ontojourney/core#StageSpecification"
+  },
+  {
+    "name": "SuccessfulHeroicNarrativeLearningJourneyExecution",
+    "kind": "class",
+    "stereotype": "event",
+    "detail": "Specializes HeroicNarrativeLearningJourneyExecution.",
+    "iri": "https://w3id.org/ontojourney/core#SuccessfulHeroicNarrativeLearningJourneyExecution"
+  },
+  {
+    "name": "TransformationEvent",
+    "kind": "class",
+    "stereotype": "event",
+    "detail": "Top-level type in the OntoJourney domain model.",
+    "iri": "https://w3id.org/ontojourney/core#TransformationEvent"
+  }
+]

@@ -1,0 +1,52 @@
+name: Defect report
+description: Report an inconsistency, broken artifact, validation failure, or documentation error.
+title: "[Defect]: "
+body:
+  - type: markdown
+    attributes:
+      value: Thank you for helping keep the ontology and its artifacts aligned.
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Affected layer
+      options:
+        - Tonto / OntoUML model
+        - RDF / OWL serialization
+        - SHACL constraints or tests
+        - Documentation or diagram
+        - Website or automation
+        - Citation or metadata
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or artifact
+      placeholder: Core v0.9.0, filename, or page URL
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed problem
+      description: State what is inconsistent or fails, including exact terms or messages.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Reproduction or evidence
+      description: Add minimal steps, data, sources, or screenshots without personal information.
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope confirmation
+      options:
+        - label: I checked the current documentation and searched existing issues.
+          required: true

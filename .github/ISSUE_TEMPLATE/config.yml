@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Read the contribution guide
+    url: https://github.com/luisfcosta2015/ontojourney/blob/main/CONTRIBUTING.md
+    about: Review the scope and stopping rule before proposing a core change.

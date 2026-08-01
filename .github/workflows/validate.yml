@@ -1,0 +1,51 @@
+name: Validate ontology and documentation
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  ontology:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install validation dependencies
+        run: pip install -r ontology/requirements-validation.txt
+      - name: Audit OntoUML JSON
+        run: python ontology/tests/audit_generated_json.py
+      - name: Run SHACL positive and negative tests
+        run: python ontology/tests/run_shacl_tests.py
+      - name: Build and verify release package
+        run: python scripts/build_release.py
+      - name: Verify release checksums and archive integrity
+        working-directory: public/artifacts/0.9.0
+        run: |
+          sha256sum --check SHA256SUMS
+          unzip -t ontojourney-core-v0.9.0.zip
+
+  documentation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Check generated model reference
+        run: npm run check:model
+      - name: Lint
+        run: npm run lint
+      - name: Build static site and check internal links
+        env:
+          GITHUB_PAGES: "true"
+          NEXT_PUBLIC_BASE_PATH: /ontojourney
+        run: npm run build:pages

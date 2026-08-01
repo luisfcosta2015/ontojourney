@@ -1,0 +1,13 @@
+{
+  "projectName": "OntoJourneyCore",
+  "displayName": "OntoJourney Core",
+  "authors": [
+    "Luis Felipe Coimbra Costa"
+  ],
+  "license": "CC-BY-4.0",
+  "version": "0.9.0",
+  "publisher": "OntoJourney Project",
+  "dependencies": {},
+  "outFolder": "generated",
+  "description": "OntoJourney Core v0.9: focal heroic execution, participant-specific transformation, general stage challenges, normative missions, and explicit progression constraints."
+}

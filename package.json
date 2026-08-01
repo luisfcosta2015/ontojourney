@@ -1,0 +1,35 @@
+{
+  "name": "ontojourney-docs",
+  "version": "0.9.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm run build:pages",
+    "build:pages": "npm run generate:model && next build && node scripts/check_static_links.mjs",
+    "generate:model": "node scripts/generate-model-reference.mjs",
+    "check:model": "node scripts/generate-model-reference.mjs --check",
+    "start": "next start",
+    "test": "npm run check:model && npm run lint",
+    "lint": "eslint . --ignore-pattern .next --ignore-pattern out"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.2.8",
+    "@fontsource/cormorant-garamond": "^5.2.8",
+    "next": "16.2.6",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.2.6",
+    "typescript": "5.9.3"
+  },
+  "type": "module",
+  "displayName": "OntoJourney Documentation"
+}

@@ -1,0 +1,54 @@
+name: Term or relation proposal
+description: Propose a formally justified class, relation, constraint, or definition.
+title: "[Term]: "
+body:
+  - type: input
+    id: label
+    attributes:
+      label: Proposed label
+    validations:
+      required: true
+  - type: dropdown
+    id: termtype
+    attributes:
+      label: Proposed element
+      options:
+        - Class
+        - Relation
+        - Constraint
+        - Annotation or definition
+        - Deprecation
+    validations:
+      required: true
+  - type: textarea
+    id: definition
+    attributes:
+      label: Definition
+      description: State identity or applicability conditions in direct language.
+    validations:
+      required: true
+  - type: input
+    id: cq
+    attributes:
+      label: Competency question or issue
+      placeholder: CQ identifier or issue URL
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples and counterexamples
+    validations:
+      required: true
+  - type: textarea
+    id: foundation
+    attributes:
+      label: Foundational analysis
+      description: Propose an OntoUML stereotype or formal role and justify it.
+  - type: textarea
+    id: impact
+    attributes:
+      label: Compatibility and validation impact
+      description: Identify affected IRIs, constraints, tests, diagrams, and documentation.
+    validations:
+      required: true
