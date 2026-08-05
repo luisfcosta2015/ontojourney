@@ -4,6 +4,7 @@
 [![Validation](https://github.com/luisfcosta2015/ontojourney/actions/workflows/validate.yml/badge.svg)](https://github.com/luisfcosta2015/ontojourney/actions/workflows/validate.yml)
 [![License: CC BY 4.0](https://img.shields.io/badge/ontology%20%26%20docs-CC%20BY%204.0-8d4e32.svg)](LICENSE)
 [![Version: 0.9.0](https://img.shields.io/badge/core-v0.9.0-462542.svg)](https://w3id.org/ontojourney/core/0.9)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21802021.svg)](https://doi.org/10.5281/zenodo.21802021)
 
 **OntoJourney is a public ontology for narrative-heroic learning journeys. Its
 OntoUML representation uses UFO as a foundational basis.**
@@ -19,6 +20,8 @@ records, checksums, and citation metadata.
 - Ontology IRI: <https://w3id.org/ontojourney/core>
 - Entity namespace: `https://w3id.org/ontojourney/core#`
 - Version IRI: <https://w3id.org/ontojourney/core/0.9>
+- Version DOI: <https://doi.org/10.5281/zenodo.21802021>
+- Concept DOI for all versions: <https://doi.org/10.5281/zenodo.21802020>
 - Release: [Core v0.9.0](https://github.com/luisfcosta2015/ontojourney/releases/tag/v0.9.0)
 
 ## Validation status
@@ -81,7 +84,11 @@ path and deploys it from `main`.
 
 > Costa, Luis Felipe Coimbra. 2026. *OntoJourney: An Ontology of
 > Narrative-Heroic Learning Journeys*. OntoJourney Core v0.9.0.
-> <https://w3id.org/ontojourney/core/0.9>.
+> <https://doi.org/10.5281/zenodo.21802021>.
+
+Use the version DOI when citing v0.9.0. The concept DOI
+<https://doi.org/10.5281/zenodo.21802020> resolves to the collection of all
+OntoJourney versions.
 
 Machine-readable citation metadata is available in [`CITATION.cff`](CITATION.cff)
 and [`codemeta.json`](codemeta.json).
