@@ -4,6 +4,8 @@ import Link from "next/link";
 import { ValidationStrip } from "@/components/validation-strip";
 import { RELEASE_LABEL, assetUrl } from "@/lib/site";
 
+const VERSION_DOI = "https://doi.org/10.5281/zenodo.21802021";
+
 const entryPoints = [
   {
     number: "01",
@@ -46,6 +48,12 @@ export default function Home() {
               <Link className="button button--primary" href="/model/reference/">
                 Explore 67 terms <span aria-hidden="true">→</span>
               </Link>
+              <a
+                className="button button--secondary"
+                href={VERSION_DOI}
+              >
+                Cite archived v0.9.0 <span aria-hidden="true">↗</span>
+              </a>
               <a
                 className="button button--secondary"
                 href={assetUrl("/artifacts/0.9.0/ontojourney-core-v0.9.0.zip")}
@@ -149,8 +157,8 @@ export default function Home() {
           <div>
             <p className="lead">
               The release passed the planned source, structural, RDF, SHACL,
-              OntoUML API, and Protégé/HermiT checks. Each record states what
-              that check establishes and what remains outside its scope.
+              OntoUML API, and Protégé/HermiT checks. Zenodo preserves this
+              version under DOI 10.5281/zenodo.21802021.
             </p>
             <div className="button-row">
               <Link className="button button--primary" href="/validation/">
@@ -159,6 +167,9 @@ export default function Home() {
               <Link className="button button--secondary" href="/releases/0.9.0/">
                 Release notes
               </Link>
+              <a className="button button--secondary" href={VERSION_DOI}>
+                Open Zenodo record <span aria-hidden="true">↗</span>
+              </a>
             </div>
           </div>
         </div>
