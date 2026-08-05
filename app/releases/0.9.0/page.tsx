@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     "Public release notes, validation status, identifiers, and downloads for OntoJourney Core v0.9.0.",
 };
 
+const VERSION_DOI = "https://doi.org/10.5281/zenodo.21802021";
+const CONCEPT_DOI = "https://doi.org/10.5281/zenodo.21802020";
+
 const contents = [
   "Canonical Tonto source and OntoUML JSON exchange model.",
   "Turtle, RDF/XML, JSON-LD, and N-Triples serializations.",
@@ -65,6 +68,8 @@ export default function ReleasePage() {
             <section id="identifiers">
               <h2>Identifiers</h2>
               <p>Version IRI: <a href={VERSION_IRI}>{VERSION_IRI}</a></p>
+              <p>Version DOI: <a href={VERSION_DOI}>{VERSION_DOI}</a></p>
+              <p>Concept DOI for all versions: <a href={CONCEPT_DOI}>{CONCEPT_DOI}</a></p>
               <p>
                 Entity identifiers use the stable non-versioned namespace
                 <code>https://w3id.org/ontojourney/core#</code>.
@@ -74,12 +79,16 @@ export default function ReleasePage() {
             <section id="download">
               <h2>Download</h2>
               <p>
-                The archive includes a SHA-256 manifest and a self-contained
-                reproducibility tree for the local structural and SHACL checks.
+                Zenodo preserves the citable archive for version 0.9.0. The
+                repository also provides the corresponding public release
+                artifacts and validation records.
               </p>
               <div className="button-row">
-                <a className="button button--primary" href={assetUrl("/artifacts/0.9.0/ontojourney-core-v0.9.0.zip")} download>
-                  Download complete release <span aria-hidden="true">↓</span>
+                <a className="button button--primary" href={VERSION_DOI}>
+                  Open archived release <span aria-hidden="true">↗</span>
+                </a>
+                <a className="button button--secondary" href={assetUrl("/artifacts/0.9.0/ontojourney-core-v0.9.0.zip")} download>
+                  Download repository copy <span aria-hidden="true">↓</span>
                 </a>
                 <Link className="button button--secondary" href="/resources/">Select individual files</Link>
               </div>
