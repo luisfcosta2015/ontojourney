@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { PageHero } from "@/components/page-hero";
-import { VERSION_IRI, assetUrl } from "@/lib/site";
+import { assetUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Release 0.9.0",
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 
 const VERSION_DOI = "https://doi.org/10.5281/zenodo.21802021";
 const CONCEPT_DOI = "https://doi.org/10.5281/zenodo.21802020";
+const VERSION_IRI = "https://w3id.org/ontojourney/core/0.9";
 
 const contents = [
   "Canonical Tonto source and OntoUML JSON exchange model.",

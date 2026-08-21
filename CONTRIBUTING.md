@@ -29,9 +29,11 @@ Run before opening a pull request:
 
 ```bash
 python3 -m venv .venv
-.venv/bin/pip install -r ontology/requirements-validation.txt
-.venv/bin/python ontology/tests/audit_generated_json.py
-.venv/bin/python ontology/tests/run_shacl_tests.py
+.venv/bin/pip install -r ontology/reproducible/requirements-validation.txt
+.venv/bin/python ontology/reproducible/tests/audit_generated_json.py
+.venv/bin/python ontology/reproducible/tests/audit_release_consistency.py
+.venv/bin/python ontology/reproducible/tests/run_shacl_tests.py
+python scripts/build_release.py
 npm ci
 npm run check:model
 GITHUB_PAGES=true NEXT_PUBLIC_BASE_PATH=/ontojourney npm run build:pages
@@ -39,7 +41,9 @@ GITHUB_PAGES=true NEXT_PUBLIC_BASE_PATH=/ontojourney npm run build:pages
 
 ## Versioning
 
-- Patch releases correct documentation, metadata, serializations, or tooling without changing term meaning.
+- Patch releases may add backward-compatible definitions or constraints and
+  correct documentation, metadata, serializations, or tooling without changing
+  term identity.
 - Minor releases may add backward-compatible terms or constraints with documented evidence.
 - A change in term identity or meaning requires explicit deprecation and a migration plan.
 

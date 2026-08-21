@@ -1,0 +1,76 @@
+% Generated from OntoJourneyCore.json; do not edit independently.
+\begingroup
+\small
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.12}
+\captionof{table}{Definitions of the 40 classes in OntoJourney Core v0.9.1.}
+\label{tab:ontojourney-class-definitions}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.27\textwidth}>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.49\textwidth}@{}}
+\toprule
+\textbf{Class} & \textbf{Stereotype} & \textbf{Definition} \\
+\midrule
+\endfirsthead
+\multicolumn{3}{@{}l}{\small\itshape Table~\ref{tab:ontojourney-class-definitions} continued}\\
+\toprule
+\textbf{Class} & \textbf{Stereotype} & \textbf{Definition} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{3}{r@{}}{\small Continued on the next page}\\
+\endfoot
+\bottomrule
+\endlastfoot
+\multicolumn{3}{@{}l}{\textit{Information objects and descriptions}}\\*
+\texttt{Information\allowbreak{}Object} & \texttt{kind} & An entity whose identity is determined by its informational content and that may be expressed through different physical or digital carriers. \\
+\texttt{Description} & \texttt{subkind} & An Information Object that expresses a conceptualization of entities or configurations and provides criteria for interpreting or assessing them. \\
+\texttt{Narrative\allowbreak{}Content} & \texttt{subkind} & An Information Object that organises characters, events, or themes as narrative content, independently of the medium through which it is expressed. \\
+\texttt{Normative\allowbreak{}Description} & \texttt{subkind} & A Description that prescribes, permits, or evaluates possible actions or situations instead of merely characterising them. \\
+\texttt{Plan\allowbreak{}Description} & \texttt{subkind} & A Normative Description that prescribes or organises intended actions and events towards a purpose. \\
+\texttt{Goal\allowbreak{}Description} & \texttt{subkind} & A Normative Description whose propositional content describes a situation intended to be attained. \\
+\texttt{Condition\allowbreak{}Description} & \texttt{subkind} & A Normative Description that specifies a condition against which a situation can be assessed. \\
+\addlinespace[2pt]
+\multicolumn{3}{@{}l}{\textit{Journey models and model-level specifications}}\\*
+\texttt{Journey\allowbreak{}Model} & \texttt{subkind} & A Description that characterises a reusable journey pattern through one or more Stage Specifications and one Closure Specification, and may prescribe Intended Transformations. \\
+\texttt{Narrative\allowbreak{}Journey\allowbreak{}Model} & \texttt{subkind} & A Journey Model whose overall progression is organised by exactly one Journey Narrative. \\
+\texttt{Heroic\allowbreak{}Narrative\allowbreak{}Journey\allowbreak{}Model} & \texttt{subkind} & A Narrative Journey Model that frames a meaningful progression through demanding stages towards transformation and closure as a heroic trajectory. \\
+\texttt{Learning\allowbreak{}Journey\allowbreak{}Model} & \texttt{subkind} & A Journey Model and Plan Description that intentionally organises an educational experience and has at least one Educational Purpose. \\
+\texttt{Heroic\allowbreak{}Narrative\allowbreak{}Learning\allowbreak{}Journey\allowbreak{}Model} & \texttt{subkind} & A Heroic Narrative Journey Model and Learning Journey Model whose identity includes one Journey Narrative, at least two connected Stage Specifications, at least one challenged stage, at least one Educational Purpose, at least one Intended Learning Transformation, and one Closure Specification. \\
+\texttt{Stage\allowbreak{}Specification} & \texttt{subkind} & A Plan Description that specifies one stage belonging to a Journey Model and may be linked to other Stage Specifications through directlyPrecedesStage. \\
+\texttt{Journey\allowbreak{}Narrative} & \texttt{subkind} & Narrative Content that organises the narrative progression of a Narrative Journey Model as a whole. \\
+\texttt{Narrative\allowbreak{}Framing} & \texttt{subkind} & Narrative Content that gives one HLJ Stage Specification its local narrative context and connects it to the wider journey. \\
+\texttt{Intended\allowbreak{}Transformation} & \texttt{subkind} & A Goal Description prescribed by a Journey Model that specifies a transformation the model is intended to bring about. \\
+\texttt{Intended\allowbreak{}Learning\allowbreak{}Transformation} & \texttt{subkind} & An Intended Transformation that specifies a learning-related change to be pursued through a learning journey. \\
+\texttt{Educational\allowbreak{}Purpose} & \texttt{subkind} & A Goal Description that states an educational aim of a Learning Journey Model. \\
+\texttt{Mission\allowbreak{}Specification} & \texttt{subkind} & A Normative Description that states what the Learner is invited or expected to pursue within an HLJ stage and may combine a desired result with directions for action. \\
+\texttt{Closure\allowbreak{}Specification} & \texttt{subkind} & A Condition Description defined by a Journey Model that states the condition under which an execution of the model counts as having reached closure. \\
+\texttt{Challenge\allowbreak{}Specification} & \texttt{subkind} & A Normative Description assigned to a Stage Specification that describes a demand, obstacle, problem, task, or condition that makes progression demanding. \\
+\texttt{Assistance\allowbreak{}Specification} & \texttt{subkind} & A Normative Description of support intended to be made available within an HLJ Stage Specification. \\
+\addlinespace[2pt]
+\multicolumn{3}{@{}l}{\textit{Executions and internal events}}\\*
+\texttt{Journey\allowbreak{}Execution} & \texttt{event} & A complex event in which one Journey Model is enacted in a particular context through one or more Stage Executions. \\
+\texttt{Narrative\allowbreak{}Journey\allowbreak{}Execution} & \texttt{event} & A Journey Execution of a Narrative Journey Model in which the performed stages enact a narratively organised journey. \\
+\texttt{Heroic\allowbreak{}Narrative\allowbreak{}Journey\allowbreak{}Execution} & \texttt{event} & A Narrative Journey Execution of a Heroic Narrative Journey Model that constitutes one focal heroic trajectory with exactly one Protagonist. \\
+\texttt{Learning\allowbreak{}Journey\allowbreak{}Execution} & \texttt{event} & A Journey Execution of a Learning Journey Model in which at least one Person participates as Learner. \\
+\texttt{Heroic\allowbreak{}Narrative\allowbreak{}Learning\allowbreak{}Journey\allowbreak{}Execution} & \texttt{event} & A Heroic Narrative Journey Execution and Learning Journey Execution of one Heroic Narrative Learning Journey Model, with exactly one focal Person participating as both Protagonist and Learner. \\
+\texttt{Successful\allowbreak{}Heroic\allowbreak{}Narrative\allowbreak{}Learning\allowbreak{}Journey\allowbreak{}Execution} & \texttt{event} & A Heroic Narrative Learning Journey Execution that produces a Closure Situation satisfying the executed model's Closure Specification and at least one Realized Transformation of the focal Person satisfying an Intended Learning Transformation prescribed by that model. \\
+\texttt{Stage\allowbreak{}Execution} & \texttt{event} & An event within a Journey Execution that enacts one Stage Specification belonging to the executed Journey Model. \\
+\texttt{HLJ\allowbreak{}Stage\allowbreak{}Execution} & \texttt{event} & A Stage Execution of an HLJ Stage Specification that may include Challenge Encounters, Challenge Performances, and Assistance Provisions connected to specifications of that same stage. \\
+\texttt{Transformation\allowbreak{}Event} & \texttt{event} & An event within a Journey Execution that brings about one Realized Transformation. \\
+\texttt{Challenge\allowbreak{}Encounter} & \texttt{event} & An event within an HLJ Stage Execution in which the specified challenge of that stage is faced, whether or not it is successfully addressed. \\
+\texttt{Challenge\allowbreak{}Performance} & \texttt{event} & An event within an HLJ Stage Execution in which action is directed towards the specified challenge of that stage; its occurrence does not by itself imply success. \\
+\texttt{Assistance\allowbreak{}Provision} & \texttt{event} & An event within an HLJ Stage Execution in which assistance specified for that stage is provided. \\
+\addlinespace[2pt]
+\multicolumn{3}{@{}l}{\textit{Situations and participants}}\\*
+\texttt{Realized\allowbreak{}Transformation} & \texttt{situation} & A situation brought about by one or more Transformation Events that represents an actual change concerning exactly one Person and satisfies one Intended Transformation. \\
+\texttt{Closure\allowbreak{}Situation} & \texttt{situation} & A situation brought about by a Journey Execution that satisfies a Closure Specification; in a successful execution, that specification is defined by the executed model. \\
+\texttt{Person} & \texttt{kind} & A human individual who may participate in Journey Executions and whose identity is preserved across the historical roles Protagonist and Learner. \\
+\texttt{Protagonist} & \texttt{historical\allowbreak{}Role} & A historical role instantiated by a Person through participation as the focal subject of a Heroic Narrative Journey Execution. \\
+\texttt{Learner} & \texttt{historical\allowbreak{}Role} & A historical role instantiated by a Person through participation in a Learning Journey Execution. \\
+\addlinespace[2pt]
+\multicolumn{3}{@{}l}{\textit{HLJ stage specialization}}\\*
+\texttt{HLJ\allowbreak{}Stage\allowbreak{}Specification} & \texttt{subkind} & A Stage Specification in the Heroine's Learning Journey anatomy that contains exactly one Narrative Framing, Mission Specification, Challenge Specification, and Assistance Specification. \\
+\addlinespace[2pt]
+\end{longtable}
+\endgroup

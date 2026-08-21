@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
 
 import { PageHero } from "@/components/page-hero";
-import { assetUrl } from "@/lib/site";
+import { VERSION, assetUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Validation",
   description:
-    "Technical validation records for OntoJourney Core v0.9.0 across source, structure, RDF, SHACL, the OntoUML API, and HermiT.",
+    "Technical validation records for OntoJourney Core v0.9.1 across source, structure, RDF, SHACL, the OntoUML API, and HermiT.",
 };
 
 const checks = [
-  ["Tonto source", "Local CLI validation", "Passed", "31 Jul 2026"],
-  ["OntoUML JSON", "Structural audit: 40 classes, 27 relations, 33 generalizations", "Passed", "31 Jul 2026"],
-  ["gUFO / RDF", "Turtle parse and structural audit: 326 triples", "Passed", "1 Aug 2026"],
-  ["SHACL", "One conforming fixture and two deliberately invalid fixtures", "Passed", "31 Jul 2026"],
-  ["OntoUML API", "HTTP 200; no reported violations", "Passed", "31 Jul 2026"],
-  ["Protégé / HermiT", "Classification completed; no unsatisfiable OntoJourney classes", "Passed", "1 Aug 2026"],
+  ["Tonto source", "Local CLI validation of the canonical source", "Passed", "21 Aug 2026"],
+  ["OntoUML JSON", "40 classes and definitions, 27 relations, and 33 generalizations", "Passed", "21 Aug 2026"],
+  ["gUFO / RDF", "Four isomorphic serializations with 368 triples", "Passed", "21 Aug 2026"],
+  ["SHACL", "One conforming fixture and nine deliberately invalid fixtures", "Passed", "21 Aug 2026"],
+  ["OntoUML API", "HTTP 200 with an empty violation list", "Passed", "21 Aug 2026"],
+  ["HermiT / ROBOT", "Classification completed; no inconsistency or unsatisfiable OntoJourney term", "Passed", "21 Aug 2026"],
 ];
 
 const evidence = [
@@ -42,12 +42,12 @@ export default function ValidationPage() {
             <div>
               <p className="eyebrow">Release status</p>
               <h2 className="section-title" id="status-title">
-                All planned v0.9.0 technical gates passed.
+                {`All planned v${VERSION} technical gates passed.`}
               </h2>
             </div>
             <p>
               The OntoUML API record is tied to SHA-256
-              <code>7830fc94d0741517bbb415094ed3ff08204a166419b92627b4aa300192f6e18a</code>
+              <code>2465501b7152b50e5c6c01197d47dbc45df591010757b4ecc2453d5761b8436d</code>
               of the submitted OntoUML JSON.
             </p>
           </div>
@@ -67,8 +67,8 @@ export default function ValidationPage() {
             </table>
           </div>
           <div className="button-row" style={{ marginTop: "1.5rem" }}>
-            <a className="button button--primary" href={assetUrl("/artifacts/0.9.0/VALIDATION_REPORT.md")}>Open validation report <span aria-hidden="true">→</span></a>
-            <a className="button button--secondary" href={assetUrl("/artifacts/0.9.0/validation/ontouml-api-response-v0.9.json")}>Raw API response</a>
+            <a className="button button--primary" href={assetUrl(`/artifacts/${VERSION}/VALIDATION_REPORT.md`)}>Open validation report <span aria-hidden="true">→</span></a>
+            <a className="button button--secondary" href={assetUrl(`/artifacts/${VERSION}/validation/ontouml-api-response-v0.9.1.json`)}>Raw API response</a>
           </div>
         </div>
       </section>
@@ -108,11 +108,12 @@ export default function ValidationPage() {
           </div>
           <div className="prose">
             <pre><code>{`python3 -m venv .venv
-.venv/bin/pip install -r ontology/requirements-validation.txt
-.venv/bin/python ontology/tests/audit_generated_json.py
-.venv/bin/python ontology/tests/run_shacl_tests.py`}</code></pre>
+.venv/bin/pip install -r ontology/reproducible/requirements-validation.txt
+.venv/bin/python ontology/reproducible/tests/audit_generated_json.py
+.venv/bin/python ontology/reproducible/tests/audit_release_consistency.py
+.venv/bin/python ontology/reproducible/tests/run_shacl_tests.py`}</code></pre>
             <p>
-              The two invalid SHACL fixtures are expected to report
+              The nine invalid SHACL fixtures are expected to report
               <code>conforms=False</code>; rejection is their passing outcome.
             </p>
           </div>

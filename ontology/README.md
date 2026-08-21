@@ -1,42 +1,39 @@
-# OntoJourney Core v0.9.0
+# OntoJourney Core v0.9.1
 
-This directory contains the public formal artifacts for OntoJourney Core
-v0.9.0.
+This release contains the OntoJourney formal source, exchange model, RDF
+serializations, SHACL shapes, class definitions, reproducibility fixtures,
+validation records, checksums, and citation metadata. It preserves the 40
+classes, 27 relations, and 33 generalizations of v0.9.0 while tightening the
+constraints required by the manuscript.
 
-## Contents
+- Ontology IRI: `https://w3id.org/ontojourney/core`
+- Entity namespace: `https://w3id.org/ontojourney/core#`
+- Version IRI: `https://w3id.org/ontojourney/core/0.9.1`
+- Release date: 21 August 2026
+- License: CC BY 4.0
 
-```text
-src/core.tonto                         conceptual source
-generated/OntoJourneyCore.json         OntoUML exchange model
-generated/OntoJourneyCore.ttl          gUFO-aligned Turtle serialization
-shacl/ontojourney-core-v0.9.shacl.ttl  SHACL constraint graph
-tests/                                  structural and SHACL fixtures
-validation/                             public technical records
-PUBLICATION.md                          IRI and version policy
-CHANGELOG.md                            public release history
-```
+The canonical definitions are the English `description` blocks in
+`core.tonto`. `CLASS_DEFINITIONS.md` and the appendix source are generated from
+the OntoUML JSON; the RDF serializations expose the same text as
+`rdfs:comment` annotations. `CONSTRAINTS.md` explains the division of work
+between Tonto, OWL/gUFO, and SHACL.
 
-## Validation
+## Local validation
 
-Version 0.9.0 passed local source validation, OntoUML JSON structural auditing,
-RDF parsing, SHACL fixture tests, remote OntoUML API verification, and
-Protégé/HermiT classification.
-
-Run the reproducible local checks from this directory:
-
-```bash
-python3 -m pip install -r requirements-validation.txt
-python3 tests/audit_generated_json.py
-python3 tests/run_shacl_tests.py
-```
-
-The OntoUML API record, raw response, and HermiT record are available under
-`validation/`.
-
-## Public identifiers
+With Tonto CLI and the Python packages pinned in
+`reproducible/requirements-validation.txt`, run:
 
 ```text
-Ontology IRI:     https://w3id.org/ontojourney/core
-Entity namespace: https://w3id.org/ontojourney/core#
-Version IRI:      https://w3id.org/ontojourney/core/0.9
+tonto-cli validate reproducible
+python reproducible/tests/audit_generated_json.py
+python reproducible/tests/audit_release_consistency.py
+python reproducible/tests/run_shacl_tests.py
 ```
+
+The remote OntoUML API and HermiT results are recorded in `validation/`.
+
+`reproducible/scripts/finalize_release_artifacts.py` adds the version metadata
+and canonical class comments after the gUFO transformation.
+`reproducible/scripts/generate_class_documentation.py` regenerates the Markdown
+glossary and LaTeX appendix from the OntoUML JSON. The checksum manifest must be
+regenerated last with `reproducible/scripts/update_checksums.py`.

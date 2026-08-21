@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 const root = resolve(import.meta.dirname, "..");
-const sourcePath = resolve(root, "ontology/generated/OntoJourneyCore.json");
+const sourcePath = resolve(root, "ontology/OntoJourneyCore.json");
 const outputPath = resolve(root, "lib/model-reference.json");
 const project = JSON.parse(readFileSync(sourcePath, "utf8"));
 const contents = project.model.contents.flatMap((pkg) => pkg.contents ?? []);
@@ -33,6 +33,7 @@ for (const item of contents) {
       name: item.name,
       kind: "class",
       stereotype: item.stereotype || "class",
+      definition: item.description?.trim() || "",
       detail: parents.length
         ? `Specializes ${parents.join(" and ")}.`
         : "Top-level type in the OntoJourney domain model.",
@@ -50,6 +51,7 @@ for (const item of contents) {
       name: item.name,
       kind: "relation",
       stereotype: item.stereotype || "relation",
+      definition: item.description?.trim() || "",
       detail:
         source && target
           ? `${source.name} [${source.cardinality}] → ${target.name} [${target.cardinality}].`

@@ -8,7 +8,7 @@ import { ENTITY_NAMESPACE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Term reference",
   description:
-    "Search the 40 classes and 27 relations in OntoJourney Core v0.9, with OntoUML stereotypes, generalizations, endpoints, cardinalities, and canonical IRIs.",
+    "Search the 40 classes and 27 relations in OntoJourney Core v0.9.1, with class definitions, OntoUML stereotypes, generalizations, endpoints, cardinalities, and canonical IRIs.",
 };
 
 export default function ReferencePage() {
@@ -17,7 +17,7 @@ export default function ReferencePage() {
       <PageHero
         eyebrow="Model reference"
         title="Forty classes. Twenty-seven relations. One stable namespace."
-        lead="This public reference is generated from the versioned OntoUML JSON. It exposes every domain class and relation without maintaining a separate hand-written index."
+        lead="This public reference is generated from the versioned OntoUML JSON. It exposes every domain class and relation, including the 40 canonical class definitions, without maintaining a separate hand-written index."
       />
       <section className="section">
         <div className="site-container">
@@ -29,8 +29,9 @@ export default function ReferencePage() {
             <div>
               <p>
                 Entity IRIs use <code>{ENTITY_NAMESPACE}</code>. Class cards
-                identify their OntoUML stereotype and immediate parent;
-                relation cards identify endpoints and cardinalities.
+                show the canonical English definition, OntoUML stereotype, and
+                immediate parent; relation cards identify endpoints and
+                cardinalities.
               </p>
               <p>
                 For release structure and reuse guidance, read the

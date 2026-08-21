@@ -1,23 +1,19 @@
 from __future__ import annotations
 
 from hashlib import sha256
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 import shutil
 import zipfile
-
-from rdflib import Graph
 
 
 ROOT = Path(__file__).resolve().parents[1]
 ONTOLOGY = ROOT / "ontology"
 PUBLIC = ROOT / "public"
-OUT = PUBLIC / "artifacts" / "0.9.0"
-ARCHIVE_NAME = "ontojourney-core-v0.9.0.zip"
-
-
-def copy(source: Path, destination: Path) -> None:
-    destination.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(source, destination)
+VERSION = "0.9.1"
+PACKAGE_NAME = f"ontojourney-core-v{VERSION}"
+OUT = PUBLIC / "artifacts" / VERSION
+ARCHIVE_NAME = f"{PACKAGE_NAME}.zip"
+ARCHIVE_TIMESTAMP = (2026, 8, 21, 0, 0, 0)
 
 
 def digest(path: Path) -> str:
@@ -28,77 +24,129 @@ def digest(path: Path) -> str:
     return result.hexdigest()
 
 
+def package_files(root: Path) -> list[Path]:
+    return sorted(
+        (path for path in root.rglob("*") if path.is_file()),
+        key=lambda path: path.relative_to(root).as_posix(),
+    )
+
+
+def verify_manifest(root: Path) -> int:
+    manifest = root / "SHA256SUMS"
+    if not manifest.is_file():
+        raise FileNotFoundError(f"Missing checksum manifest: {manifest}")
+
+    entries: dict[str, str] = {}
+    for line_number, line in enumerate(manifest.read_text(encoding="utf-8").splitlines(), 1):
+        if not line.strip():
+            continue
+        try:
+            checksum, relative = line.split(None, 1)
+        except ValueError as error:
+            raise ValueError(f"Malformed SHA256SUMS line {line_number}: {line!r}") from error
+
+        relative = relative.strip()
+        posix_path = PurePosixPath(relative)
+        if (
+            len(checksum) != 64
+            or any(character not in "0123456789abcdef" for character in checksum)
+            or posix_path.is_absolute()
+            or relative in {"", "."}
+            or ".." in posix_path.parts
+        ):
+            raise ValueError(f"Unsafe or malformed SHA256SUMS line {line_number}: {line!r}")
+        if relative in entries:
+            raise ValueError(f"Duplicate checksum entry: {relative}")
+        entries[relative] = checksum
+
+    expected = {
+        path.relative_to(root).as_posix()
+        for path in package_files(root)
+        if path != manifest
+    }
+    listed = set(entries)
+    if listed != expected:
+        missing = sorted(expected - listed)
+        unlisted = sorted(listed - expected)
+        raise ValueError(
+            "Checksum manifest does not cover the package exactly: "
+            f"missing entries={missing}; nonexistent entries={unlisted}"
+        )
+
+    for relative, checksum in entries.items():
+        path = root / Path(relative)
+        actual = digest(path)
+        if actual != checksum:
+            raise ValueError(
+                f"Checksum mismatch for {relative}: expected {checksum}, found {actual}"
+            )
+    return len(entries)
+
+
+def write_archive(source: Path, archive: Path) -> int:
+    files = package_files(source)
+    with zipfile.ZipFile(
+        archive,
+        "w",
+        compression=zipfile.ZIP_DEFLATED,
+        compresslevel=9,
+    ) as bundle:
+        for path in files:
+            relative = path.relative_to(source).as_posix()
+            info = zipfile.ZipInfo(
+                filename=f"{PACKAGE_NAME}/{relative}",
+                date_time=ARCHIVE_TIMESTAMP,
+            )
+            info.create_system = 3
+            info.external_attr = 0o100644 << 16
+            info.flag_bits |= 0x800
+            bundle.writestr(
+                info,
+                path.read_bytes(),
+                compress_type=zipfile.ZIP_DEFLATED,
+                compresslevel=9,
+            )
+    return len(files)
+
+
+def verify_archive(source: Path, archive: Path) -> None:
+    expected = {
+        f"{PACKAGE_NAME}/{path.relative_to(source).as_posix()}": path
+        for path in package_files(source)
+    }
+    with zipfile.ZipFile(archive) as bundle:
+        if bundle.testzip() is not None:
+            raise ValueError(f"Archive integrity check failed: {archive}")
+        names = set(bundle.namelist())
+        if names != set(expected):
+            raise ValueError("Archive entries do not match the release package")
+        for name, path in expected.items():
+            if bundle.read(name) != path.read_bytes():
+                raise ValueError(f"Archive content differs for {name}")
+
+
 def main() -> None:
+    source_entries = verify_manifest(ONTOLOGY)
+
     if OUT.exists():
         shutil.rmtree(OUT)
-    OUT.mkdir(parents=True)
-
-    graph = Graph().parse(ONTOLOGY / "generated" / "OntoJourneyCore.ttl", format="turtle")
-    graph.serialize(OUT / "ontojourney-core.ttl", format="turtle")
-    graph.serialize(OUT / "ontojourney-core.rdf", format="xml")
-    graph.serialize(OUT / "ontojourney-core.jsonld", format="json-ld", indent=2)
-    graph.serialize(OUT / "ontojourney-core.nt", format="nt")
-
-    files = [
-        (ONTOLOGY / "generated" / "OntoJourneyCore.json", OUT / "OntoJourneyCore.json"),
-        (ONTOLOGY / "src" / "core.tonto", OUT / "core.tonto"),
-        (ONTOLOGY / "tonto.json", OUT / "tonto.json"),
-        (ONTOLOGY / "shacl" / "ontojourney-core-v0.9.shacl.ttl", OUT / "ontojourney-core.shacl.ttl"),
-        (ONTOLOGY / "PUBLICATION.md", OUT / "PUBLICATION.md"),
-        (ONTOLOGY / "CHANGELOG.md", OUT / "CHANGELOG.md"),
-        (ONTOLOGY / "validation" / "VALIDATION_REPORT_V0.9.md", OUT / "VALIDATION_REPORT.md"),
-        (ONTOLOGY / "validation" / "ONTOUML_API_VALIDATION_V0.9.md", OUT / "validation" / "ONTOUML_API_VALIDATION_V0.9.md"),
-        (ONTOLOGY / "validation" / "ontouml-api-response-v0.9.json", OUT / "validation" / "ontouml-api-response-v0.9.json"),
-        (ONTOLOGY / "validation" / "HERMIT_VALIDATION_V0.9.md", OUT / "validation" / "HERMIT_VALIDATION_V0.9.md"),
-        (ROOT / "CITATION.cff", OUT / "CITATION.cff"),
-        (ROOT / "codemeta.json", OUT / "codemeta.json"),
-        (ROOT / "LICENSE", OUT / "LICENSE"),
-        (ONTOLOGY / "generated" / "OntoJourneyCore.json", OUT / "reproducible" / "generated" / "OntoJourneyCore.json"),
-        (ONTOLOGY / "src" / "core.tonto", OUT / "reproducible" / "src" / "core.tonto"),
-        (ONTOLOGY / "tonto.json", OUT / "reproducible" / "tonto.json"),
-        (ONTOLOGY / "shacl" / "ontojourney-core-v0.9.shacl.ttl", OUT / "reproducible" / "shacl" / "ontojourney-core-v0.9.shacl.ttl"),
-        (ONTOLOGY / "tests" / "audit_generated_json.py", OUT / "reproducible" / "tests" / "audit_generated_json.py"),
-        (ONTOLOGY / "tests" / "run_shacl_tests.py", OUT / "reproducible" / "tests" / "run_shacl_tests.py"),
-        (ONTOLOGY / "tests" / "data" / "positive.ttl", OUT / "reproducible" / "tests" / "data" / "positive.ttl"),
-        (ONTOLOGY / "tests" / "data" / "negative_focal_success.ttl", OUT / "reproducible" / "tests" / "data" / "negative_focal_success.ttl"),
-        (ONTOLOGY / "tests" / "data" / "negative_model.ttl", OUT / "reproducible" / "tests" / "data" / "negative_model.ttl"),
-        (ONTOLOGY / "requirements-validation.txt", OUT / "reproducible" / "requirements-validation.txt"),
-    ]
-    for source, destination in files:
-        copy(source, destination)
-
-    copy(OUT / "ontojourney-core.ttl", OUT / "reproducible" / "generated" / "OntoJourneyCore.ttl")
-
-    readme = """# OntoJourney Core v0.9.0
-
-This public release contains the OntoJourney formal source, exchange model,
-RDF serializations, SHACL shapes, reproducibility fixtures, validation records,
-checksums, and citation metadata.
-
-Ontology IRI: `https://w3id.org/ontojourney/core`  
-Entity namespace: `https://w3id.org/ontojourney/core#`  
-Version IRI: `https://w3id.org/ontojourney/core/0.9`  
-License: CC BY 4.0
-"""
-    (OUT / "README.md").write_text(readme, encoding="utf-8")
+    shutil.copytree(ONTOLOGY, OUT)
+    verify_manifest(OUT)
 
     archive = OUT / ARCHIVE_NAME
-    sums_path = OUT / "SHA256SUMS"
-    artifact_files = sorted(
-        path for path in OUT.rglob("*") if path.is_file() and path.name not in {ARCHIVE_NAME, "SHA256SUMS"}
-    )
-    sums = [f"{digest(path)}  {path.relative_to(OUT).as_posix()}" for path in artifact_files]
-    sums_path.write_text("\n".join(sums) + "\n", encoding="utf-8")
+    archived_files = write_archive(ONTOLOGY, archive)
+    verify_archive(ONTOLOGY, archive)
 
-    with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as bundle:
-        for path in sorted(path for path in OUT.rglob("*") if path.is_file() and path != archive):
-            bundle.write(path, Path("ontojourney-core-v0.9.0") / path.relative_to(OUT))
-
-    with sums_path.open("a", encoding="utf-8") as stream:
+    with (OUT / "SHA256SUMS").open("a", encoding="utf-8") as stream:
         stream.write(f"{digest(archive)}  {ARCHIVE_NAME}\n")
+    public_entries = verify_manifest(OUT)
 
-    print(f"Published {len(graph)} RDF triples and {len(artifact_files)} release files.")
+    print(
+        f"Published {source_entries} checksummed files plus SHA256SUMS; "
+        f"archived {archived_files} files."
+    )
     print(f"Archive: {archive}")
+    print(f"Public manifest entries: {public_entries}")
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { CANONICAL_IRI, REPOSITORY_URL, assetUrl } from "@/lib/site";
+import { CANONICAL_IRI, REPOSITORY_URL, VERSION, assetUrl } from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -50,8 +50,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="footer-bottom">
-          OntoJourney Core v0.9.0 · Ontology and documentation CC BY 4.0,
-          except separately identified visual assets · Maintained by Luis Felipe Coimbra Costa
+          {`OntoJourney Core v${VERSION} · Ontology and documentation CC BY 4.0, except separately identified visual assets · Maintained by Luis Felipe Coimbra Costa`}
         </div>
       </div>
     </footer>

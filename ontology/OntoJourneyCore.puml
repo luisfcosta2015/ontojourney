@@ -1,0 +1,152 @@
+@startuml
+set separator none
+top to bottom direction
+skinparam classAttributeIconSize 0
+hide empty members
+skinparam nodesep 65
+skinparam ranksep 80
+skinparam backgroundColor white
+hide circle
+package "ontojourney.core" {
+class "InformationObject" <<kind>> #CD6872 {
+}
+class JourneyExecution as "     JourneyExecution     " <<event>> #D1CA3C {
+}
+class StageExecution as "   StageExecution   " <<event>> #D1CA3C {
+}
+class "TransformationEvent" <<event>> #D1CA3C {
+}
+class "ChallengeEncounter" <<event>> #D1CA3C {
+}
+class "ChallengePerformance" <<event>> #D1CA3C {
+}
+class "AssistanceProvision" <<event>> #D1CA3C {
+}
+class RealizedTransformation as "   RealizedTransformation   " <<situation>> #FCA90D {
+}
+class "ClosureSituation" <<situation>> #FCA90D {
+}
+class Person as "   Person   " <<kind>> #CD6872 {
+}
+class Description as "   Description   " <<subkind>> #F46A6A {
+}
+class NarrativeContent as "   NarrativeContent   " <<subkind>> #F46A6A {
+}
+class NormativeDescription as "        NormativeDescription        " <<subkind>> #F46A6A {
+}
+class PlanDescription as "   PlanDescription   " <<subkind>> #F46A6A {
+}
+class GoalDescription as "   GoalDescription   " <<subkind>> #F46A6A {
+}
+class "ConditionDescription" <<subkind>> #F46A6A {
+}
+class JourneyModel as "        JourneyModel        " <<subkind>> #F46A6A {
+}
+class NarrativeJourneyModel as "   NarrativeJourneyModel   " <<subkind>> #F46A6A {
+}
+class "HeroicNarrativeJourneyModel" <<subkind>> #F46A6A {
+}
+class LearningJourneyModel as "   LearningJourneyModel   " <<subkind>> #F46A6A {
+}
+class "HeroicNarrativeLearningJourneyModel" <<subkind>> #F46A6A {
+}
+class StageSpecification as "        StageSpecification        " <<subkind>> #F46A6A {
+}
+class "JourneyNarrative" <<subkind>> #F46A6A {
+}
+class "NarrativeFraming" <<subkind>> #F46A6A {
+}
+class IntendedTransformation as "   IntendedTransformation   " <<subkind>> #F46A6A {
+}
+class "IntendedLearningTransformation" <<subkind>> #F46A6A {
+}
+class "EducationalPurpose" <<subkind>> #F46A6A {
+}
+class "MissionSpecification" <<subkind>> #F46A6A {
+}
+class ClosureSpecification as "   ClosureSpecification   " <<subkind>> #F46A6A {
+}
+class ChallengeSpecification as "   ChallengeSpecification   " <<subkind>> #F46A6A {
+}
+class AssistanceSpecification as "   AssistanceSpecification   " <<subkind>> #F46A6A {
+}
+class "NarrativeJourneyExecution" <<event>> #D1CA3C {
+}
+class HeroicNarrativeJourneyExecution as "   HeroicNarrativeJourneyExecution   " <<event>> #D1CA3C {
+}
+class LearningJourneyExecution as "   LearningJourneyExecution   " <<event>> #D1CA3C {
+}
+class HeroicNarrativeLearningJourneyExecution as "   HeroicNarrativeLearningJourneyExecution   " <<event>> #D1CA3C {
+}
+class "SuccessfulHeroicNarrativeLearningJourneyExecution" <<event>> #D1CA3C {
+}
+class HLJStageExecution as "   HLJStageExecution   " <<event>> #D1CA3C {
+}
+class "Protagonist" <<historicalRole>> #F46A6A {
+}
+class "Learner" <<historicalRole>> #F46A6A {
+}
+class HLJStageSpecification as "   HLJStageSpecification   " <<subkind>> #F46A6A {
+}
+}
+"InformationObject" <|-- Description
+"InformationObject" <|-- NarrativeContent
+Description <|-- NormativeDescription
+NormativeDescription <|-- PlanDescription
+NormativeDescription <|-- GoalDescription
+NormativeDescription <|-- "ConditionDescription"
+Description <|-- JourneyModel
+JourneyModel <|-- NarrativeJourneyModel
+NarrativeJourneyModel <|-- "HeroicNarrativeJourneyModel"
+JourneyModel <|-- LearningJourneyModel
+PlanDescription <|-- LearningJourneyModel
+"HeroicNarrativeJourneyModel" <|-- "HeroicNarrativeLearningJourneyModel"
+LearningJourneyModel <|-- "HeroicNarrativeLearningJourneyModel"
+PlanDescription <|-- StageSpecification
+NarrativeContent <|-- "JourneyNarrative"
+NarrativeContent <|-- "NarrativeFraming"
+GoalDescription <|-- IntendedTransformation
+IntendedTransformation <|-- "IntendedLearningTransformation"
+GoalDescription <|-- "EducationalPurpose"
+NormativeDescription <|-- "MissionSpecification"
+"ConditionDescription" <|-- ClosureSpecification
+NormativeDescription <|-- ChallengeSpecification
+NormativeDescription <|-- AssistanceSpecification
+JourneyExecution <|-- "NarrativeJourneyExecution"
+"NarrativeJourneyExecution" <|-- HeroicNarrativeJourneyExecution
+JourneyExecution <|-- LearningJourneyExecution
+HeroicNarrativeJourneyExecution <|-- HeroicNarrativeLearningJourneyExecution
+LearningJourneyExecution <|-- HeroicNarrativeLearningJourneyExecution
+HeroicNarrativeLearningJourneyExecution <|-- "SuccessfulHeroicNarrativeLearningJourneyExecution"
+StageExecution <|-- HLJStageExecution
+Person <|-- "Protagonist"
+Person <|-- "Learner"
+StageSpecification <|-- HLJStageSpecification
+JourneyModel "1" o-- "1..*" StageSpecification : <back:WhiteSmoke>hasStage</back> >
+StageSpecification "0..*" -- "0..*" StageSpecification : <back:WhiteSmoke>directlyPrecedesStage</back> >
+NarrativeJourneyModel "1" o-- "1" "JourneyNarrative" : <back:WhiteSmoke>hasNarrative</back> >
+JourneyModel "1" -- "0..*" IntendedTransformation : <back:WhiteSmoke>prescribesTransformation</back> >
+LearningJourneyModel "1" -- "1..*" "EducationalPurpose" : <back:WhiteSmoke>hasEducationalPurpose</back> >
+JourneyModel "1" -- "1" ClosureSpecification : <back:WhiteSmoke>definesClosure</back> >
+JourneyExecution "0..*" -- "1" JourneyModel : <back:WhiteSmoke>isExecutionOfJourneyModel</back> >
+JourneyExecution "1" o-- "1..*" StageExecution : <back:WhiteSmoke>hasStageExecution</back> >
+StageExecution "0..*" -- "1" StageSpecification : <back:WhiteSmoke>isExecutionOfStageSpecification</back> >
+"Protagonist" "1" -- "1..*" HeroicNarrativeJourneyExecution : <back:WhiteSmoke>participatesAsProtagonistIn</back> >
+"Learner" "1..*" -- "1..*" LearningJourneyExecution : <back:WhiteSmoke>participatesAsLearnerIn</back> >
+JourneyExecution "1" o-- "0..*" "TransformationEvent" : <back:WhiteSmoke>hasTransformationEvent</back> >
+"TransformationEvent" "1..*" -- "1" RealizedTransformation : <back:WhiteSmoke>producesTransformation</back> >
+RealizedTransformation "0..*" -- "1" IntendedTransformation : <back:WhiteSmoke>satisfiesIntendedTransformation</back> >
+RealizedTransformation "0..*" -- "1" Person : <back:WhiteSmoke>isTransformationOf</back> >
+JourneyExecution "1" -- "0..1" "ClosureSituation" : <back:WhiteSmoke>producesClosure</back> >
+"ClosureSituation" "0..*" -- "1" ClosureSpecification : <back:WhiteSmoke>satisfiesClosureSpecification</back> >
+HLJStageSpecification "1" o-- "1" "NarrativeFraming" : <back:WhiteSmoke>hasNarrativeFraming</back> >
+HLJStageSpecification "1" o-- "1" "MissionSpecification" : <back:WhiteSmoke>hasMission</back> >
+HLJStageSpecification "1" o-- "1" AssistanceSpecification : <back:WhiteSmoke>hasAssistance</back> >
+StageSpecification "1" o-- "0..*" ChallengeSpecification : <back:WhiteSmoke>hasChallenge</back> >
+HLJStageExecution "1" o-- "0..*" "ChallengeEncounter" : <back:WhiteSmoke>hasChallengeEncounter</back> >
+HLJStageExecution "1" o-- "0..*" "ChallengePerformance" : <back:WhiteSmoke>hasChallengePerformance</back> >
+HLJStageExecution "1" o-- "0..*" "AssistanceProvision" : <back:WhiteSmoke>hasAssistanceProvision</back> >
+"ChallengeEncounter" "0..*" -- "1" ChallengeSpecification : <back:WhiteSmoke>isEncounterOf</back> >
+"ChallengePerformance" "0..*" -- "1" ChallengeSpecification : <back:WhiteSmoke>addressesChallenge</back> >
+"AssistanceProvision" "0..*" -- "1" AssistanceSpecification : <back:WhiteSmoke>realizesAssistance</back> >
+@enduml

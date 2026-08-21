@@ -917,6 +917,15 @@ pre code {
   margin: 0.7rem 0 0;
 }
 
+.term-card .term-definition {
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+.term-card .term-detail {
+  font-size: 0.72rem;
+}
+
 .download-grid {
   display: grid;
   gap: 0.8rem;

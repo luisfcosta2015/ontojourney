@@ -1,0 +1,312 @@
+@prefix oj: <https://w3id.org/ontojourney/core#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+oj:FocalHeroicExecutionShape
+    a sh:NodeShape ;
+    sh:targetClass oj:HeroicNarrativeJourneyExecution ;
+    sh:property [
+        sh:path [ sh:inversePath oj:participatesAsProtagonistIn ] ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class oj:Protagonist ;
+        sh:message "A heroic narrative journey execution must have exactly one focal Protagonist."@en
+    ] .
+
+oj:FocalLearningExecutionShape
+    a sh:NodeShape ;
+    sh:targetClass oj:HeroicNarrativeLearningJourneyExecution ;
+    sh:property [
+        sh:path [ sh:inversePath oj:participatesAsLearnerIn ] ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class oj:Learner ;
+        sh:message "A heroic narrative learning journey execution must have exactly one focal Learner."@en
+    ] ;
+    sh:sparql [
+        sh:message "The focal Protagonist and focal Learner must be the same Person."@en ;
+        sh:select """
+            PREFIX oj: <https://w3id.org/ontojourney/core#>
+            SELECT $this
+            WHERE {
+                FILTER NOT EXISTS {
+                    ?person oj:participatesAsProtagonistIn $this ;
+                            oj:participatesAsLearnerIn $this .
+                }
+            }
+        """
+    ] ;
+    sh:sparql [
+        sh:message "Every transformation produced within the execution must concern its focal participant."@en ;
+        sh:select """
+            PREFIX oj: <https://w3id.org/ontojourney/core#>
+            SELECT DISTINCT $this
+            WHERE {
+                $this oj:hasTransformationEvent ?event .
+                ?event oj:producesTransformation ?transformation .
+                FILTER NOT EXISTS {
+                    ?transformation oj:isTransformationOf ?person .
+                    ?person oj:participatesAsProtagonistIn $this ;
+                            oj:participatesAsLearnerIn $this .
+                }
+            }
+        """
+    ] .
+
+oj:NarrativeExecutionModelShape
+    a sh:NodeShape ;
+    sh:targetClass oj:NarrativeJourneyExecution ;
+    sh:property [
+        sh:path oj:isExecutionOfJourneyModel ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class oj:NarrativeJourneyModel ;
+        sh:message "A Narrative Journey Execution must execute exactly one Narrative Journey Model."@en
+    ] .
+
+oj:HeroicNarrativeExecutionModelShape
+    a sh:NodeShape ;
+    sh:targetClass oj:HeroicNarrativeJourneyExecution ;
+    sh:property [
+        sh:path oj:isExecutionOfJourneyModel ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class oj:HeroicNarrativeJourneyModel ;
+        sh:message "A Heroic Narrative Journey Execution must execute exactly one Heroic Narrative Journey Model."@en
+    ] .
+
+oj:LearningExecutionModelShape
+    a sh:NodeShape ;
+    sh:targetClass oj:LearningJourneyExecution ;
+    sh:property [
+        sh:path oj:isExecutionOfJourneyModel ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class oj:LearningJourneyModel ;
+        sh:message "A Learning Journey Execution must execute exactly one Learning Journey Model."@en
+    ] .
+
+oj:HeroicNarrativeLearningExecutionModelShape
+    a sh:NodeShape ;
+    sh:targetClass oj:HeroicNarrativeLearningJourneyExecution ;
+    sh:property [
+        sh:path oj:isExecutionOfJourneyModel ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class oj:HeroicNarrativeLearningJourneyModel ;
+        sh:message "A Heroic Narrative Learning Journey Execution must execute exactly one Heroic Narrative Learning Journey Model."@en
+    ] .
+
+oj:RealizedTransformationShape
+    a sh:NodeShape ;
+    sh:targetClass oj:RealizedTransformation ;
+    sh:property [
+        sh:path oj:isTransformationOf ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class oj:Person ;
+        sh:message "A RealizedTransformation must concern exactly one Person."@en
+    ] .
+
+oj:HeroicNarrativeLearningJourneyModelShape
+    a sh:NodeShape ;
+    sh:targetClass oj:HeroicNarrativeLearningJourneyModel ;
+    sh:property [
+        sh:path oj:hasStage ;
+        sh:minCount 2 ;
+        sh:class oj:StageSpecification ;
+        sh:message "The model needs two or more StageSpecification members."@en
+    ] ;
+    sh:property [
+        sh:path ( oj:hasStage oj:hasChallenge ) ;
+        sh:minCount 1 ;
+        sh:class oj:ChallengeSpecification ;
+        sh:message "The model needs a hasChallenge path through one of its stages."@en
+    ] ;
+    sh:property [
+        sh:path oj:prescribesTransformation ;
+        sh:qualifiedValueShape [
+            sh:class oj:IntendedLearningTransformation
+        ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:message "A heroic narrative learning journey model must prescribe at least one Intended Learning Transformation."@en
+    ] ;
+    sh:sparql [
+        sh:message "At least two distinct stages of the model must be connected by directlyPrecedesStage."@en ;
+        sh:select """
+            PREFIX oj: <https://w3id.org/ontojourney/core#>
+            SELECT $this
+            WHERE {
+                FILTER NOT EXISTS {
+                    $this oj:hasStage ?first, ?second .
+                    ?first oj:directlyPrecedesStage ?second .
+                    FILTER (?first != ?second)
+                }
+            }
+        """
+    ] .
+
+oj:StageProgressionShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf oj:directlyPrecedesStage ;
+    sh:sparql [
+        sh:message "A Stage Specification must not directly precede itself."@en ;
+        sh:select """
+            PREFIX oj: <https://w3id.org/ontojourney/core#>
+            SELECT $this
+            WHERE {
+                $this oj:directlyPrecedesStage $this .
+            }
+        """
+    ] ;
+    sh:sparql [
+        sh:message "Directly related Stage Specifications must belong to at least one common Journey Model."@en ;
+        sh:select """
+            PREFIX oj: <https://w3id.org/ontojourney/core#>
+            SELECT DISTINCT $this
+            WHERE {
+                $this oj:directlyPrecedesStage ?next .
+                FILTER NOT EXISTS {
+                    ?model oj:hasStage $this, ?next .
+                }
+            }
+        """
+    ] .
+
+oj:JourneyExecutionStageCoherenceShape
+    a sh:NodeShape ;
+    sh:targetClass oj:JourneyExecution ;
+    sh:sparql [
+        sh:message "Every Stage Execution in a Journey Execution must execute a Stage Specification belonging to the executed Journey Model."@en ;
+        sh:select """
+            PREFIX oj: <https://w3id.org/ontojourney/core#>
+            SELECT DISTINCT $this
+            WHERE {
+                $this oj:isExecutionOfJourneyModel ?model ;
+                      oj:hasStageExecution ?stageExecution .
+                ?stageExecution oj:isExecutionOfStageSpecification ?stageSpecification .
+                FILTER NOT EXISTS {
+                    ?model oj:hasStage ?stageSpecification .
+                }
+            }
+        """
+    ] .
+
+oj:HLJStageExecutionShape
+    a sh:NodeShape ;
+    sh:targetClass oj:HLJStageExecution ;
+    sh:property [
+        sh:path oj:isExecutionOfStageSpecification ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class oj:HLJStageSpecification ;
+        sh:message "An HLJ Stage Execution must execute exactly one HLJ Stage Specification."@en
+    ] ;
+    sh:sparql [
+        sh:message "A Challenge Encounter must refer to a Challenge Specification of the same executed HLJ stage."@en ;
+        sh:select """
+            PREFIX oj: <https://w3id.org/ontojourney/core#>
+            SELECT DISTINCT $this
+            WHERE {
+                $this oj:isExecutionOfStageSpecification ?stageSpecification ;
+                      oj:hasChallengeEncounter ?encounter .
+                ?encounter oj:isEncounterOf ?challengeSpecification .
+                FILTER NOT EXISTS {
+                    ?stageSpecification oj:hasChallenge ?challengeSpecification .
+                }
+            }
+        """
+    ] ;
+    sh:sparql [
+        sh:message "A Challenge Performance must address a Challenge Specification of the same executed HLJ stage."@en ;
+        sh:select """
+            PREFIX oj: <https://w3id.org/ontojourney/core#>
+            SELECT DISTINCT $this
+            WHERE {
+                $this oj:isExecutionOfStageSpecification ?stageSpecification ;
+                      oj:hasChallengePerformance ?performance .
+                ?performance oj:addressesChallenge ?challengeSpecification .
+                FILTER NOT EXISTS {
+                    ?stageSpecification oj:hasChallenge ?challengeSpecification .
+                }
+            }
+        """
+    ] ;
+    sh:sparql [
+        sh:message "An Assistance Provision must realize the Assistance Specification of the same executed HLJ stage."@en ;
+        sh:select """
+            PREFIX oj: <https://w3id.org/ontojourney/core#>
+            SELECT DISTINCT $this
+            WHERE {
+                $this oj:isExecutionOfStageSpecification ?stageSpecification ;
+                      oj:hasAssistanceProvision ?provision .
+                ?provision oj:realizesAssistance ?assistanceSpecification .
+                FILTER NOT EXISTS {
+                    ?stageSpecification oj:hasAssistance ?assistanceSpecification .
+                }
+            }
+        """
+    ] .
+
+oj:HLJStageSpecificationShape
+    a sh:NodeShape ;
+    sh:targetClass oj:HLJStageSpecification ;
+    sh:property [
+        sh:path oj:hasChallenge ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class oj:ChallengeSpecification ;
+        sh:message "An HLJ Stage Specification must have exactly one Challenge Specification."@en
+    ] .
+
+oj:SuccessfulExecutionShape
+    a sh:NodeShape ;
+    sh:targetClass oj:SuccessfulHeroicNarrativeLearningJourneyExecution ;
+    sh:property [
+        sh:path oj:isExecutionOfJourneyModel ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class oj:HeroicNarrativeLearningJourneyModel ;
+        sh:message "A successful execution must execute exactly one heroic narrative learning journey model."@en
+    ] ;
+    sh:property [
+        sh:path oj:producesClosure ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class oj:ClosureSituation ;
+        sh:message "A successful execution must produce exactly one Closure Situation."@en
+    ] ;
+    sh:sparql [
+        sh:message "The produced closure must match the closure description linked from the executed model."@en ;
+        sh:select """
+            PREFIX oj: <https://w3id.org/ontojourney/core#>
+            SELECT $this
+            WHERE {
+                $this oj:isExecutionOfJourneyModel ?model ;
+                      oj:producesClosure ?closure .
+                FILTER NOT EXISTS {
+                    ?closure oj:satisfiesClosureSpecification ?specification .
+                    ?model oj:definesClosure ?specification .
+                }
+            }
+        """
+    ] ;
+    sh:sparql [
+        sh:message "A successful execution must realize an intended learning transformation of its focal participant prescribed by the executed model."@en ;
+        sh:select """
+            PREFIX oj: <https://w3id.org/ontojourney/core#>
+            SELECT $this
+            WHERE {
+                FILTER NOT EXISTS {
+                    $this oj:isExecutionOfJourneyModel ?model ;
+                          oj:hasTransformationEvent ?event .
+                    ?event oj:producesTransformation ?realized .
+                    ?realized oj:satisfiesIntendedTransformation ?intended ;
+                              oj:isTransformationOf ?person .
+                    ?model oj:prescribesTransformation ?intended .
+                    ?intended a oj:IntendedLearningTransformation .
+                    ?person oj:participatesAsProtagonistIn $this ;
+                            oj:participatesAsLearnerIn $this .
+                }
+            }
+        """
+    ] .

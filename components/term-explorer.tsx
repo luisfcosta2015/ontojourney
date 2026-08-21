@@ -18,6 +18,7 @@ export function TermExplorer() {
         !normalized ||
         term.name.toLowerCase().includes(normalized) ||
         term.stereotype.toLowerCase().includes(normalized) ||
+        term.definition.toLowerCase().includes(normalized) ||
         term.detail.toLowerCase().includes(normalized);
       return matchesFilter && matchesQuery;
     });
@@ -31,7 +32,7 @@ export function TermExplorer() {
           className="search-input"
           id="term-search"
           onChange={(event) => setQuery(event.target.value)}
-          placeholder="Search by term, stereotype, or endpoint…"
+          placeholder="Search by term, definition, stereotype, or endpoint…"
           type="search"
           value={query}
         />
@@ -57,7 +58,8 @@ export function TermExplorer() {
               <h3>{term.name}</h3>
               <span className="term-type">{term.stereotype}</span>
             </div>
-            <p>{term.detail}</p>
+            {term.definition ? <p className="term-definition">{term.definition}</p> : null}
+            <p className="term-detail">{term.detail}</p>
             <a className="card__link" href={term.iri}>
               Canonical IRI <span aria-hidden="true">↗</span>
             </a>

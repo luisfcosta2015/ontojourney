@@ -1,0 +1,2823 @@
+{
+  "model": {
+    "contents": [
+      {
+        "contents": [
+          {
+            "stereotype": "datatype",
+            "restrictedTo": [
+              "abstract"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "number"
+            },
+            "type": "Class",
+            "id": "wf4yzvj6p9rvw4xvadto",
+            "name": "number",
+            "description": null
+          },
+          {
+            "stereotype": "datatype",
+            "restrictedTo": [
+              "abstract"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "string"
+            },
+            "type": "Class",
+            "id": "3qhbx3894xvbk8q4kqkc",
+            "name": "string",
+            "description": null
+          },
+          {
+            "stereotype": "datatype",
+            "restrictedTo": [
+              "abstract"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "boolean"
+            },
+            "type": "Class",
+            "id": "gno8pkklkhhe6p9hdymm",
+            "name": "boolean",
+            "description": null
+          },
+          {
+            "stereotype": "datatype",
+            "restrictedTo": [
+              "abstract"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "date"
+            },
+            "type": "Class",
+            "id": "02s0knis1t1j2h1l3idy",
+            "name": "date",
+            "description": null
+          },
+          {
+            "stereotype": "datatype",
+            "restrictedTo": [
+              "abstract"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "time"
+            },
+            "type": "Class",
+            "id": "s3gmmd8wc3o53a9gwzf0",
+            "name": "time",
+            "description": null
+          },
+          {
+            "stereotype": "datatype",
+            "restrictedTo": [
+              "abstract"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "datetime"
+            },
+            "type": "Class",
+            "id": "5ufj0zgqazijruvcvlx7",
+            "name": "datetime",
+            "description": null
+          },
+          {
+            "stereotype": "datatype",
+            "restrictedTo": [
+              "abstract"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "undefined"
+            },
+            "type": "Class",
+            "id": "dmicumzgcwc5ezkdqgy4",
+            "name": "undefined",
+            "description": null
+          }
+        ],
+        "propertyAssignments": {
+          "__tontoImports": []
+        },
+        "type": "Package",
+        "id": "kj91lybiwq6i1qhl4z8u",
+        "name": "Tonto.BasicDataTypes",
+        "description": null
+      },
+      {
+        "contents": [
+          {
+            "stereotype": "kind",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "InformationObject"
+            },
+            "type": "Class",
+            "id": "ia4unm4o5f65qom1kbcy",
+            "name": "InformationObject",
+            "description": "An entity whose identity is determined by its informational content and that may be expressed through different physical or digital carriers."
+          },
+          {
+            "stereotype": "subkind",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "Description"
+            },
+            "type": "Class",
+            "id": "mgoyjz7diqjas570am5u",
+            "name": "Description",
+            "description": "An Information Object that expresses a conceptualization of entities or configurations and provides criteria for interpreting or assessing them."
+          },
+          {
+            "stereotype": "subkind",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "NarrativeContent"
+            },
+            "type": "Class",
+            "id": "agmtk7yl2wsfepqhbdcx",
+            "name": "NarrativeContent",
+            "description": "An Information Object that organises characters, events, or themes as narrative content, independently of the medium through which it is expressed."
+          },
+          {
+            "stereotype": "subkind",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "NormativeDescription"
+            },
+            "type": "Class",
+            "id": "82sdo8o1h5xnibb8yv9h",
+            "name": "NormativeDescription",
+            "description": "A Description that prescribes, permits, or evaluates possible actions or situations instead of merely characterising them."
+          },
+          {
+            "stereotype": "subkind",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "PlanDescription"
+            },
+            "type": "Class",
+            "id": "cysk59d73nkmvuwttljw",
+            "name": "PlanDescription",
+            "description": "A Normative Description that prescribes or organises intended actions and events towards a purpose."
+          },
+          {
+            "stereotype": "subkind",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "GoalDescription"
+            },
+            "type": "Class",
+            "id": "h1vkxozkui8lyzb01f4q",
+            "name": "GoalDescription",
+            "description": "A Normative Description whose propositional content describes a situation intended to be attained."
+          },
+          {
+            "stereotype": "subkind",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "ConditionDescription"
+            },
+            "type": "Class",
+            "id": "dphu0u21ry7bu8yel6nm",
+            "name": "ConditionDescription",
+            "description": "A Normative Description that specifies a condition against which a situation can be assessed."
+          },
+          {
+            "stereotype": "subkind",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "JourneyModel"
+            },
+            "type": "Class",
+            "id": "3f2y9yc72ed1h5pqycf7",
+            "name": "JourneyModel",
+            "description": "A Description that characterises a reusable journey pattern through one or more Stage Specifications and one Closure Specification, and may prescribe Intended Transformations."
+          },
+          {
+            "stereotype": "subkind",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "NarrativeJourneyModel"
+            },
+            "type": "Class",
+            "id": "hi95hn1gmgg18wayv337",
+            "name": "NarrativeJourneyModel",
+            "description": "A Journey Model whose overall progression is organised by exactly one Journey Narrative."
+          },
+          {
+            "stereotype": "subkind",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "HeroicNarrativeJourneyModel"
+            },
+            "type": "Class",
+            "id": "2gxu1j7pl05soaqbipn6",
+            "name": "HeroicNarrativeJourneyModel",
+            "description": "A Narrative Journey Model that frames a meaningful progression through demanding stages towards transformation and closure as a heroic trajectory."
+          },
+          {
+            "stereotype": "subkind",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "LearningJourneyModel"
+            },
+            "type": "Class",
+            "id": "x4xqonx2df52lvptxgsc",
+            "name": "LearningJourneyModel",
+            "description": "A Journey Model and Plan Description that intentionally organises an educational experience and has at least one Educational Purpose."
+          },
+          {
+            "stereotype": "subkind",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "HeroicNarrativeLearningJourneyModel"
+            },
+            "type": "Class",
+            "id": "1vz4iijkiuyd52i8bokx",
+            "name": "HeroicNarrativeLearningJourneyModel",
+            "description": "A Heroic Narrative Journey Model and Learning Journey Model whose identity includes one Journey Narrative, at least two connected Stage Specifications, at least one challenged stage, at least one Educational Purpose, at least one Intended Learning Transformation, and one Closure Specification."
+          },
+          {
+            "stereotype": "subkind",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "StageSpecification"
+            },
+            "type": "Class",
+            "id": "44molcotuqat4y12l3q9",
+            "name": "StageSpecification",
+            "description": "A Plan Description that specifies one stage belonging to a Journey Model and may be linked to other Stage Specifications through directlyPrecedesStage."
+          },
+          {
+            "stereotype": "subkind",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "JourneyNarrative"
+            },
+            "type": "Class",
+            "id": "dmi5gbaihoco0ymhbiu4",
+            "name": "JourneyNarrative",
+            "description": "Narrative Content that organises the narrative progression of a Narrative Journey Model as a whole."
+          },
+          {
+            "stereotype": "subkind",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "NarrativeFraming"
+            },
+            "type": "Class",
+            "id": "cycpi1b9ancr276p5ghh",
+            "name": "NarrativeFraming",
+            "description": "Narrative Content that gives one HLJ Stage Specification its local narrative context and connects it to the wider journey."
+          },
+          {
+            "stereotype": "subkind",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "IntendedTransformation"
+            },
+            "type": "Class",
+            "id": "je5zq9484328xsmjtw8d",
+            "name": "IntendedTransformation",
+            "description": "A Goal Description prescribed by a Journey Model that specifies a transformation the model is intended to bring about."
+          },
+          {
+            "stereotype": "subkind",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "IntendedLearningTransformation"
+            },
+            "type": "Class",
+            "id": "j4b87h0o66s1jhd56fqc",
+            "name": "IntendedLearningTransformation",
+            "description": "An Intended Transformation that specifies a learning-related change to be pursued through a learning journey."
+          },
+          {
+            "stereotype": "subkind",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "EducationalPurpose"
+            },
+            "type": "Class",
+            "id": "wi058edfywh2ic6eqnde",
+            "name": "EducationalPurpose",
+            "description": "A Goal Description that states an educational aim of a Learning Journey Model."
+          },
+          {
+            "stereotype": "subkind",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "MissionSpecification"
+            },
+            "type": "Class",
+            "id": "8z06l5py6f820ysnlrln",
+            "name": "MissionSpecification",
+            "description": "A Normative Description that states what the Learner is invited or expected to pursue within an HLJ stage and may combine a desired result with directions for action."
+          },
+          {
+            "stereotype": "subkind",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "ClosureSpecification"
+            },
+            "type": "Class",
+            "id": "dyuhqrccdk2jhoayh4ru",
+            "name": "ClosureSpecification",
+            "description": "A Condition Description defined by a Journey Model that states the condition under which an execution of the model counts as having reached closure."
+          },
+          {
+            "stereotype": "subkind",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "ChallengeSpecification"
+            },
+            "type": "Class",
+            "id": "6zhdc701i6rx5wvj0t1s",
+            "name": "ChallengeSpecification",
+            "description": "A Normative Description assigned to a Stage Specification that describes a demand, obstacle, problem, task, or condition that makes progression demanding."
+          },
+          {
+            "stereotype": "subkind",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "AssistanceSpecification"
+            },
+            "type": "Class",
+            "id": "pnpb8kkw6qj1lcn7alrr",
+            "name": "AssistanceSpecification",
+            "description": "A Normative Description of support intended to be made available within an HLJ Stage Specification."
+          },
+          {
+            "stereotype": "event",
+            "restrictedTo": [
+              "event"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "JourneyExecution"
+            },
+            "type": "Class",
+            "id": "sv0ldvsmijlsi58r0zy6",
+            "name": "JourneyExecution",
+            "description": "A complex event in which one Journey Model is enacted in a particular context through one or more Stage Executions."
+          },
+          {
+            "stereotype": "event",
+            "restrictedTo": [
+              "event"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "NarrativeJourneyExecution"
+            },
+            "type": "Class",
+            "id": "sebokgn8pnslhgds1v45",
+            "name": "NarrativeJourneyExecution",
+            "description": "A Journey Execution of a Narrative Journey Model in which the performed stages enact a narratively organised journey."
+          },
+          {
+            "stereotype": "event",
+            "restrictedTo": [
+              "event"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "HeroicNarrativeJourneyExecution"
+            },
+            "type": "Class",
+            "id": "1zle8rv2r08wtevo0cxp",
+            "name": "HeroicNarrativeJourneyExecution",
+            "description": "A Narrative Journey Execution of a Heroic Narrative Journey Model that constitutes one focal heroic trajectory with exactly one Protagonist."
+          },
+          {
+            "stereotype": "event",
+            "restrictedTo": [
+              "event"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "LearningJourneyExecution"
+            },
+            "type": "Class",
+            "id": "db5uv1erhx3tnoef35e9",
+            "name": "LearningJourneyExecution",
+            "description": "A Journey Execution of a Learning Journey Model in which at least one Person participates as Learner."
+          },
+          {
+            "stereotype": "event",
+            "restrictedTo": [
+              "event"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "HeroicNarrativeLearningJourneyExecution"
+            },
+            "type": "Class",
+            "id": "5n68ycga6ubeeyx3q9ct",
+            "name": "HeroicNarrativeLearningJourneyExecution",
+            "description": "A Heroic Narrative Journey Execution and Learning Journey Execution of one Heroic Narrative Learning Journey Model, with exactly one focal Person participating as both Protagonist and Learner."
+          },
+          {
+            "stereotype": "event",
+            "restrictedTo": [
+              "event"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "SuccessfulHeroicNarrativeLearningJourneyExecution"
+            },
+            "type": "Class",
+            "id": "bsrgywgxpsem96nnq5ep",
+            "name": "SuccessfulHeroicNarrativeLearningJourneyExecution",
+            "description": "A Heroic Narrative Learning Journey Execution that produces a Closure Situation satisfying the executed model's Closure Specification and at least one Realized Transformation of the focal Person satisfying an Intended Learning Transformation prescribed by that model."
+          },
+          {
+            "stereotype": "event",
+            "restrictedTo": [
+              "event"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "StageExecution"
+            },
+            "type": "Class",
+            "id": "7c27icc4vz0ceb0v06p0",
+            "name": "StageExecution",
+            "description": "An event within a Journey Execution that enacts one Stage Specification belonging to the executed Journey Model."
+          },
+          {
+            "stereotype": "event",
+            "restrictedTo": [
+              "event"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "HLJStageExecution"
+            },
+            "type": "Class",
+            "id": "dvtvthvkrovz5f3fpex7",
+            "name": "HLJStageExecution",
+            "description": "A Stage Execution of an HLJ Stage Specification that may include Challenge Encounters, Challenge Performances, and Assistance Provisions connected to specifications of that same stage."
+          },
+          {
+            "stereotype": "event",
+            "restrictedTo": [
+              "event"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "TransformationEvent"
+            },
+            "type": "Class",
+            "id": "vyumhw5ky8lqf05q2r9b",
+            "name": "TransformationEvent",
+            "description": "An event within a Journey Execution that brings about one Realized Transformation."
+          },
+          {
+            "stereotype": "event",
+            "restrictedTo": [
+              "event"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "ChallengeEncounter"
+            },
+            "type": "Class",
+            "id": "c3fkzax2u90jknhq4qa5",
+            "name": "ChallengeEncounter",
+            "description": "An event within an HLJ Stage Execution in which the specified challenge of that stage is faced, whether or not it is successfully addressed."
+          },
+          {
+            "stereotype": "event",
+            "restrictedTo": [
+              "event"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "ChallengePerformance"
+            },
+            "type": "Class",
+            "id": "kpzrcfhm9sa3qjug5htd",
+            "name": "ChallengePerformance",
+            "description": "An event within an HLJ Stage Execution in which action is directed towards the specified challenge of that stage; its occurrence does not by itself imply success."
+          },
+          {
+            "stereotype": "event",
+            "restrictedTo": [
+              "event"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "AssistanceProvision"
+            },
+            "type": "Class",
+            "id": "07hsh55wyl02z4pra2n4",
+            "name": "AssistanceProvision",
+            "description": "An event within an HLJ Stage Execution in which assistance specified for that stage is provided."
+          },
+          {
+            "stereotype": "situation",
+            "restrictedTo": [
+              "situation"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "RealizedTransformation"
+            },
+            "type": "Class",
+            "id": "nkzz9c57lvdeegx1gbpy",
+            "name": "RealizedTransformation",
+            "description": "A situation brought about by one or more Transformation Events that represents an actual change concerning exactly one Person and satisfies one Intended Transformation."
+          },
+          {
+            "stereotype": "situation",
+            "restrictedTo": [
+              "situation"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "ClosureSituation"
+            },
+            "type": "Class",
+            "id": "srcnsripr2ebaxdp3nq3",
+            "name": "ClosureSituation",
+            "description": "A situation brought about by a Journey Execution that satisfies a Closure Specification; in a successful execution, that specification is defined by the executed model."
+          },
+          {
+            "stereotype": "kind",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "Person"
+            },
+            "type": "Class",
+            "id": "ya4td9hch594ocqrftl6",
+            "name": "Person",
+            "description": "A human individual who may participate in Journey Executions and whose identity is preserved across the historical roles Protagonist and Learner."
+          },
+          {
+            "stereotype": "historicalRole",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "Protagonist"
+            },
+            "type": "Class",
+            "id": "owrnm1dzcg96brfj7svr",
+            "name": "Protagonist",
+            "description": "A historical role instantiated by a Person through participation as the focal subject of a Heroic Narrative Journey Execution."
+          },
+          {
+            "stereotype": "historicalRole",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "Learner"
+            },
+            "type": "Class",
+            "id": "3btgi3l8y68xyz18p2v0",
+            "name": "Learner",
+            "description": "A historical role instantiated by a Person through participation in a Learning Journey Execution."
+          },
+          {
+            "stereotype": "subkind",
+            "restrictedTo": [
+              "functional-complex"
+            ],
+            "properties": null,
+            "literals": null,
+            "isAbstract": false,
+            "isDerived": false,
+            "isExtensional": false,
+            "isPowertype": false,
+            "order": "1",
+            "propertyAssignments": {
+              "__tontoName": "HLJStageSpecification"
+            },
+            "type": "Class",
+            "id": "5q9p89v4ej4u0b4l2pxu",
+            "name": "HLJStageSpecification",
+            "description": "A Stage Specification in the Heroine's Learning Journey anatomy that contains exactly one Narrative Framing, Mission Specification, Challenge Specification, and Assistance Specification."
+          },
+          {
+            "stereotype": null,
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "3f2y9yc72ed1h5pqycf7"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "SHARED",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0pg",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "1..*",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "44molcotuqat4y12l3q9"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0ph",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "zr5bqes2avrzgek66siu",
+            "name": "hasStage",
+            "description": null
+          },
+          {
+            "stereotype": null,
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "0..*",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "44molcotuqat4y12l3q9"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0pj",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "0..*",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "44molcotuqat4y12l3q9"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0pk",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "hnztaym00u3zzwlmwn64",
+            "name": "directlyPrecedesStage",
+            "description": null
+          },
+          {
+            "stereotype": null,
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "hi95hn1gmgg18wayv337"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "SHARED",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0pm",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "dmi5gbaihoco0ymhbiu4"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0pn",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "5q2nkwxv0vxkz8sj1wb2",
+            "name": "hasNarrative",
+            "description": null
+          },
+          {
+            "stereotype": null,
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "3f2y9yc72ed1h5pqycf7"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0pp",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "0..*",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "je5zq9484328xsmjtw8d"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0pq",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "1yhi1fxhhkwi31puednm",
+            "name": "prescribesTransformation",
+            "description": null
+          },
+          {
+            "stereotype": null,
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "x4xqonx2df52lvptxgsc"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0ps",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "1..*",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "wi058edfywh2ic6eqnde"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0pt",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "1i2kd7skm8uogcvizmiz",
+            "name": "hasEducationalPurpose",
+            "description": null
+          },
+          {
+            "stereotype": null,
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "3f2y9yc72ed1h5pqycf7"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0pv",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "dyuhqrccdk2jhoayh4ru"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0pw",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "9xnulyz1irtrt6twavlk",
+            "name": "definesClosure",
+            "description": null
+          },
+          {
+            "stereotype": null,
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "0..*",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "sv0ldvsmijlsi58r0zy6"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0py",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "3f2y9yc72ed1h5pqycf7"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0pz",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "etcvdsvlnktxoafawoqa",
+            "name": "isExecutionOfJourneyModel",
+            "description": null
+          },
+          {
+            "stereotype": null,
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "sv0ldvsmijlsi58r0zy6"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "SHARED",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0q1",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "1..*",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "7c27icc4vz0ceb0v06p0"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0q2",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "c71lqprw22t7szav6l03",
+            "name": "hasStageExecution",
+            "description": null
+          },
+          {
+            "stereotype": null,
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "0..*",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "7c27icc4vz0ceb0v06p0"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0q4",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "44molcotuqat4y12l3q9"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0q5",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "3y70p47lprqr16buv05w",
+            "name": "isExecutionOfStageSpecification",
+            "description": null
+          },
+          {
+            "stereotype": "participation",
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "owrnm1dzcg96brfj7svr"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0q7",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "1..*",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "1zle8rv2r08wtevo0cxp"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0q8",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "yuuyh0696pcc99b4l273",
+            "name": "participatesAsProtagonistIn",
+            "description": null
+          },
+          {
+            "stereotype": "participation",
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "1..*",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "3btgi3l8y68xyz18p2v0"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0qa",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "1..*",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "db5uv1erhx3tnoef35e9"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0qb",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "7ozaj3htxl61yme6gmcx",
+            "name": "participatesAsLearnerIn",
+            "description": null
+          },
+          {
+            "stereotype": null,
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "sv0ldvsmijlsi58r0zy6"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "SHARED",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0qd",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "0..*",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "vyumhw5ky8lqf05q2r9b"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0qe",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "3qemrxrak8xaeub347oq",
+            "name": "hasTransformationEvent",
+            "description": null
+          },
+          {
+            "stereotype": "bringsAbout",
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "1..*",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "vyumhw5ky8lqf05q2r9b"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0qg",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "nkzz9c57lvdeegx1gbpy"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0qh",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "8l1yqpkbu1yk7biyhv0s",
+            "name": "producesTransformation",
+            "description": null
+          },
+          {
+            "stereotype": null,
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "0..*",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "nkzz9c57lvdeegx1gbpy"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0qj",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "je5zq9484328xsmjtw8d"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0qk",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "imjtvy1lh3k1as97bmqk",
+            "name": "satisfiesIntendedTransformation",
+            "description": null
+          },
+          {
+            "stereotype": null,
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "0..*",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "nkzz9c57lvdeegx1gbpy"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0qm",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "ya4td9hch594ocqrftl6"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0qn",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "h5ns8caj6bsy4xh0nqq2",
+            "name": "isTransformationOf",
+            "description": null
+          },
+          {
+            "stereotype": "bringsAbout",
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "sv0ldvsmijlsi58r0zy6"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0qp",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "0..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "srcnsripr2ebaxdp3nq3"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0qq",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "vz2g9l10yez9ihin33dr",
+            "name": "producesClosure",
+            "description": null
+          },
+          {
+            "stereotype": null,
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "0..*",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "srcnsripr2ebaxdp3nq3"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0qs",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "dyuhqrccdk2jhoayh4ru"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0qt",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "0im0pr3w6x20fi93eymd",
+            "name": "satisfiesClosureSpecification",
+            "description": null
+          },
+          {
+            "stereotype": null,
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "5q9p89v4ej4u0b4l2pxu"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "SHARED",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0qv",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "cycpi1b9ancr276p5ghh"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0qw",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "ze7egbt1z3j8dtinon82",
+            "name": "hasNarrativeFraming",
+            "description": null
+          },
+          {
+            "stereotype": null,
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "5q9p89v4ej4u0b4l2pxu"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "SHARED",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0qy",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "8z06l5py6f820ysnlrln"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0qz",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "phlxut62vjpnecf5ndhu",
+            "name": "hasMission",
+            "description": null
+          },
+          {
+            "stereotype": null,
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "5q9p89v4ej4u0b4l2pxu"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "SHARED",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0r1",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "pnpb8kkw6qj1lcn7alrr"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0r2",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "il03irjagiap7e95146c",
+            "name": "hasAssistance",
+            "description": null
+          },
+          {
+            "stereotype": null,
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "44molcotuqat4y12l3q9"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "SHARED",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0r4",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "0..*",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "6zhdc701i6rx5wvj0t1s"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0r5",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "z27d9rx9zxf2li57kh40",
+            "name": "hasChallenge",
+            "description": null
+          },
+          {
+            "stereotype": null,
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "dvtvthvkrovz5f3fpex7"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "SHARED",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0r7",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "0..*",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "c3fkzax2u90jknhq4qa5"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0r8",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "sga4www0me2g5kdnygcm",
+            "name": "hasChallengeEncounter",
+            "description": null
+          },
+          {
+            "stereotype": null,
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "dvtvthvkrovz5f3fpex7"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "SHARED",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0ra",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "0..*",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "kpzrcfhm9sa3qjug5htd"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0rb",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "td0ile82dhvxxnssf9jw",
+            "name": "hasChallengePerformance",
+            "description": null
+          },
+          {
+            "stereotype": null,
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "dvtvthvkrovz5f3fpex7"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "SHARED",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0rd",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "0..*",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "07hsh55wyl02z4pra2n4"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0re",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "xxbqrzguc5006ni24ewv",
+            "name": "hasAssistanceProvision",
+            "description": null
+          },
+          {
+            "stereotype": null,
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "0..*",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "c3fkzax2u90jknhq4qa5"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0rg",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "6zhdc701i6rx5wvj0t1s"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0rh",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "4rqdufb1y4qfqhlhxppr",
+            "name": "isEncounterOf",
+            "description": null
+          },
+          {
+            "stereotype": null,
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "0..*",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "kpzrcfhm9sa3qjug5htd"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0rj",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "6zhdc701i6rx5wvj0t1s"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0rk",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "1xi0bwo1m0ghacqyidts",
+            "name": "addressesChallenge",
+            "description": null
+          },
+          {
+            "stereotype": null,
+            "properties": [
+              {
+                "stereotype": null,
+                "cardinality": "0..*",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "07hsh55wyl02z4pra2n4"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0rm",
+                "name": null,
+                "description": null
+              },
+              {
+                "stereotype": null,
+                "cardinality": "1..1",
+                "propertyType": {
+                  "type": "Class",
+                  "id": "pnpb8kkw6qj1lcn7alrr"
+                },
+                "subsettedProperties": null,
+                "redefinedProperties": null,
+                "aggregationKind": "NONE",
+                "isDerived": false,
+                "isOrdered": false,
+                "isReadOnly": false,
+                "propertyAssignments": {},
+                "type": "Property",
+                "id": "kmszrq0rn",
+                "name": null,
+                "description": null
+              }
+            ],
+            "isAbstract": false,
+            "isDerived": false,
+            "propertyAssignments": {},
+            "type": "Relation",
+            "id": "jepze7rr2jbxc88plo93",
+            "name": "realizesAssistance",
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "ia4unm4o5f65qom1kbcy"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "mgoyjz7diqjas570am5u"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "71ov2r9r0lxdwt9w4f0c",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "ia4unm4o5f65qom1kbcy"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "agmtk7yl2wsfepqhbdcx"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "lkn1bwmdrp8pkawfrucp",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "mgoyjz7diqjas570am5u"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "82sdo8o1h5xnibb8yv9h"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "t0grazlrc7zc7c9m5tnh",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "82sdo8o1h5xnibb8yv9h"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "cysk59d73nkmvuwttljw"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "v2k7dmlaf6qjn6wxkndl",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "82sdo8o1h5xnibb8yv9h"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "h1vkxozkui8lyzb01f4q"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "p9yyfur7htklh8y33zm4",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "82sdo8o1h5xnibb8yv9h"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "dphu0u21ry7bu8yel6nm"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "hwxyq44roy9kypl4pvmu",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "mgoyjz7diqjas570am5u"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "3f2y9yc72ed1h5pqycf7"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "vbjbpva61e6815qhz4u6",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "3f2y9yc72ed1h5pqycf7"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "hi95hn1gmgg18wayv337"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "ndc13yawv14bczp9a07y",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "hi95hn1gmgg18wayv337"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "2gxu1j7pl05soaqbipn6"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "r2evh3u1j9jk4hhxwvl5",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "3f2y9yc72ed1h5pqycf7"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "x4xqonx2df52lvptxgsc"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "2s44lflzcoq5wp8c9mm1",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "cysk59d73nkmvuwttljw"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "x4xqonx2df52lvptxgsc"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "yqp8rwxyv3xhzi5h2sef",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "2gxu1j7pl05soaqbipn6"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "1vz4iijkiuyd52i8bokx"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "auojqq33kr801nebs4cz",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "x4xqonx2df52lvptxgsc"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "1vz4iijkiuyd52i8bokx"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "umc7dbbqkm5z1qv93z6l",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "cysk59d73nkmvuwttljw"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "44molcotuqat4y12l3q9"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "9fzc5hl350ogn3zy0l5p",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "agmtk7yl2wsfepqhbdcx"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "dmi5gbaihoco0ymhbiu4"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "03u2386r35w1gk4ine5e",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "agmtk7yl2wsfepqhbdcx"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "cycpi1b9ancr276p5ghh"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "h9ogalv0973e2o6t9sc5",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "h1vkxozkui8lyzb01f4q"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "je5zq9484328xsmjtw8d"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "atpld5lbdnrptgax4aei",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "je5zq9484328xsmjtw8d"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "j4b87h0o66s1jhd56fqc"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "lml7ykw4jxsht0swfa28",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "h1vkxozkui8lyzb01f4q"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "wi058edfywh2ic6eqnde"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "9ocyzrzty5dtucn1s6ph",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "82sdo8o1h5xnibb8yv9h"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "8z06l5py6f820ysnlrln"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "j19ase1o51hnstm9mfx2",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "dphu0u21ry7bu8yel6nm"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "dyuhqrccdk2jhoayh4ru"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "3vedib9nh5lpbvyztifp",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "82sdo8o1h5xnibb8yv9h"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "6zhdc701i6rx5wvj0t1s"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "g0d5p6970dcyv4iao0e4",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "82sdo8o1h5xnibb8yv9h"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "pnpb8kkw6qj1lcn7alrr"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "j26rzyovbr6sl46avqt0",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "sv0ldvsmijlsi58r0zy6"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "sebokgn8pnslhgds1v45"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "gpourwjc5m4r43spqtun",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "sebokgn8pnslhgds1v45"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "1zle8rv2r08wtevo0cxp"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "66qiqhdmvwgiy1clf1b7",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "sv0ldvsmijlsi58r0zy6"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "db5uv1erhx3tnoef35e9"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "c38jlfsq1of7ffw7j71k",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "1zle8rv2r08wtevo0cxp"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "5n68ycga6ubeeyx3q9ct"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "9pby7d2qe8x86n534zuo",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "db5uv1erhx3tnoef35e9"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "5n68ycga6ubeeyx3q9ct"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "ebhbxccxkrorjtohl6mm",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "5n68ycga6ubeeyx3q9ct"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "bsrgywgxpsem96nnq5ep"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "o9fisif78sf9crh2ke5o",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "7c27icc4vz0ceb0v06p0"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "dvtvthvkrovz5f3fpex7"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "kzg0vm8rgeuw92yw3szq",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "ya4td9hch594ocqrftl6"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "owrnm1dzcg96brfj7svr"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "biq01r4lrrqirtl2u1km",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "ya4td9hch594ocqrftl6"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "3btgi3l8y68xyz18p2v0"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "5any8qcq57u8n3lr0v8z",
+            "name": null,
+            "description": null
+          },
+          {
+            "general": {
+              "type": "Class",
+              "id": "44molcotuqat4y12l3q9"
+            },
+            "specific": {
+              "type": "Class",
+              "id": "5q9p89v4ej4u0b4l2pxu"
+            },
+            "propertyAssignments": {},
+            "type": "Generalization",
+            "id": "jk1aabxtrfcapyy9i4d7",
+            "name": null,
+            "description": null
+          }
+        ],
+        "propertyAssignments": {
+          "__tontoImports": []
+        },
+        "type": "Package",
+        "id": "tfon6hn3c4kzmtwch7rn",
+        "name": "ontojourney.core",
+        "description": null
+      }
+    ],
+    "propertyAssignments": {},
+    "type": "Package",
+    "id": "kmszrq0o1",
+    "name": "OntoJourneyCore",
+    "description": null
+  },
+  "diagrams": null,
+  "type": "Project",
+  "id": "kmszrq0o0",
+  "name": "OntoJourneyCore",
+  "description": null
+}

@@ -4,7 +4,7 @@
   "namespace": "https://example.org/replace-with-controlled-namespace#",
   "dependsOn": {
     "ontology": "https://w3id.org/ontojourney/core",
-    "version": "0.9.0"
+    "version": "0.9.1"
   },
   "license": "CC-BY-4.0",
   "competencyQuestions": []

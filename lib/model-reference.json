@@ -3,6 +3,7 @@
     "name": "addressesChallenge",
     "kind": "relation",
     "stereotype": "relation",
+    "definition": "",
     "detail": "ChallengePerformance [0..*] → ChallengeSpecification [1..1].",
     "iri": "https://w3id.org/ontojourney/core#addressesChallenge"
   },
@@ -10,6 +11,7 @@
     "name": "AssistanceProvision",
     "kind": "class",
     "stereotype": "event",
+    "definition": "An event within an HLJ Stage Execution in which assistance specified for that stage is provided.",
     "detail": "Top-level type in the OntoJourney domain model.",
     "iri": "https://w3id.org/ontojourney/core#AssistanceProvision"
   },
@@ -17,6 +19,7 @@
     "name": "AssistanceSpecification",
     "kind": "class",
     "stereotype": "subkind",
+    "definition": "A Normative Description of support intended to be made available within an HLJ Stage Specification.",
     "detail": "Specializes NormativeDescription.",
     "iri": "https://w3id.org/ontojourney/core#AssistanceSpecification"
   },
@@ -24,6 +27,7 @@
     "name": "ChallengeEncounter",
     "kind": "class",
     "stereotype": "event",
+    "definition": "An event within an HLJ Stage Execution in which the specified challenge of that stage is faced, whether or not it is successfully addressed.",
     "detail": "Top-level type in the OntoJourney domain model.",
     "iri": "https://w3id.org/ontojourney/core#ChallengeEncounter"
   },
@@ -31,6 +35,7 @@
     "name": "ChallengePerformance",
     "kind": "class",
     "stereotype": "event",
+    "definition": "An event within an HLJ Stage Execution in which action is directed towards the specified challenge of that stage; its occurrence does not by itself imply success.",
     "detail": "Top-level type in the OntoJourney domain model.",
     "iri": "https://w3id.org/ontojourney/core#ChallengePerformance"
   },
@@ -38,6 +43,7 @@
     "name": "ChallengeSpecification",
     "kind": "class",
     "stereotype": "subkind",
+    "definition": "A Normative Description assigned to a Stage Specification that describes a demand, obstacle, problem, task, or condition that makes progression demanding.",
     "detail": "Specializes NormativeDescription.",
     "iri": "https://w3id.org/ontojourney/core#ChallengeSpecification"
   },
@@ -45,6 +51,7 @@
     "name": "ClosureSituation",
     "kind": "class",
     "stereotype": "situation",
+    "definition": "A situation brought about by a Journey Execution that satisfies a Closure Specification; in a successful execution, that specification is defined by the executed model.",
     "detail": "Top-level type in the OntoJourney domain model.",
     "iri": "https://w3id.org/ontojourney/core#ClosureSituation"
   },
@@ -52,6 +59,7 @@
     "name": "ClosureSpecification",
     "kind": "class",
     "stereotype": "subkind",
+    "definition": "A Condition Description defined by a Journey Model that states the condition under which an execution of the model counts as having reached closure.",
     "detail": "Specializes ConditionDescription.",
     "iri": "https://w3id.org/ontojourney/core#ClosureSpecification"
   },
@@ -59,6 +67,7 @@
     "name": "ConditionDescription",
     "kind": "class",
     "stereotype": "subkind",
+    "definition": "A Normative Description that specifies a condition against which a situation can be assessed.",
     "detail": "Specializes NormativeDescription.",
     "iri": "https://w3id.org/ontojourney/core#ConditionDescription"
   },
@@ -66,6 +75,7 @@
     "name": "definesClosure",
     "kind": "relation",
     "stereotype": "relation",
+    "definition": "",
     "detail": "JourneyModel [1..1] → ClosureSpecification [1..1].",
     "iri": "https://w3id.org/ontojourney/core#definesClosure"
   },
@@ -73,6 +83,7 @@
     "name": "Description",
     "kind": "class",
     "stereotype": "subkind",
+    "definition": "An Information Object that expresses a conceptualization of entities or configurations and provides criteria for interpreting or assessing them.",
     "detail": "Specializes InformationObject.",
     "iri": "https://w3id.org/ontojourney/core#Description"
   },
@@ -80,6 +91,7 @@
     "name": "directlyPrecedesStage",
     "kind": "relation",
     "stereotype": "relation",
+    "definition": "",
     "detail": "StageSpecification [0..*] → StageSpecification [0..*].",
     "iri": "https://w3id.org/ontojourney/core#directlyPrecedesStage"
   },
@@ -87,6 +99,7 @@
     "name": "EducationalPurpose",
     "kind": "class",
     "stereotype": "subkind",
+    "definition": "A Goal Description that states an educational aim of a Learning Journey Model.",
     "detail": "Specializes GoalDescription.",
     "iri": "https://w3id.org/ontojourney/core#EducationalPurpose"
   },
@@ -94,6 +107,7 @@
     "name": "GoalDescription",
     "kind": "class",
     "stereotype": "subkind",
+    "definition": "A Normative Description whose propositional content describes a situation intended to be attained.",
     "detail": "Specializes NormativeDescription.",
     "iri": "https://w3id.org/ontojourney/core#GoalDescription"
   },
@@ -101,6 +115,7 @@
     "name": "hasAssistance",
     "kind": "relation",
     "stereotype": "relation",
+    "definition": "",
     "detail": "HLJStageSpecification [1..1] → AssistanceSpecification [1..1].",
     "iri": "https://w3id.org/ontojourney/core#hasAssistance"
   },
@@ -108,6 +123,7 @@
     "name": "hasAssistanceProvision",
     "kind": "relation",
     "stereotype": "relation",
+    "definition": "",
     "detail": "HLJStageExecution [1..1] → AssistanceProvision [0..*].",
     "iri": "https://w3id.org/ontojourney/core#hasAssistanceProvision"
   },
@@ -115,6 +131,7 @@
     "name": "hasChallenge",
     "kind": "relation",
     "stereotype": "relation",
+    "definition": "",
     "detail": "StageSpecification [1..1] → ChallengeSpecification [0..*].",
     "iri": "https://w3id.org/ontojourney/core#hasChallenge"
   },
@@ -122,6 +139,7 @@
     "name": "hasChallengeEncounter",
     "kind": "relation",
     "stereotype": "relation",
+    "definition": "",
     "detail": "HLJStageExecution [1..1] → ChallengeEncounter [0..*].",
     "iri": "https://w3id.org/ontojourney/core#hasChallengeEncounter"
   },
@@ -129,6 +147,7 @@
     "name": "hasChallengePerformance",
     "kind": "relation",
     "stereotype": "relation",
+    "definition": "",
     "detail": "HLJStageExecution [1..1] → ChallengePerformance [0..*].",
     "iri": "https://w3id.org/ontojourney/core#hasChallengePerformance"
   },
@@ -136,6 +155,7 @@
     "name": "hasEducationalPurpose",
     "kind": "relation",
     "stereotype": "relation",
+    "definition": "",
     "detail": "LearningJourneyModel [1..1] → EducationalPurpose [1..*].",
     "iri": "https://w3id.org/ontojourney/core#hasEducationalPurpose"
   },
@@ -143,6 +163,7 @@
     "name": "hasMission",
     "kind": "relation",
     "stereotype": "relation",
+    "definition": "",
     "detail": "HLJStageSpecification [1..1] → MissionSpecification [1..1].",
     "iri": "https://w3id.org/ontojourney/core#hasMission"
   },
@@ -150,6 +171,7 @@
     "name": "hasNarrative",
     "kind": "relation",
     "stereotype": "relation",
+    "definition": "",
     "detail": "NarrativeJourneyModel [1..1] → JourneyNarrative [1..1].",
     "iri": "https://w3id.org/ontojourney/core#hasNarrative"
   },
@@ -157,6 +179,7 @@
     "name": "hasNarrativeFraming",
     "kind": "relation",
     "stereotype": "relation",
+    "definition": "",
     "detail": "HLJStageSpecification [1..1] → NarrativeFraming [1..1].",
     "iri": "https://w3id.org/ontojourney/core#hasNarrativeFraming"
   },
@@ -164,6 +187,7 @@
     "name": "hasStage",
     "kind": "relation",
     "stereotype": "relation",
+    "definition": "",
     "detail": "JourneyModel [1..1] → StageSpecification [1..*].",
     "iri": "https://w3id.org/ontojourney/core#hasStage"
   },
@@ -171,6 +195,7 @@
     "name": "hasStageExecution",
     "kind": "relation",
     "stereotype": "relation",
+    "definition": "",
     "detail": "JourneyExecution [1..1] → StageExecution [1..*].",
     "iri": "https://w3id.org/ontojourney/core#hasStageExecution"
   },
@@ -178,6 +203,7 @@
     "name": "hasTransformationEvent",
     "kind": "relation",
     "stereotype": "relation",
+    "definition": "",
     "detail": "JourneyExecution [1..1] → TransformationEvent [0..*].",
     "iri": "https://w3id.org/ontojourney/core#hasTransformationEvent"
   },
@@ -185,6 +211,7 @@
     "name": "HeroicNarrativeJourneyExecution",
     "kind": "class",
     "stereotype": "event",
+    "definition": "A Narrative Journey Execution of a Heroic Narrative Journey Model that constitutes one focal heroic trajectory with exactly one Protagonist.",
     "detail": "Specializes NarrativeJourneyExecution.",
     "iri": "https://w3id.org/ontojourney/core#HeroicNarrativeJourneyExecution"
   },
@@ -192,6 +219,7 @@
     "name": "HeroicNarrativeJourneyModel",
     "kind": "class",
     "stereotype": "subkind",
+    "definition": "A Narrative Journey Model that frames a meaningful progression through demanding stages towards transformation and closure as a heroic trajectory.",
     "detail": "Specializes NarrativeJourneyModel.",
     "iri": "https://w3id.org/ontojourney/core#HeroicNarrativeJourneyModel"
   },
@@ -199,6 +227,7 @@
     "name": "HeroicNarrativeLearningJourneyExecution",
     "kind": "class",
     "stereotype": "event",
+    "definition": "A Heroic Narrative Journey Execution and Learning Journey Execution of one Heroic Narrative Learning Journey Model, with exactly one focal Person participating as both Protagonist and Learner.",
     "detail": "Specializes HeroicNarrativeJourneyExecution and LearningJourneyExecution.",
     "iri": "https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyExecution"
   },
@@ -206,6 +235,7 @@
     "name": "HeroicNarrativeLearningJourneyModel",
     "kind": "class",
     "stereotype": "subkind",
+    "definition": "A Heroic Narrative Journey Model and Learning Journey Model whose identity includes one Journey Narrative, at least two connected Stage Specifications, at least one challenged stage, at least one Educational Purpose, at least one Intended Learning Transformation, and one Closure Specification.",
     "detail": "Specializes HeroicNarrativeJourneyModel and LearningJourneyModel.",
     "iri": "https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyModel"
   },
@@ -213,6 +243,7 @@
     "name": "HLJStageExecution",
     "kind": "class",
     "stereotype": "event",
+    "definition": "A Stage Execution of an HLJ Stage Specification that may include Challenge Encounters, Challenge Performances, and Assistance Provisions connected to specifications of that same stage.",
     "detail": "Specializes StageExecution.",
     "iri": "https://w3id.org/ontojourney/core#HLJStageExecution"
   },
@@ -220,6 +251,7 @@
     "name": "HLJStageSpecification",
     "kind": "class",
     "stereotype": "subkind",
+    "definition": "A Stage Specification in the Heroine's Learning Journey anatomy that contains exactly one Narrative Framing, Mission Specification, Challenge Specification, and Assistance Specification.",
     "detail": "Specializes StageSpecification.",
     "iri": "https://w3id.org/ontojourney/core#HLJStageSpecification"
   },
@@ -227,6 +259,7 @@
     "name": "InformationObject",
     "kind": "class",
     "stereotype": "kind",
+    "definition": "An entity whose identity is determined by its informational content and that may be expressed through different physical or digital carriers.",
     "detail": "Top-level type in the OntoJourney domain model.",
     "iri": "https://w3id.org/ontojourney/core#InformationObject"
   },
@@ -234,6 +267,7 @@
     "name": "IntendedLearningTransformation",
     "kind": "class",
     "stereotype": "subkind",
+    "definition": "An Intended Transformation that specifies a learning-related change to be pursued through a learning journey.",
     "detail": "Specializes IntendedTransformation.",
     "iri": "https://w3id.org/ontojourney/core#IntendedLearningTransformation"
   },
@@ -241,6 +275,7 @@
     "name": "IntendedTransformation",
     "kind": "class",
     "stereotype": "subkind",
+    "definition": "A Goal Description prescribed by a Journey Model that specifies a transformation the model is intended to bring about.",
     "detail": "Specializes GoalDescription.",
     "iri": "https://w3id.org/ontojourney/core#IntendedTransformation"
   },
@@ -248,6 +283,7 @@
     "name": "isEncounterOf",
     "kind": "relation",
     "stereotype": "relation",
+    "definition": "",
     "detail": "ChallengeEncounter [0..*] → ChallengeSpecification [1..1].",
     "iri": "https://w3id.org/ontojourney/core#isEncounterOf"
   },
@@ -255,6 +291,7 @@
     "name": "isExecutionOfJourneyModel",
     "kind": "relation",
     "stereotype": "relation",
+    "definition": "",
     "detail": "JourneyExecution [0..*] → JourneyModel [1..1].",
     "iri": "https://w3id.org/ontojourney/core#isExecutionOfJourneyModel"
   },
@@ -262,6 +299,7 @@
     "name": "isExecutionOfStageSpecification",
     "kind": "relation",
     "stereotype": "relation",
+    "definition": "",
     "detail": "StageExecution [0..*] → StageSpecification [1..1].",
     "iri": "https://w3id.org/ontojourney/core#isExecutionOfStageSpecification"
   },
@@ -269,6 +307,7 @@
     "name": "isTransformationOf",
     "kind": "relation",
     "stereotype": "relation",
+    "definition": "",
     "detail": "RealizedTransformation [0..*] → Person [1..1].",
     "iri": "https://w3id.org/ontojourney/core#isTransformationOf"
   },
@@ -276,6 +315,7 @@
     "name": "JourneyExecution",
     "kind": "class",
     "stereotype": "event",
+    "definition": "A complex event in which one Journey Model is enacted in a particular context through one or more Stage Executions.",
     "detail": "Top-level type in the OntoJourney domain model.",
     "iri": "https://w3id.org/ontojourney/core#JourneyExecution"
   },
@@ -283,6 +323,7 @@
     "name": "JourneyModel",
     "kind": "class",
     "stereotype": "subkind",
+    "definition": "A Description that characterises a reusable journey pattern through one or more Stage Specifications and one Closure Specification, and may prescribe Intended Transformations.",
     "detail": "Specializes Description.",
     "iri": "https://w3id.org/ontojourney/core#JourneyModel"
   },
@@ -290,6 +331,7 @@
     "name": "JourneyNarrative",
     "kind": "class",
     "stereotype": "subkind",
+    "definition": "Narrative Content that organises the narrative progression of a Narrative Journey Model as a whole.",
     "detail": "Specializes NarrativeContent.",
     "iri": "https://w3id.org/ontojourney/core#JourneyNarrative"
   },
@@ -297,6 +339,7 @@
     "name": "Learner",
     "kind": "class",
     "stereotype": "historicalRole",
+    "definition": "A historical role instantiated by a Person through participation in a Learning Journey Execution.",
     "detail": "Specializes Person.",
     "iri": "https://w3id.org/ontojourney/core#Learner"
   },
@@ -304,6 +347,7 @@
     "name": "LearningJourneyExecution",
     "kind": "class",
     "stereotype": "event",
+    "definition": "A Journey Execution of a Learning Journey Model in which at least one Person participates as Learner.",
     "detail": "Specializes JourneyExecution.",
     "iri": "https://w3id.org/ontojourney/core#LearningJourneyExecution"
   },
@@ -311,6 +355,7 @@
     "name": "LearningJourneyModel",
     "kind": "class",
     "stereotype": "subkind",
+    "definition": "A Journey Model and Plan Description that intentionally organises an educational experience and has at least one Educational Purpose.",
     "detail": "Specializes JourneyModel and PlanDescription.",
     "iri": "https://w3id.org/ontojourney/core#LearningJourneyModel"
   },
@@ -318,6 +363,7 @@
     "name": "MissionSpecification",
     "kind": "class",
     "stereotype": "subkind",
+    "definition": "A Normative Description that states what the Learner is invited or expected to pursue within an HLJ stage and may combine a desired result with directions for action.",
     "detail": "Specializes NormativeDescription.",
     "iri": "https://w3id.org/ontojourney/core#MissionSpecification"
   },
@@ -325,6 +371,7 @@
     "name": "NarrativeContent",
     "kind": "class",
     "stereotype": "subkind",
+    "definition": "An Information Object that organises characters, events, or themes as narrative content, independently of the medium through which it is expressed.",
     "detail": "Specializes InformationObject.",
     "iri": "https://w3id.org/ontojourney/core#NarrativeContent"
   },
@@ -332,6 +379,7 @@
     "name": "NarrativeFraming",
     "kind": "class",
     "stereotype": "subkind",
+    "definition": "Narrative Content that gives one HLJ Stage Specification its local narrative context and connects it to the wider journey.",
     "detail": "Specializes NarrativeContent.",
     "iri": "https://w3id.org/ontojourney/core#NarrativeFraming"
   },
@@ -339,6 +387,7 @@
     "name": "NarrativeJourneyExecution",
     "kind": "class",
     "stereotype": "event",
+    "definition": "A Journey Execution of a Narrative Journey Model in which the performed stages enact a narratively organised journey.",
     "detail": "Specializes JourneyExecution.",
     "iri": "https://w3id.org/ontojourney/core#NarrativeJourneyExecution"
   },
@@ -346,6 +395,7 @@
     "name": "NarrativeJourneyModel",
     "kind": "class",
     "stereotype": "subkind",
+    "definition": "A Journey Model whose overall progression is organised by exactly one Journey Narrative.",
     "detail": "Specializes JourneyModel.",
     "iri": "https://w3id.org/ontojourney/core#NarrativeJourneyModel"
   },
@@ -353,6 +403,7 @@
     "name": "NormativeDescription",
     "kind": "class",
     "stereotype": "subkind",
+    "definition": "A Description that prescribes, permits, or evaluates possible actions or situations instead of merely characterising them.",
     "detail": "Specializes Description.",
     "iri": "https://w3id.org/ontojourney/core#NormativeDescription"
   },
@@ -360,6 +411,7 @@
     "name": "participatesAsLearnerIn",
     "kind": "relation",
     "stereotype": "participation",
+    "definition": "",
     "detail": "Learner [1..*] → LearningJourneyExecution [1..*].",
     "iri": "https://w3id.org/ontojourney/core#participatesAsLearnerIn"
   },
@@ -367,6 +419,7 @@
     "name": "participatesAsProtagonistIn",
     "kind": "relation",
     "stereotype": "participation",
+    "definition": "",
     "detail": "Protagonist [1..1] → HeroicNarrativeJourneyExecution [1..*].",
     "iri": "https://w3id.org/ontojourney/core#participatesAsProtagonistIn"
   },
@@ -374,6 +427,7 @@
     "name": "Person",
     "kind": "class",
     "stereotype": "kind",
+    "definition": "A human individual who may participate in Journey Executions and whose identity is preserved across the historical roles Protagonist and Learner.",
     "detail": "Top-level type in the OntoJourney domain model.",
     "iri": "https://w3id.org/ontojourney/core#Person"
   },
@@ -381,6 +435,7 @@
     "name": "PlanDescription",
     "kind": "class",
     "stereotype": "subkind",
+    "definition": "A Normative Description that prescribes or organises intended actions and events towards a purpose.",
     "detail": "Specializes NormativeDescription.",
     "iri": "https://w3id.org/ontojourney/core#PlanDescription"
   },
@@ -388,6 +443,7 @@
     "name": "prescribesTransformation",
     "kind": "relation",
     "stereotype": "relation",
+    "definition": "",
     "detail": "JourneyModel [1..1] → IntendedTransformation [0..*].",
     "iri": "https://w3id.org/ontojourney/core#prescribesTransformation"
   },
@@ -395,6 +451,7 @@
     "name": "producesClosure",
     "kind": "relation",
     "stereotype": "bringsAbout",
+    "definition": "",
     "detail": "JourneyExecution [1..1] → ClosureSituation [0..1].",
     "iri": "https://w3id.org/ontojourney/core#producesClosure"
   },
@@ -402,6 +459,7 @@
     "name": "producesTransformation",
     "kind": "relation",
     "stereotype": "bringsAbout",
+    "definition": "",
     "detail": "TransformationEvent [1..*] → RealizedTransformation [1..1].",
     "iri": "https://w3id.org/ontojourney/core#producesTransformation"
   },
@@ -409,6 +467,7 @@
     "name": "Protagonist",
     "kind": "class",
     "stereotype": "historicalRole",
+    "definition": "A historical role instantiated by a Person through participation as the focal subject of a Heroic Narrative Journey Execution.",
     "detail": "Specializes Person.",
     "iri": "https://w3id.org/ontojourney/core#Protagonist"
   },
@@ -416,6 +475,7 @@
     "name": "RealizedTransformation",
     "kind": "class",
     "stereotype": "situation",
+    "definition": "A situation brought about by one or more Transformation Events that represents an actual change concerning exactly one Person and satisfies one Intended Transformation.",
     "detail": "Top-level type in the OntoJourney domain model.",
     "iri": "https://w3id.org/ontojourney/core#RealizedTransformation"
   },
@@ -423,6 +483,7 @@
     "name": "realizesAssistance",
     "kind": "relation",
     "stereotype": "relation",
+    "definition": "",
     "detail": "AssistanceProvision [0..*] → AssistanceSpecification [1..1].",
     "iri": "https://w3id.org/ontojourney/core#realizesAssistance"
   },
@@ -430,6 +491,7 @@
     "name": "satisfiesClosureSpecification",
     "kind": "relation",
     "stereotype": "relation",
+    "definition": "",
     "detail": "ClosureSituation [0..*] → ClosureSpecification [1..1].",
     "iri": "https://w3id.org/ontojourney/core#satisfiesClosureSpecification"
   },
@@ -437,6 +499,7 @@
     "name": "satisfiesIntendedTransformation",
     "kind": "relation",
     "stereotype": "relation",
+    "definition": "",
     "detail": "RealizedTransformation [0..*] → IntendedTransformation [1..1].",
     "iri": "https://w3id.org/ontojourney/core#satisfiesIntendedTransformation"
   },
@@ -444,6 +507,7 @@
     "name": "StageExecution",
     "kind": "class",
     "stereotype": "event",
+    "definition": "An event within a Journey Execution that enacts one Stage Specification belonging to the executed Journey Model.",
     "detail": "Top-level type in the OntoJourney domain model.",
     "iri": "https://w3id.org/ontojourney/core#StageExecution"
   },
@@ -451,6 +515,7 @@
     "name": "StageSpecification",
     "kind": "class",
     "stereotype": "subkind",
+    "definition": "A Plan Description that specifies one stage belonging to a Journey Model and may be linked to other Stage Specifications through directlyPrecedesStage.",
     "detail": "Specializes PlanDescription.",
     "iri": "https://w3id.org/ontojourney/core#StageSpecification"
   },
@@ -458,6 +523,7 @@
     "name": "SuccessfulHeroicNarrativeLearningJourneyExecution",
     "kind": "class",
     "stereotype": "event",
+    "definition": "A Heroic Narrative Learning Journey Execution that produces a Closure Situation satisfying the executed model's Closure Specification and at least one Realized Transformation of the focal Person satisfying an Intended Learning Transformation prescribed by that model.",
     "detail": "Specializes HeroicNarrativeLearningJourneyExecution.",
     "iri": "https://w3id.org/ontojourney/core#SuccessfulHeroicNarrativeLearningJourneyExecution"
   },
@@ -465,6 +531,7 @@
     "name": "TransformationEvent",
     "kind": "class",
     "stereotype": "event",
+    "definition": "An event within a Journey Execution that brings about one Realized Transformation.",
     "detail": "Top-level type in the OntoJourney domain model.",
     "iri": "https://w3id.org/ontojourney/core#TransformationEvent"
   }

@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { PageHero } from "@/components/page-hero";
-import { ENTITY_NAMESPACE, assetUrl } from "@/lib/site";
+import { ENTITY_NAMESPACE, VERSION, assetUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Model overview",
   description:
-    "Public OntoJourney Core v0.9.0 statistics, representations, namespace, and generated term reference.",
+    "Public OntoJourney Core v0.9.1 statistics, representations, namespace, and generated term reference.",
 };
 
 const layers = [
@@ -23,7 +23,7 @@ export default function ModelPage() {
       <PageHero
         eyebrow="Model overview"
         title="Inspect the public model from its generated vocabulary."
-        lead="OntoJourney Core v0.9.0 publishes 40 domain classes, 27 relation records, and 33 generalization records. Its term explorer is generated from the versioned OntoUML JSON rather than maintained as a second model."
+        lead={`OntoJourney Core v${VERSION} publishes 40 domain classes, 27 relation records, and 33 generalization records. Its term explorer is generated from the versioned OntoUML JSON rather than maintained as a second model.`}
       />
 
       <section className="stat-grid" aria-label="Public model statistics">
@@ -90,10 +90,10 @@ export default function ModelPage() {
             </h2>
           </div>
           <div className="button-row">
-            <a className="button button--primary" href={assetUrl("/artifacts/0.9.0/OntoJourneyCore.json")} download>
+            <a className="button button--primary" href={assetUrl(`/artifacts/${VERSION}/OntoJourneyCore.json`)} download>
               OntoUML JSON <span aria-hidden="true">↓</span>
             </a>
-            <a className="button button--secondary" href={assetUrl("/artifacts/0.9.0/ontojourney-core.ttl")} download>
+            <a className="button button--secondary" href={assetUrl(`/artifacts/${VERSION}/ontojourney-core.ttl`)} download>
               Turtle <span aria-hidden="true">↓</span>
             </a>
             <Link className="button button--secondary" href="/resources/">

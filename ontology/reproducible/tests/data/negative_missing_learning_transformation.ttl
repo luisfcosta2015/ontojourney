@@ -1,0 +1,18 @@
+@prefix ex: <https://example.org/test#> .
+@prefix oj: <https://w3id.org/ontojourney/core#> .
+
+ex:model
+    a oj:HeroicNarrativeLearningJourneyModel ;
+    oj:hasStage ex:stage1, ex:stage2 ;
+    oj:prescribesTransformation ex:genericTransformation ;
+    oj:definesClosure ex:closureSpecification .
+
+ex:stage1
+    a oj:StageSpecification ;
+    oj:directlyPrecedesStage ex:stage2 ;
+    oj:hasChallenge ex:challenge .
+
+ex:stage2 a oj:StageSpecification .
+ex:challenge a oj:ChallengeSpecification .
+ex:genericTransformation a oj:IntendedTransformation .
+ex:closureSpecification a oj:ClosureSpecification .

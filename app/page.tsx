@@ -2,9 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { ValidationStrip } from "@/components/validation-strip";
-import { RELEASE_LABEL, assetUrl } from "@/lib/site";
-
-const VERSION_DOI = "https://doi.org/10.5281/zenodo.21802021";
+import { CONCEPT_DOI, RELEASE_LABEL, assetUrl } from "@/lib/site";
 
 const entryPoints = [
   {
@@ -50,16 +48,16 @@ export default function Home() {
               </Link>
               <a
                 className="button button--secondary"
-                href={VERSION_DOI}
+                href={CONCEPT_DOI}
               >
-                Cite archived v0.9.0 <span aria-hidden="true">↗</span>
+                Open citation record <span aria-hidden="true">↗</span>
               </a>
               <a
                 className="button button--secondary"
-                href={assetUrl("/artifacts/0.9.0/ontojourney-core-v0.9.0.zip")}
+                href={assetUrl("/artifacts/0.9.1/ontojourney-core-v0.9.1.zip")}
                 download
               >
-                Download v0.9.0 <span aria-hidden="true">↓</span>
+                Download v0.9.1 <span aria-hidden="true">↓</span>
               </a>
             </div>
           </div>
@@ -139,11 +137,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="stat-grid" aria-label="OntoJourney Core v0.9 statistics">
+      <section className="stat-grid" aria-label="OntoJourney Core v0.9.1 statistics">
         <div className="stat"><strong>40</strong><span>Domain classes</span></div>
         <div className="stat"><strong>27</strong><span>Relations</span></div>
         <div className="stat"><strong>33</strong><span>Generalizations</span></div>
-        <div className="stat"><strong>326</strong><span>Published RDF triples</span></div>
+        <div className="stat"><strong>368</strong><span>Published RDF triples</span></div>
       </section>
 
       <section className="section" aria-labelledby="release-title">
@@ -151,24 +149,25 @@ export default function Home() {
           <div>
             <p className="eyebrow">Current public release</p>
             <h2 className="section-title" id="release-title">
-              OntoJourney Core v0.9.0
+              OntoJourney Core v0.9.1
             </h2>
           </div>
           <div>
             <p className="lead">
               The release passed the planned source, structural, RDF, SHACL,
-              OntoUML API, and Protégé/HermiT checks. Zenodo preserves this
-              version under DOI 10.5281/zenodo.21802021.
+              OntoUML API, and HermiT checks. The Zenodo concept DOI identifies
+              the project collection; the exact v0.9.1 DOI will be recorded
+              after Zenodo mints the version archive.
             </p>
             <div className="button-row">
               <Link className="button button--primary" href="/validation/">
                 Review validation <span aria-hidden="true">→</span>
               </Link>
-              <Link className="button button--secondary" href="/releases/0.9.0/">
+              <Link className="button button--secondary" href="/releases/0.9.1/">
                 Release notes
               </Link>
-              <a className="button button--secondary" href={VERSION_DOI}>
-                Open Zenodo record <span aria-hidden="true">↗</span>
+              <a className="button button--secondary" href={CONCEPT_DOI}>
+                Open Zenodo collection <span aria-hidden="true">↗</span>
               </a>
             </div>
           </div>

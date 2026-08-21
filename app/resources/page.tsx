@@ -4,8 +4,10 @@ import Link from "next/link";
 import { PageHero } from "@/components/page-hero";
 import {
   CANONICAL_IRI,
+  CONCEPT_DOI,
   ENTITY_NAMESPACE,
   REPOSITORY_URL,
+  VERSION,
   VERSION_IRI,
   assetUrl,
 } from "@/lib/site";
@@ -13,11 +15,11 @@ import {
 export const metadata: Metadata = {
   title: "Resources and citation",
   description:
-    "Download OntoJourney Core v0.9.0 in Tonto, OntoUML JSON, RDF, and SHACL formats, with checksums and citation metadata.",
+    "Download OntoJourney Core v0.9.1 in Tonto, OntoUML JSON, RDF, and SHACL formats, with checksums and citation metadata.",
 };
 
 const downloads = [
-  ["Complete release", "ZIP · source, serializations, tests, metadata, and validation", "ontojourney-core-v0.9.0.zip"],
+  ["Complete release", "ZIP · source, serializations, tests, metadata, and validation", `ontojourney-core-v${VERSION}.zip`],
   ["Turtle", "RDF/Turtle · public Web ontology", "ontojourney-core.ttl"],
   ["RDF/XML", "RDF/XML · OWL-compatible serialization", "ontojourney-core.rdf"],
   ["JSON-LD", "JSON-LD · linked-data serialization", "ontojourney-core.jsonld"],
@@ -29,7 +31,7 @@ const downloads = [
 ];
 
 export default function ResourcesPage() {
-  const artifactRoot = "/artifacts/0.9.0";
+  const artifactRoot = `/artifacts/${VERSION}`;
 
   return (
     <main id="main-content">
@@ -43,7 +45,7 @@ export default function ResourcesPage() {
         <div className="site-container">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">Core v0.9.0</p>
+              <p className="eyebrow">{`Core v${VERSION}`}</p>
               <h2 className="section-title" id="downloads-title">Machine-readable artifacts.</h2>
             </div>
             <p>
@@ -73,8 +75,9 @@ export default function ResourcesPage() {
             <p><strong>Entity namespace</strong><br /><code>{ENTITY_NAMESPACE}</code></p>
             <p><strong>Version IRI</strong><br /><code>{VERSION_IRI}</code></p>
             <p>
-              The repository includes the W3ID redirect configuration for a
-              later submission after GitHub Pages is verified.
+              W3ID is the active persistent-identifier service. Its
+              content-negotiation rules keep entity IRIs stable and route each
+              version IRI to the corresponding documentation and RDF files.
             </p>
           </div>
         </div>
@@ -97,7 +100,13 @@ export default function ResourcesPage() {
               <p>
                 Costa, Luis Felipe Coimbra. 2026. <em>OntoJourney: An Ontology
                 of Narrative-Heroic Learning Journeys</em>. OntoJourney Core
-                v0.9.0. <a href={VERSION_IRI}>{VERSION_IRI}</a>.
+                {` v${VERSION}. `}<a href={VERSION_IRI}>{VERSION_IRI}</a>.
+              </p>
+              <p>
+                The version IRI identifies this exact release. The
+                <a href={CONCEPT_DOI}> Zenodo concept DOI</a> identifies the
+                collection of OntoJourney versions; the v0.9.1 version DOI will
+                be added after Zenodo creates the archive.
               </p>
             </section>
             <section id="bibtex">
@@ -106,7 +115,7 @@ export default function ResourcesPage() {
   author  = {Costa, Luis Felipe Coimbra},
   title   = {OntoJourney: An Ontology of Narrative-Heroic Learning Journeys},
   year    = {2026},
-  version = {0.9.0},
+  version = {${VERSION}},
   url     = {${VERSION_IRI}},
   license = {CC-BY-4.0}
 }`}</code></pre>

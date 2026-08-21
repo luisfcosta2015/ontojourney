@@ -1,0 +1,31 @@
+@prefix ex: <https://example.org/test#> .
+@prefix oj: <https://w3id.org/ontojourney/core#> .
+
+ex:genericModel a oj:JourneyModel .
+ex:narrativeOnlyModel a oj:NarrativeJourneyModel .
+ex:intersectionWithoutHNLJType a oj:HeroicNarrativeJourneyModel, oj:LearningJourneyModel .
+
+ex:narrativeExecution
+    a oj:NarrativeJourneyExecution ;
+    oj:isExecutionOfJourneyModel ex:genericModel .
+
+ex:heroicExecution
+    a oj:HeroicNarrativeJourneyExecution ;
+    oj:isExecutionOfJourneyModel ex:narrativeOnlyModel .
+
+ex:heroicParticipant
+    a oj:Person, oj:Protagonist ;
+    oj:participatesAsProtagonistIn ex:heroicExecution .
+
+ex:learningExecution
+    a oj:LearningJourneyExecution ;
+    oj:isExecutionOfJourneyModel ex:genericModel .
+
+ex:heroicLearningExecution
+    a oj:HeroicNarrativeLearningJourneyExecution ;
+    oj:isExecutionOfJourneyModel ex:intersectionWithoutHNLJType .
+
+ex:focalParticipant
+    a oj:Person, oj:Protagonist, oj:Learner ;
+    oj:participatesAsProtagonistIn ex:heroicLearningExecution ;
+    oj:participatesAsLearnerIn ex:heroicLearningExecution .
