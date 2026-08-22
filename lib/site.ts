@@ -6,6 +6,7 @@ export const RELEASE_LABEL = `Core v${VERSION}`;
 export const CANONICAL_IRI = "https://w3id.org/ontojourney/core";
 export const ENTITY_NAMESPACE = `${CANONICAL_IRI}#`;
 export const VERSION_IRI = `${CANONICAL_IRI}/${VERSION}`;
+export const VERSION_DOI = "https://doi.org/10.5281/zenodo.22043806";
 export const CONCEPT_DOI = "https://doi.org/10.5281/zenodo.21802020";
 export const SITE_DESCRIPTION =
   "OntoJourney is a public UFO-grounded OntoUML ontology for narrative-heroic learning journeys, published with versioned source, serializations, constraints, and validation evidence.";

@@ -8,6 +8,7 @@ import {
   ENTITY_NAMESPACE,
   REPOSITORY_URL,
   VERSION,
+  VERSION_DOI,
   VERSION_IRI,
   assetUrl,
 } from "@/lib/site";
@@ -100,13 +101,14 @@ export default function ResourcesPage() {
               <p>
                 Costa, Luis Felipe Coimbra. 2026. <em>OntoJourney: An Ontology
                 of Narrative-Heroic Learning Journeys</em>. OntoJourney Core
-                {` v${VERSION}. `}<a href={VERSION_IRI}>{VERSION_IRI}</a>.
+                {` v${VERSION}. `}Zenodo. <a href={VERSION_DOI}>{VERSION_DOI}</a>.
               </p>
               <p>
-                The version IRI identifies this exact release. The
-                <a href={CONCEPT_DOI}> Zenodo concept DOI</a> identifies the
-                collection of OntoJourney versions; the v0.9.1 version DOI will
-                be added after Zenodo creates the archive.
+                The version DOI identifies the exact archived package. The
+                version IRI <a href={VERSION_IRI}>{VERSION_IRI}</a> identifies
+                the corresponding ontology release through W3ID. The
+                <a href={CONCEPT_DOI}> Zenodo concept DOI</a> represents the
+                collection of OntoJourney versions.
               </p>
             </section>
             <section id="bibtex">
@@ -116,6 +118,8 @@ export default function ResourcesPage() {
   title   = {OntoJourney: An Ontology of Narrative-Heroic Learning Journeys},
   year    = {2026},
   version = {${VERSION}},
+  doi     = {10.5281/zenodo.22043806},
+  publisher = {Zenodo},
   url     = {${VERSION_IRI}},
   license = {CC-BY-4.0}
 }`}</code></pre>

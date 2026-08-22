@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { ValidationStrip } from "@/components/validation-strip";
-import { CONCEPT_DOI, RELEASE_LABEL, assetUrl } from "@/lib/site";
+import { CONCEPT_DOI, RELEASE_LABEL, VERSION_DOI, assetUrl } from "@/lib/site";
 
 const entryPoints = [
   {
@@ -48,7 +48,7 @@ export default function Home() {
               </Link>
               <a
                 className="button button--secondary"
-                href={CONCEPT_DOI}
+                href={VERSION_DOI}
               >
                 Open citation record <span aria-hidden="true">↗</span>
               </a>
@@ -155,9 +155,9 @@ export default function Home() {
           <div>
             <p className="lead">
               The release passed the planned source, structural, RDF, SHACL,
-              OntoUML API, and HermiT checks. The Zenodo concept DOI identifies
-              the project collection; the exact v0.9.1 DOI will be recorded
-              after Zenodo mints the version archive.
+              OntoUML API, and HermiT checks. The version DOI identifies the
+              exact archived package, while the Zenodo concept DOI identifies
+              the project collection.
             </p>
             <div className="button-row">
               <Link className="button button--primary" href="/validation/">

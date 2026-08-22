@@ -6,7 +6,8 @@ authors:
   - family-names: "Costa"
     given-names: "Luis Felipe Coimbra"
 version: 0.9.1
-date-released: 2026-08-21
+date-released: "2026-08-21"
+doi: 10.5281/zenodo.22043806
 repository-code: "https://github.com/luisfcosta2015/ontojourney"
 url: "https://w3id.org/ontojourney/core/0.9.1"
 license: CC-BY-4.0

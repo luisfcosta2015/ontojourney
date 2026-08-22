@@ -22,11 +22,12 @@ test fixtures, validation records, checksums, and citation metadata.
 - Ontology IRI: <https://w3id.org/ontojourney/core>
 - Entity namespace: `https://w3id.org/ontojourney/core#`
 - Version IRI: <https://w3id.org/ontojourney/core/0.9.1>
+- Version DOI: <https://doi.org/10.5281/zenodo.22043806>
 - Concept DOI for all versions: <https://doi.org/10.5281/zenodo.21802020>
 - Release: [Core v0.9.1](https://github.com/luisfcosta2015/ontojourney/releases/tag/v0.9.1)
 
-The exact v0.9.1 DOI will be added after Zenodo archives the GitHub release; no
-version DOI is inferred before that record exists.
+The version DOI identifies the archived v0.9.1 package. The concept DOI
+represents all OntoJourney versions and resolves to the latest record.
 
 ## Validation status
 
@@ -98,11 +99,13 @@ deploys it from `main`.
 
 > Costa, Luis Felipe Coimbra. 2026. *OntoJourney: An Ontology of
 > Narrative-Heroic Learning Journeys*. OntoJourney Core v0.9.1.
-> <https://w3id.org/ontojourney/core/0.9.1>.
+> Zenodo. <https://doi.org/10.5281/zenodo.22043806>.
 
-Use the version IRI to identify v0.9.1 until its Zenodo version DOI is minted.
-The concept DOI <https://doi.org/10.5281/zenodo.21802020> resolves to the
-collection of all OntoJourney versions.
+Use the version DOI to cite the exact archived package. The version IRI
+<https://w3id.org/ontojourney/core/0.9.1> identifies the corresponding
+ontology release through W3ID. The concept DOI
+<https://doi.org/10.5281/zenodo.21802020> represents the collection of all
+OntoJourney versions.
 
 Machine-readable citation metadata is available in [`CITATION.cff`](CITATION.cff)
 and [`codemeta.json`](codemeta.json).

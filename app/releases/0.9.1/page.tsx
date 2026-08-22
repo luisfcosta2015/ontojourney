@@ -6,6 +6,7 @@ import {
   CONCEPT_DOI,
   REPOSITORY_URL,
   VERSION,
+  VERSION_DOI,
   VERSION_IRI,
   assetUrl,
 } from "@/lib/site";
@@ -73,11 +74,8 @@ export default function ReleasePage() {
             <section id="identifiers">
               <h2>Identifiers</h2>
               <p>Version IRI: <a href={VERSION_IRI}>{VERSION_IRI}</a></p>
+              <p>Version DOI: <a href={VERSION_DOI}>{VERSION_DOI}</a></p>
               <p>Concept DOI for all versions: <a href={CONCEPT_DOI}>{CONCEPT_DOI}</a></p>
-              <p>
-                The exact v0.9.1 version DOI will be recorded here after Zenodo
-                archives the GitHub release. No DOI is inferred in advance.
-              </p>
               <p>
                 Entity identifiers retain the stable non-versioned namespace
                 <code>https://w3id.org/ontojourney/core#</code>.
