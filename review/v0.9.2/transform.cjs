@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports -- ontouml-js 0.4.1 is consumed through its tested CommonJS API. */
 const fs=require('fs'),path=require('path');
 const {serializationUtils,OntoumlVerification,Ontouml2Gufo}=require('ontouml-js');
 const root=__dirname,out=path.join(root,'candidate-output');fs.mkdirSync(out,{recursive:true});

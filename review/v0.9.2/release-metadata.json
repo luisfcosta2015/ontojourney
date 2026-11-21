@@ -1,0 +1,15 @@
+{
+  "targetVersion": "0.9.2",
+  "candidateVersion": "0.9.2-rc.1",
+  "status": "draft",
+  "ontologyIRI": "https://w3id.org/ontojourney/core",
+  "namespace": "https://w3id.org/ontojourney/core#",
+  "versionIRI": "https://w3id.org/ontojourney/core/0.9.2",
+  "doi": "10.5281/zenodo.24420185",
+  "doiStatus": "reserved-unpublished",
+  "zenodoDraftId": "24420185",
+  "previousVersionIRI": "https://w3id.org/ontojourney/core/0.9.1",
+  "previousVersionDOI": "10.5281/zenodo.22043806",
+  "conceptDOI": "10.5281/zenodo.21802020",
+  "publicationDate": null
+}

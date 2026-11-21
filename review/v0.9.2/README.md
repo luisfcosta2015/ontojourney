@@ -13,10 +13,18 @@ Review baseline: main daa7a991d54798d96acd9ae1d3609d5de901e45a; published releas
 ## Existing evidence (author's independent local run, not a CI claim)
 Tonto CLI 0.4.13 local validation and JSON structural audit passed. ontouml-js 0.4.1 verified and transformed baseline and candidate locally. Transformed axioms match the prototype after excluding annotations and release metadata (zero differing triples). HermiT via ROBOT 1.9.10 passed on the candidate transformation (356 input / 414 output axioms). Nine CQ queries on three graphs returned the same bindings in the candidate and baseline. Original 10 SHACL tests and ten comparative candidate/profile scenarios returned expected results. Case 01 remains model-only. No empirical or independent domain-expert validation is claimed. The original positive fixture is incomplete for seven multiplicities; optional structural completeness overlay detects those gaps.
 
+## Reserved release metadata
+
+- Target version: `0.9.2`
+- Version IRI: `https://w3id.org/ontojourney/core/0.9.2` (not yet activated)
+- Reserved DOI: `10.5281/zenodo.24420185` (unpublished draft; not yet citable as a released resource)
+- Previous version DOI: `10.5281/zenodo.22043806`
+- Concept DOI: `10.5281/zenodo.21802020`
+
 ## Promotion gates
 - [ ] Review remaining semantic questions with ontology specialists; do not equate tool validation with domain adequacy.
 - [ ] Transfer the reviewed release candidate artefacts, sanitized evidence and reproducibility scripts into this branch; verify public redistribution rights for Case 01 material. No private Manager code or raw personal/local logs.
-- [ ] Reserve a new version-specific DOI on Zenodo (new version of record 22043806, not a new independent record); retain existing concept DOI and historic identifiers. No fabricated DOI or publication date.
+- [x] Reserved new version-specific DOI `10.5281/zenodo.24420185` in Zenodo new-version draft `24420185` (author screenshot, 2026-11-21). Not yet registered or published. Retain existing concept DOI and historic identifiers. Final publication date remains pending.
 - [ ] Finalize version IRI /core/0.9.2, provenance, metadata, checksums, source/JSON/four RDF formats, generated glossary and appendix. Rerun release audits, Core SHACL tests, CQ tests and optional completeness overlay. Core SHACL unchanged; overlay opt-in.
 - [ ] Update build_release.py, validate.yml, release.yml (manual release gate), root citation and README metadata, lib/site.ts, model reference, site content and release page /releases/0.9.2/. Verify site build and old artifacts unchanged.
 - [ ] Review figures and manuscript; confirm final scope and version/citation.
