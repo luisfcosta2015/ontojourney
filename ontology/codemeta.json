@@ -3,10 +3,9 @@
   "@type": "SoftwareSourceCode",
   "name": "OntoJourney",
   "description": "A reference ontology for narrative-heroic learning journeys, modeled in OntoUML and grounded in UFO.",
-  "version": "0.9.1",
-  "datePublished": "2026-08-21",
+  "version": "0.9.2",
   "codeRepository": "https://github.com/luisfcosta2015/ontojourney",
-  "url": "https://w3id.org/ontojourney/core/0.9.1",
+  "url": "https://w3id.org/ontojourney/core/0.9.2",
   "license": "https://spdx.org/licenses/CC-BY-4.0",
   "author": [
     {
@@ -16,6 +15,21 @@
     }
   ],
   "applicationCategory": "Ontology engineering",
-  "programmingLanguage": ["Tonto", "RDF/Turtle", "SHACL", "TypeScript", "Python"],
-  "keywords": ["ontology", "OntoUML", "UFO", "learning journey", "heroic narrative", "SHACL"]
+  "programmingLanguage": [
+    "Tonto",
+    "RDF/Turtle",
+    "SHACL",
+    "TypeScript",
+    "Python"
+  ],
+  "keywords": [
+    "ontology",
+    "OntoUML",
+    "UFO",
+    "learning journey",
+    "heroic narrative",
+    "SHACL"
+  ],
+  "identifier": "https://doi.org/10.5281/zenodo.24420185",
+  "datePublished": "2026-11-21"
 }

@@ -1,0 +1,13 @@
+# Synthetic additions to positive.ttl. NOT observation data or Case 01.
+@prefix ex: <https://example.org/test#> .
+@prefix oj: <https://w3id.org/ontojourney/core#> .
+ex:model oj:hasNarrative ex:narrative ; oj:hasEducationalPurpose ex:purpose .
+ex:narrative a oj:JourneyNarrative .
+ex:purpose a oj:EducationalPurpose .
+ex:stage1 oj:hasNarrativeFraming ex:framing1 ; oj:hasMission ex:mission1 .
+ex:stage2 oj:hasNarrativeFraming ex:framing2 ; oj:hasMission ex:mission2 ; oj:hasAssistance ex:assistance2 .
+ex:framing1 a oj:NarrativeFraming .
+ex:framing2 a oj:NarrativeFraming .
+ex:mission1 a oj:MissionSpecification .
+ex:mission2 a oj:MissionSpecification .
+ex:assistance2 a oj:AssistanceSpecification .

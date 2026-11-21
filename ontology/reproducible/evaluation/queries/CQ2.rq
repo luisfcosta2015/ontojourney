@@ -1,0 +1,4 @@
+PREFIX oj: <https://w3id.org/ontojourney/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?model WHERE { ?model a/rdfs:subClassOf* oj:HeroicNarrativeLearningJourneyModel ; oj:hasNarrative ?n ; oj:hasEducationalPurpose ?p ; oj:prescribesTransformation ?t ; oj:definesClosure ?c ; oj:hasStage ?s1, ?s2 . ?n a/rdfs:subClassOf* oj:JourneyNarrative . ?p a/rdfs:subClassOf* oj:EducationalPurpose . ?t a/rdfs:subClassOf* oj:IntendedLearningTransformation . ?c a/rdfs:subClassOf* oj:ClosureSpecification . ?s1 a/rdfs:subClassOf* oj:StageSpecification ; oj:directlyPrecedesStage ?s2 . ?s2 a/rdfs:subClassOf* oj:StageSpecification . FILTER(?s1 != ?s2) FILTER EXISTS { ?model oj:hasStage/oj:hasChallenge ?ch . ?ch a/rdfs:subClassOf* oj:ChallengeSpecification } }

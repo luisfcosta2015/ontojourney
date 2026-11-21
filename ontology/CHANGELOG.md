@@ -1,3 +1,9 @@
+# v0.9.2 - 2026-11-21
+
+- Generalize StageSpecification to Description; preserve planned HLJ stage typing.
+- Keep Core SHACL unchanged; add opt-in experimental completeness and synthetic CQ tests.
+- Preserve identifiers; generic-stage entailments change.
+
 # Public changelog
 
 ## v0.9.1 - 21 August 2026

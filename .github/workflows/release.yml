@@ -1,15 +1,19 @@
-name: Publish v0.9.1 release
+name: Publish v0.9.2 release
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
+    inputs:
+      confirm_version:
+        description: 'Type 0.9.2 to authorize draft release creation'
+        required: true
+        type: string
 
 permissions:
   contents: write
 
 jobs:
   release:
+    if: github.ref == 'refs/heads/main' && inputs.confirm_version == '0.9.2'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -25,13 +29,13 @@ jobs:
           python ontology/reproducible/tests/audit_generated_json.py
           python ontology/reproducible/tests/audit_release_consistency.py
           python ontology/reproducible/tests/run_shacl_tests.py
-      - name: Rebuild deterministic release package
+      - name: Verify frozen release package
         run: python scripts/build_release.py
       - name: Verify versioned release package
         shell: bash
         run: |
-          directory="public/artifacts/0.9.1"
-          archive="ontojourney-core-v0.9.1.zip"
+          directory="public/artifacts/0.9.2"
+          archive="ontojourney-core-v0.9.2.zip"
           test -d "${directory}"
           test -f "${directory}/${archive}"
           (cd "${directory}" && sha256sum --check SHA256SUMS && unzip -t "${archive}")
@@ -40,13 +44,13 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
-          if gh release view v0.9.1 >/dev/null 2>&1; then
-            echo "Release v0.9.1 already exists."
+          if gh release view v0.9.2 >/dev/null 2>&1; then
+            echo "Release v0.9.2 already exists."
             exit 0
           fi
-          directory="public/artifacts/0.9.1"
-          gh release create v0.9.1 \
-            "${directory}/ontojourney-core-v0.9.1.zip" \
+          directory="public/artifacts/0.9.2"
+          gh release create v0.9.2 \
+            "${directory}/ontojourney-core-v0.9.2.zip" \
             "${directory}/SHA256SUMS" \
             "${directory}/ontojourney-core.ttl" \
             "${directory}/ontojourney-core.rdf" \
@@ -56,5 +60,6 @@ jobs:
             "${directory}/OntoJourneyCore.json" \
             "${directory}/VALIDATION_REPORT.md" \
             --target "${GITHUB_SHA}" \
+            --draft \
             --generate-notes \
-            --title "OntoJourney Core 0.9.1"
+            --title "OntoJourney Core 0.9.2"

@@ -1,0 +1,39 @@
+PASS: JSON exact semantic delta
+PASS: transformed OWL exact axiom delta
+PASS: four RDF serializations and axioms aligned
+positive.ttl PASS True
+negative_focal_success.ttl PASS False
+negative_model.ttl PASS False
+negative_missing_learning_transformation.ttl PASS False
+negative_execution_model_types.ttl PASS False
+negative_model_stage_coherence.ttl PASS False
+negative_hlj_stage_type.ttl PASS False
+negative_same_stage_encounter.ttl PASS False
+negative_same_stage_performance.ttl PASS False
+negative_same_stage_assistance.ttl PASS False
+original/strict PASS False
+completed/strict PASS True
+missing narrative PASS False
+missing purpose PASS False
+missing framing PASS False
+missing mission PASS False
+missing assistance PASS False
+original CQ1 PASS 1
+original CQ2 PASS 0
+original CQ3 PASS 2
+original CQ4 PASS 2
+original CQ5 PASS 1
+original CQ6 PASS 1
+original CQ7 PASS 1
+original CQ8 PASS 2
+original CQ9 PASS 3
+completed CQ1 PASS 1
+completed CQ2 PASS 1
+completed CQ3 PASS 2
+completed CQ4 PASS 2
+completed CQ5 PASS 1
+completed CQ6 PASS 1
+completed CQ7 PASS 1
+completed CQ8 PASS 2
+completed CQ9 PASS 3
+PASS: candidate build and synthetic regression suite

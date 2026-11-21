@@ -7,7 +7,7 @@ from rdflib.compare import isomorphic
 from pyshacl import validate
 
 ROOT=Path(__file__).resolve().parent
-BASE=ROOT.parents[1]/"ontology"
+BASE=ROOT.parents[1]/"public/artifacts/0.9.1"
 OUT=ROOT/"candidate-output"
 OUT.mkdir(exist_ok=True)
 OJ=Namespace("https://w3id.org/ontojourney/core#")

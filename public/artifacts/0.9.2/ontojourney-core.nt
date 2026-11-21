@@ -1,0 +1,370 @@
+<https://w3id.org/ontojourney/core#IntendedLearningTransformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#SubKind> .
+<https://w3id.org/ontojourney/core#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/nemo/gufo#> .
+<https://w3id.org/ontojourney/core#ClosureSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#ConditionDescription> .
+<https://w3id.org/ontojourney/core#isExecutionOfStageSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core#StageExecution> <http://www.w3.org/2000/01/rdf-schema#label> "StageExecution"@en .
+<https://w3id.org/ontojourney/core#ConditionDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#NormativeDescription> .
+<https://w3id.org/ontojourney/core#participatesAsLearnerIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/nemo/gufo#participatedIn> .
+<https://w3id.org/ontojourney/core#ConditionDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#isEncounterOf> <http://www.w3.org/2000/01/rdf-schema#label> "isEncounterOf"@en .
+<https://w3id.org/ontojourney/core#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#JourneyExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#ClosureSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#SubKind> .
+<https://w3id.org/ontojourney/core#ChallengePerformance> <http://www.w3.org/2000/01/rdf-schema#comment> "An event within an HLJ Stage Execution in which action is directed towards the specified challenge of that stage; its occurrence does not by itself imply success."@en .
+<https://w3id.org/ontojourney/core#RealizedTransformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/nemo/gufo#Situation> .
+<https://w3id.org/ontojourney/core#satisfiesIntendedTransformation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#RealizedTransformation> .
+<https://w3id.org/ontojourney/core> <http://purl.org/dc/terms/title> "OntoJourney Core"@en .
+<https://w3id.org/ontojourney/core#ConditionDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#EducationalPurpose> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#GoalDescription> .
+<https://w3id.org/ontojourney/core#LearningJourneyModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#producesTransformation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#TransformationEvent> .
+<https://w3id.org/ontojourney/core#ChallengeEncounter> <http://www.w3.org/2000/01/rdf-schema#comment> "An event within an HLJ Stage Execution in which the specified challenge of that stage is faced, whether or not it is successfully addressed."@en .
+<https://w3id.org/ontojourney/core> <http://purl.org/dc/terms/identifier> "10.5281/zenodo.24420185" .
+<https://w3id.org/ontojourney/core#TransformationEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An event within a Journey Execution that brings about one Realized Transformation."@en .
+<https://w3id.org/ontojourney/core#isExecutionOfStageSpecification> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#StageExecution> .
+<https://w3id.org/ontojourney/core#Person> <http://www.w3.org/2000/01/rdf-schema#comment> "A human individual who may participate in Journey Executions and whose identity is preserved across the historical roles Protagonist and Learner."@en .
+<https://w3id.org/ontojourney/core#StageSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "StageSpecification"@en .
+<https://w3id.org/ontojourney/core#hasChallenge> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#StageSpecification> .
+<https://w3id.org/ontojourney/core#JourneyModel> <http://www.w3.org/2000/01/rdf-schema#comment> "A Description that characterises a reusable journey pattern through one or more Stage Specifications and one Closure Specification, and may prescribe Intended Transformations."@en .
+<https://w3id.org/ontojourney/core#Protagonist> <http://www.w3.org/2000/01/rdf-schema#label> "Protagonist"@en .
+<https://w3id.org/ontojourney/core#participatesAsProtagonistIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/nemo/gufo#participatedIn> .
+<https://w3id.org/ontojourney/core#NarrativeContent> <http://www.w3.org/2000/01/rdf-schema#comment> "An Information Object that organises characters, events, or themes as narrative content, independently of the medium through which it is expressed."@en .
+<https://w3id.org/ontojourney/core#Learner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#participatesAsLearnerIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#LearningJourneyExecution> .
+<https://w3id.org/ontojourney/core#HLJStageSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyModel> <http://www.w3.org/2000/01/rdf-schema#comment> "A Heroic Narrative Journey Model and Learning Journey Model whose identity includes one Journey Narrative, at least two connected Stage Specifications, at least one challenged stage, at least one Educational Purpose, at least one Intended Learning Transformation, and one Closure Specification."@en .
+<https://w3id.org/ontojourney/core#satisfiesIntendedTransformation> <http://www.w3.org/2000/01/rdf-schema#label> "satisfiesIntendedTransformation"@en .
+<https://w3id.org/ontojourney/core#StageExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#EventType> .
+<https://w3id.org/ontojourney/core#hasChallenge> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#ChallengeSpecification> .
+<https://w3id.org/ontojourney/core#producesClosure> <http://www.w3.org/2000/01/rdf-schema#label> "producesClosure"@en .
+<https://w3id.org/ontojourney/core#ClosureSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#HeroicNarrativeJourneyModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#SubKind> .
+<https://w3id.org/ontojourney/core#LearningJourneyModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#PlanDescription> .
+<https://w3id.org/ontojourney/core#hasTransformationEvent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#TransformationEvent> .
+<https://w3id.org/ontojourney/core#producesClosure> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#JourneyExecution> .
+<https://w3id.org/ontojourney/core#RealizedTransformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#SituationType> .
+<https://w3id.org/ontojourney/core#Learner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#realizesAssistance> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#AssistanceSpecification> .
+<https://w3id.org/ontojourney/core#HLJStageExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#EventType> .
+<https://w3id.org/ontojourney/core#ClosureSituation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#definesClosure> <http://www.w3.org/2000/01/rdf-schema#label> "definesClosure"@en .
+<https://w3id.org/ontojourney/core#addressesChallenge> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#ChallengePerformance> .
+<https://w3id.org/ontojourney/core#AssistanceSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#NormativeDescription> .
+<https://w3id.org/ontojourney/core#isExecutionOfJourneyModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core#HLJStageExecution> <http://www.w3.org/2000/01/rdf-schema#label> "HLJStageExecution"@en .
+<https://w3id.org/ontojourney/core#hasStage> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#StageSpecification> .
+<https://w3id.org/ontojourney/core#hasNarrative> <http://www.w3.org/2000/01/rdf-schema#label> "hasNarrative"@en .
+<https://w3id.org/ontojourney/core#hasStageExecution> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#JourneyExecution> .
+<https://w3id.org/ontojourney/core#EducationalPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#SubKind> .
+<https://w3id.org/ontojourney/core#hasNarrative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core#StageSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#SubKind> .
+<https://w3id.org/ontojourney/core#NormativeDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#SubKind> .
+<https://w3id.org/ontojourney/core#NormativeDescription> <http://www.w3.org/2000/01/rdf-schema#label> "NormativeDescription"@en .
+<https://w3id.org/ontojourney/core#StageExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/nemo/gufo#Event> .
+<https://w3id.org/ontojourney/core#definesClosure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core#NarrativeJourneyModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#JourneyModel> .
+<https://w3id.org/ontojourney/core#AssistanceSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "A Normative Description of support intended to be made available within an HLJ Stage Specification."@en .
+<https://w3id.org/ontojourney/core#definesClosure> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#JourneyModel> .
+<https://w3id.org/ontojourney/core#ChallengeSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#NormativeDescription> .
+<https://w3id.org/ontojourney/core#Protagonist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#IntendedTransformation> <http://www.w3.org/2000/01/rdf-schema#label> "IntendedTransformation"@en .
+<https://w3id.org/ontojourney/core#ChallengeSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#hasChallengePerformance> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#HLJStageExecution> .
+<https://w3id.org/ontojourney/core#satisfiesIntendedTransformation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#IntendedTransformation> .
+<https://w3id.org/ontojourney/core#hasChallengeEncounter> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#ChallengeEncounter> .
+<https://w3id.org/ontojourney/core#Protagonist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#GoalDescription> <http://www.w3.org/2000/01/rdf-schema#label> "GoalDescription"@en .
+<https://w3id.org/ontojourney/core#prescribesTransformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core#ChallengeSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#Learner> <http://www.w3.org/2000/01/rdf-schema#comment> "A historical role instantiated by a Person through participation in a Learning Journey Execution."@en .
+<https://w3id.org/ontojourney/core#HLJStageSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "A Stage Specification and Plan Description in the Heroine's Learning Journey anatomy that contains exactly one Narrative Framing, Mission Specification, Challenge Specification, and Assistance Specification."@en .
+<https://w3id.org/ontojourney/core#NarrativeJourneyExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#EventType> .
+<https://w3id.org/ontojourney/core#hasNarrativeFraming> <http://www.w3.org/2000/01/rdf-schema#label> "hasNarrativeFraming"@en .
+<https://w3id.org/ontojourney/core#JourneyNarrative> <http://www.w3.org/2000/01/rdf-schema#label> "JourneyNarrative"@en .
+<https://w3id.org/ontojourney/core#JourneyNarrative> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#NarrativeContent> .
+<https://w3id.org/ontojourney/core#Learner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#Role> .
+<https://w3id.org/ontojourney/core#AssistanceSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#isTransformationOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#RealizedTransformation> .
+<https://w3id.org/ontojourney/core#StageExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#AssistanceProvision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#isTransformationOf> <http://www.w3.org/2000/01/rdf-schema#label> "isTransformationOf"@en .
+<https://w3id.org/ontojourney/core#ChallengePerformance> <http://www.w3.org/2000/01/rdf-schema#label> "ChallengePerformance"@en .
+<https://w3id.org/ontojourney/core#PlanDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#NormativeDescription> .
+<https://w3id.org/ontojourney/core#isEncounterOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core#AssistanceProvision> <http://www.w3.org/2000/01/rdf-schema#label> "AssistanceProvision"@en .
+<https://w3id.org/ontojourney/core#JourneyNarrative> <http://www.w3.org/2000/01/rdf-schema#comment> "Narrative Content that organises the narrative progression of a Narrative Journey Model as a whole."@en .
+<https://w3id.org/ontojourney/core#LearningJourneyModel> <http://www.w3.org/2000/01/rdf-schema#label> "LearningJourneyModel"@en .
+<https://w3id.org/ontojourney/core#IntendedLearningTransformation> <http://www.w3.org/2000/01/rdf-schema#label> "IntendedLearningTransformation"@en .
+<https://w3id.org/ontojourney/core#hasMission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core#PlanDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core> <http://purl.org/dc/terms/modified> "2026-11-21"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/ontojourney/core#EducationalPurpose> <http://www.w3.org/2000/01/rdf-schema#comment> "A Goal Description that states an educational aim of a Learning Journey Model."@en .
+<https://w3id.org/ontojourney/core#AssistanceSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#LearningJourneyModel> <http://www.w3.org/2000/01/rdf-schema#comment> "A Journey Model and Plan Description that intentionally organises an educational experience and has at least one Educational Purpose."@en .
+<https://w3id.org/ontojourney/core#hasNarrativeFraming> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core#HLJStageExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#realizesAssistance> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#AssistanceProvision> .
+<https://w3id.org/ontojourney/core#StageExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#ClosureSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "ClosureSpecification"@en .
+<https://w3id.org/ontojourney/core#ChallengePerformance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/nemo/gufo#Event> .
+<https://w3id.org/ontojourney/core#HLJStageExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#StageExecution> .
+<https://w3id.org/ontojourney/core#PlanDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#addressesChallenge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core#HLJStageExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#MissionSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "MissionSpecification"@en .
+<https://w3id.org/ontojourney/core#hasChallengeEncounter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#HLJStageExecution> .
+<https://w3id.org/ontojourney/core#LearningJourneyExecution> <http://www.w3.org/2000/01/rdf-schema#label> "LearningJourneyExecution"@en .
+<https://w3id.org/ontojourney/core#hasAssistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core#MissionSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "A Normative Description that states what the Learner is invited or expected to pursue within an HLJ stage and may combine a desired result with directions for action."@en .
+<https://w3id.org/ontojourney/core#StageSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#Description> .
+<https://w3id.org/ontojourney/core#hasAssistanceProvision> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#AssistanceProvision> .
+<https://w3id.org/ontojourney/core#TransformationEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#EventType> .
+<https://w3id.org/ontojourney/core#participatesAsLearnerIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core#ConditionDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#SubKind> .
+<https://w3id.org/ontojourney/core#hasTransformationEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/ontojourney/core/0.9.2> .
+<https://w3id.org/ontojourney/core#ChallengeSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "A Normative Description assigned to a Stage Specification that describes a demand, obstacle, problem, task, or condition that makes progression demanding."@en .
+<https://w3id.org/ontojourney/core#Description> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#InformationObject> .
+<https://w3id.org/ontojourney/core#producesTransformation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/nemo/gufo#broughtAbout> .
+<https://w3id.org/ontojourney/core#Description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#HLJStageExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "A Stage Execution of an HLJ Stage Specification that may include Challenge Encounters, Challenge Performances, and Assistance Provisions connected to specifications of that same stage."@en .
+<https://w3id.org/ontojourney/core#GoalDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#LearningJourneyExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#JourneyExecution> .
+<https://w3id.org/ontojourney/core#NarrativeJourneyExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "A Journey Execution of a Narrative Journey Model in which the performed stages enact a narratively organised journey."@en .
+<https://w3id.org/ontojourney/core#hasAssistance> <http://www.w3.org/2000/01/rdf-schema#label> "hasAssistance"@en .
+<https://w3id.org/ontojourney/core#LearningJourneyExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "A Journey Execution of a Learning Journey Model in which at least one Person participates as Learner."@en .
+<https://w3id.org/ontojourney/core#participatesAsProtagonistIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#Protagonist> .
+<https://w3id.org/ontojourney/core#NarrativeJourneyModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#Description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#ChallengePerformance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#EventType> .
+<https://w3id.org/ontojourney/core#isEncounterOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#ChallengeSpecification> .
+<https://w3id.org/ontojourney/core#addressesChallenge> <http://www.w3.org/2000/01/rdf-schema#label> "addressesChallenge"@en .
+<https://w3id.org/ontojourney/core#JourneyNarrative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#RealizedTransformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/nemo/gufo#FunctionalComplex> .
+<https://w3id.org/ontojourney/core#Description> <http://www.w3.org/2000/01/rdf-schema#label> "Description"@en .
+<https://w3id.org/ontojourney/core#InformationObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#ClosureSituation> <http://www.w3.org/2000/01/rdf-schema#comment> "A situation brought about by a Journey Execution that satisfies a Closure Specification; in a successful execution, that specification is defined by the executed model."@en .
+<https://w3id.org/ontojourney/core#producesTransformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core#hasNarrativeFraming> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#HLJStageSpecification> .
+<https://w3id.org/ontojourney/core#NarrativeJourneyModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#hasChallengeEncounter> <http://www.w3.org/2000/01/rdf-schema#label> "hasChallengeEncounter"@en .
+<https://w3id.org/ontojourney/core#TransformationEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/nemo/gufo#Event> .
+<https://w3id.org/ontojourney/core#HeroicNarrativeJourneyModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#NarrativeJourneyModel> .
+<https://w3id.org/ontojourney/core#InformationObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/nemo/gufo#FunctionalComplex> .
+<https://w3id.org/ontojourney/core#JourneyNarrative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#HLJStageSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#SubKind> .
+<https://w3id.org/ontojourney/core#hasStage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core#NarrativeJourneyExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#InformationObject> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity whose identity is determined by its informational content and that may be expressed through different physical or digital carriers."@en .
+<https://w3id.org/ontojourney/core#participatesAsProtagonistIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core#InformationObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#directlyPrecedesStage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#StageSpecification> .
+<https://w3id.org/ontojourney/core#hasChallengePerformance> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#ChallengePerformance> .
+<https://w3id.org/ontojourney/core#hasEducationalPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core#hasStage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#JourneyModel> .
+<https://w3id.org/ontojourney/core#NarrativeJourneyExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#NarrativeFraming> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#NarrativeContent> .
+<https://w3id.org/ontojourney/core> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/ontojourney/core#" .
+<https://w3id.org/ontojourney/core#JourneyExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "A complex event in which one Journey Model is enacted in a particular context through one or more Stage Executions."@en .
+<https://w3id.org/ontojourney/core#NormativeDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#Description> .
+<https://w3id.org/ontojourney/core#NarrativeJourneyModel> <http://www.w3.org/2000/01/rdf-schema#label> "NarrativeJourneyModel"@en .
+<https://w3id.org/ontojourney/core#RealizedTransformation> <http://www.w3.org/2000/01/rdf-schema#label> "RealizedTransformation"@en .
+<https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#hasChallenge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core#JourneyExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#EventType> .
+<https://w3id.org/ontojourney/core#NarrativeJourneyModel> <http://www.w3.org/2000/01/rdf-schema#comment> "A Journey Model whose overall progression is organised by exactly one Journey Narrative."@en .
+<https://w3id.org/ontojourney/core#AssistanceProvision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#EventType> .
+<https://w3id.org/ontojourney/core#directlyPrecedesStage> <http://www.w3.org/2000/01/rdf-schema#label> "directlyPrecedesStage"@en .
+<https://w3id.org/ontojourney/core#MissionSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#StageExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "An event within a Journey Execution that enacts one Stage Specification belonging to the executed Journey Model."@en .
+<https://w3id.org/ontojourney/core#HLJStageSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyExecution> <http://www.w3.org/2000/01/rdf-schema#label> "HeroicNarrativeLearningJourneyExecution"@en .
+<https://w3id.org/ontojourney/core#TransformationEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#LearningJourneyExecution> .
+<https://w3id.org/ontojourney/core#SuccessfulHeroicNarrativeLearningJourneyExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyExecution> .
+<https://w3id.org/ontojourney/core#AssistanceSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "AssistanceSpecification"@en .
+<https://w3id.org/ontojourney/core#hasAssistance> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#AssistanceSpecification> .
+<https://w3id.org/ontojourney/core#MissionSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#ConditionDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "A Normative Description that specifies a condition against which a situation can be assessed."@en .
+<https://w3id.org/ontojourney/core#satisfiesClosureSpecification> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#ClosureSituation> .
+<https://w3id.org/ontojourney/core#ChallengeEncounter> <http://www.w3.org/2000/01/rdf-schema#label> "ChallengeEncounter"@en .
+<https://w3id.org/ontojourney/core#JourneyExecution> <http://www.w3.org/2000/01/rdf-schema#label> "JourneyExecution"@en .
+<https://w3id.org/ontojourney/core#TransformationEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#ClosureSituation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#HeroicNarrativeJourneyExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#EventType> .
+<https://w3id.org/ontojourney/core#NarrativeContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#isExecutionOfJourneyModel> <http://www.w3.org/2000/01/rdf-schema#label> "isExecutionOfJourneyModel"@en .
+<https://w3id.org/ontojourney/core#NarrativeContent> <http://www.w3.org/2000/01/rdf-schema#label> "NarrativeContent"@en .
+<https://w3id.org/ontojourney/core#directlyPrecedesStage> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#StageSpecification> .
+<https://w3id.org/ontojourney/core#ChallengeSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#SubKind> .
+<https://w3id.org/ontojourney/core#ChallengePerformance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#JourneyExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/nemo/gufo#Event> .
+<https://w3id.org/ontojourney/core#AssistanceProvision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/nemo/gufo#Event> .
+<https://w3id.org/ontojourney/core#hasEducationalPurpose> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#LearningJourneyModel> .
+<https://w3id.org/ontojourney/core#satisfiesClosureSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#ClosureSpecification> .
+<https://w3id.org/ontojourney/core#HeroicNarrativeJourneyExecution> <http://www.w3.org/2000/01/rdf-schema#label> "HeroicNarrativeJourneyExecution"@en .
+<https://w3id.org/ontojourney/core#hasMission> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#MissionSpecification> .
+<https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#HeroicNarrativeJourneyModel> .
+<https://w3id.org/ontojourney/core#hasStageExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core#participatesAsProtagonistIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#HeroicNarrativeJourneyExecution> .
+<https://w3id.org/ontojourney/core#isTransformationOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#Person> .
+<https://w3id.org/ontojourney/core#ChallengePerformance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#hasTransformationEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#JourneyExecution> .
+<https://w3id.org/ontojourney/core#addressesChallenge> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#ChallengeSpecification> .
+<https://w3id.org/ontojourney/core#producesTransformation> <http://www.w3.org/2000/01/rdf-schema#label> "producesTransformation"@en .
+<https://w3id.org/ontojourney/core#hasChallenge> <http://www.w3.org/2000/01/rdf-schema#label> "hasChallenge"@en .
+<https://w3id.org/ontojourney/core#AssistanceSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#SubKind> .
+<https://w3id.org/ontojourney/core> <http://purl.org/vocab/vann/preferredNamespacePrefix> "oj" .
+<https://w3id.org/ontojourney/core#hasTransformationEvent> <http://www.w3.org/2000/01/rdf-schema#label> "hasTransformationEvent"@en .
+<https://w3id.org/ontojourney/core#JourneyModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#NarrativeFraming> <http://www.w3.org/2000/01/rdf-schema#label> "NarrativeFraming"@en .
+<https://w3id.org/ontojourney/core#producesClosure> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/nemo/gufo#broughtAbout> .
+<https://w3id.org/ontojourney/core#RealizedTransformation> <http://www.w3.org/2000/01/rdf-schema#comment> "A situation brought about by one or more Transformation Events that represents an actual change concerning exactly one Person and satisfies one Intended Transformation."@en .
+<https://w3id.org/ontojourney/core#ClosureSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "A Condition Description defined by a Journey Model that states the condition under which an execution of the model counts as having reached closure."@en .
+<https://w3id.org/ontojourney/core#IntendedTransformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#PlanDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#SubKind> .
+<https://w3id.org/ontojourney/core#JourneyModel> <http://www.w3.org/2000/01/rdf-schema#label> "JourneyModel"@en .
+<https://w3id.org/ontojourney/core#HeroicNarrativeJourneyModel> <http://www.w3.org/2000/01/rdf-schema#comment> "A Narrative Journey Model that frames a meaningful progression through demanding stages towards transformation and closure as a heroic trajectory."@en .
+<https://w3id.org/ontojourney/core> <http://purl.org/dc/terms/description> "A reference ontology for narrative-heroic learning journeys, modeled in OntoUML and grounded in UFO."@en .
+<https://w3id.org/ontojourney/core#JourneyModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#EventType> .
+<https://w3id.org/ontojourney/core#participatesAsProtagonistIn> <http://www.w3.org/2000/01/rdf-schema#label> "participatesAsProtagonistIn"@en .
+<https://w3id.org/ontojourney/core#EducationalPurpose> <http://www.w3.org/2000/01/rdf-schema#label> "EducationalPurpose"@en .
+<https://w3id.org/ontojourney/core> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/ontojourney/core/0.9.1> .
+<https://w3id.org/ontojourney/core#IntendedTransformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#Protagonist> <http://www.w3.org/2000/01/rdf-schema#comment> "A historical role instantiated by a Person through participation as the focal subject of a Heroic Narrative Journey Execution."@en .
+<https://w3id.org/ontojourney/core#isExecutionOfJourneyModel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#JourneyExecution> .
+<https://w3id.org/ontojourney/core#hasEducationalPurpose> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#EducationalPurpose> .
+<https://w3id.org/ontojourney/core#hasMission> <http://www.w3.org/2000/01/rdf-schema#label> "hasMission"@en .
+<https://w3id.org/ontojourney/core#StageSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "A Description that characterises a model-specific stage of a Journey Model, whether as a descriptive pattern or as a prescribed part of a plan, and may be linked to other Stage Specifications through directlyPrecedesStage."@en .
+<https://w3id.org/ontojourney/core#JourneyExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#producesClosure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core#NarrativeJourneyExecution> <http://www.w3.org/2000/01/rdf-schema#label> "NarrativeJourneyExecution"@en .
+<https://w3id.org/ontojourney/core#isExecutionOfJourneyModel> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#JourneyModel> .
+<https://w3id.org/ontojourney/core#producesClosure> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#ClosureSituation> .
+<https://w3id.org/ontojourney/core#IntendedTransformation> <http://www.w3.org/2000/01/rdf-schema#comment> "A Goal Description prescribed by a Journey Model that specifies a transformation the model is intended to bring about."@en .
+<https://w3id.org/ontojourney/core#Description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#SubKind> .
+<https://w3id.org/ontojourney/core#LearningJourneyModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#AssistanceProvision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#AssistanceProvision> <http://www.w3.org/2000/01/rdf-schema#comment> "An event within an HLJ Stage Execution in which assistance specified for that stage is provided."@en .
+<https://w3id.org/ontojourney/core#HLJStageSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "HLJStageSpecification"@en .
+<https://w3id.org/ontojourney/core#hasStage> <http://www.w3.org/2000/01/rdf-schema#label> "hasStage"@en .
+<https://w3id.org/ontojourney/core#GoalDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#SubKind> .
+<https://w3id.org/ontojourney/core#NarrativeFraming> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#IntendedLearningTransformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#NarrativeJourneyModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#SubKind> .
+<https://w3id.org/ontojourney/core#satisfiesIntendedTransformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core#NarrativeFraming> <http://www.w3.org/2000/01/rdf-schema#comment> "Narrative Content that gives one HLJ Stage Specification its local narrative context and connects it to the wider journey."@en .
+<https://w3id.org/ontojourney/core#HeroicNarrativeJourneyExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#NormativeDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "A Description that prescribes, permits, or evaluates possible actions or situations instead of merely characterising them."@en .
+<https://w3id.org/ontojourney/core#TransformationEvent> <http://www.w3.org/2000/01/rdf-schema#label> "TransformationEvent"@en .
+<https://w3id.org/ontojourney/core#participatesAsLearnerIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#Learner> .
+<https://w3id.org/ontojourney/core#Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person"@en .
+<https://w3id.org/ontojourney/core> <http://www.w3.org/2002/07/owl#versionInfo> "0.9.2" .
+<https://w3id.org/ontojourney/core#MissionSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#NormativeDescription> .
+<https://w3id.org/ontojourney/core#JourneyNarrative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#SubKind> .
+<https://w3id.org/ontojourney/core#NarrativeFraming> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#IntendedLearningTransformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#isExecutionOfStageSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "isExecutionOfStageSpecification"@en .
+<https://w3id.org/ontojourney/core#hasNarrative> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#JourneyNarrative> .
+<https://w3id.org/ontojourney/core#GoalDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#NormativeDescription> .
+<https://w3id.org/ontojourney/core#HeroicNarrativeJourneyExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#ClosureSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#hasEducationalPurpose> <http://www.w3.org/2000/01/rdf-schema#label> "hasEducationalPurpose"@en .
+<https://w3id.org/ontojourney/core#GoalDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "A Normative Description whose propositional content describes a situation intended to be attained."@en .
+<https://w3id.org/ontojourney/core#HeroicNarrativeJourneyModel> <http://www.w3.org/2000/01/rdf-schema#label> "HeroicNarrativeJourneyModel"@en .
+<https://w3id.org/ontojourney/core#producesTransformation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#RealizedTransformation> .
+<https://w3id.org/ontojourney/core#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#Kind> .
+<https://w3id.org/ontojourney/core#SuccessfulHeroicNarrativeLearningJourneyExecution> <http://www.w3.org/2000/01/rdf-schema#label> "SuccessfulHeroicNarrativeLearningJourneyExecution"@en .
+<https://w3id.org/ontojourney/core#ChallengeEncounter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#EventType> .
+<https://w3id.org/ontojourney/core#prescribesTransformation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#JourneyModel> .
+<https://w3id.org/ontojourney/core#Protagonist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#Role> .
+<https://w3id.org/ontojourney/core#hasStageExecution> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#StageExecution> .
+<https://w3id.org/ontojourney/core#SuccessfulHeroicNarrativeLearningJourneyExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "A Heroic Narrative Learning Journey Execution that produces a Closure Situation satisfying the executed model's Closure Specification and at least one Realized Transformation of the focal Person satisfying an Intended Learning Transformation prescribed by that model."@en .
+<https://w3id.org/ontojourney/core#hasChallengePerformance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core> <http://purl.org/dc/terms/issued> "2026-11-21"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/ontojourney/core#GoalDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#InformationObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#Kind> .
+<https://w3id.org/ontojourney/core#hasMission> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#HLJStageSpecification> .
+<https://w3id.org/ontojourney/core#satisfiesClosureSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "satisfiesClosureSpecification"@en .
+<https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#LearningJourneyExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#EventType> .
+<https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#SubKind> .
+<https://w3id.org/ontojourney/core#RealizedTransformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#prescribesTransformation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#IntendedTransformation> .
+<https://w3id.org/ontojourney/core#SuccessfulHeroicNarrativeLearningJourneyExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#EventType> .
+<https://w3id.org/ontojourney/core#Description> <http://www.w3.org/2000/01/rdf-schema#comment> "An Information Object that expresses a conceptualization of entities or configurations and provides criteria for interpreting or assessing them."@en .
+<https://w3id.org/ontojourney/core#prescribesTransformation> <http://www.w3.org/2000/01/rdf-schema#label> "prescribesTransformation"@en .
+<https://w3id.org/ontojourney/core#isTransformationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core#MissionSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#SubKind> .
+<https://w3id.org/ontojourney/core#isEncounterOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#ChallengeEncounter> .
+<https://w3id.org/ontojourney/core#HeroicNarrativeJourneyModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#hasStageExecution> <http://www.w3.org/2000/01/rdf-schema#label> "hasStageExecution"@en .
+<https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#directlyPrecedesStage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core#ChallengeEncounter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/nemo/gufo#Event> .
+<https://w3id.org/ontojourney/core#hasAssistanceProvision> <http://www.w3.org/2000/01/rdf-schema#label> "hasAssistanceProvision"@en .
+<https://w3id.org/ontojourney/core#hasAssistance> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#HLJStageSpecification> .
+<https://w3id.org/ontojourney/core#PlanDescription> <http://www.w3.org/2000/01/rdf-schema#label> "PlanDescription"@en .
+<https://w3id.org/ontojourney/core#IntendedLearningTransformation> <http://www.w3.org/2000/01/rdf-schema#comment> "An Intended Transformation that specifies a learning-related change to be pursued through a learning journey."@en .
+<https://w3id.org/ontojourney/core#hasNarrative> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#NarrativeJourneyModel> .
+<https://w3id.org/ontojourney/core#HeroicNarrativeJourneyModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#IntendedLearningTransformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#IntendedTransformation> .
+<https://w3id.org/ontojourney/core#satisfiesClosureSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core#EducationalPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#NarrativeJourneyExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#JourneyExecution> .
+<https://w3id.org/ontojourney/core#hasAssistanceProvision> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ontojourney/core#HLJStageExecution> .
+<https://w3id.org/ontojourney/core#NarrativeContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#SubKind> .
+<https://w3id.org/ontojourney/core#StageSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#JourneyModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#Description> .
+<https://w3id.org/ontojourney/core#hasChallengeEncounter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core#NormativeDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#EducationalPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#ClosureSituation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#SituationType> .
+<https://w3id.org/ontojourney/core#StageSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#NormativeDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#ClosureSituation> <http://www.w3.org/2000/01/rdf-schema#label> "ClosureSituation"@en .
+<https://w3id.org/ontojourney/core#HLJStageSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#PlanDescription> .
+<https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#HeroicNarrativeJourneyExecution> .
+<https://w3id.org/ontojourney/core#ChallengeSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "ChallengeSpecification"@en .
+<https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyModel> <http://www.w3.org/2000/01/rdf-schema#label> "HeroicNarrativeLearningJourneyModel"@en .
+<https://w3id.org/ontojourney/core#hasNarrativeFraming> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#NarrativeFraming> .
+<https://w3id.org/ontojourney/core#NarrativeContent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#InformationObject> .
+<https://w3id.org/ontojourney/core#JourneyModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#SubKind> .
+<https://w3id.org/ontojourney/core#ChallengeEncounter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#definesClosure> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#ClosureSpecification> .
+<https://w3id.org/ontojourney/core#realizesAssistance> <http://www.w3.org/2000/01/rdf-schema#label> "realizesAssistance"@en .
+<https://w3id.org/ontojourney/core> <http://purl.org/dc/terms/creator> "Luis Felipe Coimbra Costa" .
+<https://w3id.org/ontojourney/core#IntendedTransformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#SubKind> .
+<https://w3id.org/ontojourney/core> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/ontojourney/core#Learner> <http://www.w3.org/2000/01/rdf-schema#label> "Learner"@en .
+<https://w3id.org/ontojourney/core#InformationObject> <http://www.w3.org/2000/01/rdf-schema#label> "InformationObject"@en .
+<https://w3id.org/ontojourney/core#NarrativeContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#ChallengeEncounter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#ClosureSituation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/nemo/gufo#Situation> .
+<https://w3id.org/ontojourney/core#LearningJourneyExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#PlanDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "A Normative Description that prescribes or organises intended actions and events towards a purpose."@en .
+<https://w3id.org/ontojourney/core#Learner> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#Person> .
+<https://w3id.org/ontojourney/core#participatesAsLearnerIn> <http://www.w3.org/2000/01/rdf-schema#label> "participatesAsLearnerIn"@en .
+<https://w3id.org/ontojourney/core#Protagonist> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#Person> .
+<https://w3id.org/ontojourney/core> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/ontojourney/core#hasChallengePerformance> <http://www.w3.org/2000/01/rdf-schema#label> "hasChallengePerformance"@en .
+<https://w3id.org/ontojourney/core#realizesAssistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core#ConditionDescription> <http://www.w3.org/2000/01/rdf-schema#label> "ConditionDescription"@en .
+<https://w3id.org/ontojourney/core#SuccessfulHeroicNarrativeLearningJourneyExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ontojourney/core#HeroicNarrativeJourneyExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "A Narrative Journey Execution of a Heroic Narrative Journey Model that constitutes one focal heroic trajectory with exactly one Protagonist."@en .
+<https://w3id.org/ontojourney/core#IntendedTransformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#GoalDescription> .
+<https://w3id.org/ontojourney/core#isExecutionOfStageSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ontojourney/core#StageSpecification> .
+<https://w3id.org/ontojourney/core#LearningJourneyExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#HeroicNarrativeJourneyExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#NarrativeJourneyExecution> .
+<https://w3id.org/ontojourney/core#LearningJourneyModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#SubKind> .
+<https://w3id.org/ontojourney/core#SuccessfulHeroicNarrativeLearningJourneyExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ontojourney/core#HLJStageSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#StageSpecification> .
+<https://w3id.org/ontojourney/core#LearningJourneyModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#JourneyModel> .
+<https://w3id.org/ontojourney/core#hasAssistanceProvision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "A Heroic Narrative Journey Execution and Learning Journey Execution of one Heroic Narrative Learning Journey Model, with exactly one focal Person participating as both Protagonist and Learner."@en .
+<https://w3id.org/ontojourney/core#NarrativeFraming> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/nemo/gufo#SubKind> .
+<https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ontojourney/core#LearningJourneyModel> .

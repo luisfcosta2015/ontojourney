@@ -33,3 +33,6 @@ Tonto CLI 0.4.13 local validation and JSON structural audit passed. ontouml-js 0
 - [ ] Verify new and historical content negotiation plus download checksums before announcing.
 
 The extended review workflow regenerates JSON, verifies and transforms it locally, compares exact axiom changes, builds four RDF serializations, reruns Core SHACL, generates an opt-in overlay and tests nine queries on two synthetic graphs. Candidate outputs become an unpublished CI artifact. IDs may differ from the original generated JSON. Case 01 data and raw logs are not included pending redistribution checks. Production files and redirects remain unchanged. Final promotion remains gated.
+
+## Frozen release integration
+The 60-file transfer and ZIP were independently hash-verified. The target release date in this branch is 2026-11-21; do not merge or publish until the author confirms the date and final scope. If publication is later, update the date metadata, re-freeze the archive and revalidate first. GitHub release creation is manual and produces a draft. Historical public directories remain untouched. W3ID is deferred until hosting is verified.

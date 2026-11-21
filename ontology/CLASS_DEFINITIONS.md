@@ -1,4 +1,4 @@
-# OntoJourney Core v0.9.1 — class definitions
+# OntoJourney Core v0.9.2 — class definitions
 
 This document is generated from the English `description` values in the canonical Tonto model. Do not edit it independently.
 
@@ -23,7 +23,7 @@ This document is generated from the English `description` values in the canonica
 | `HeroicNarrativeJourneyModel` | `subkind` | A Narrative Journey Model that frames a meaningful progression through demanding stages towards transformation and closure as a heroic trajectory. |
 | `LearningJourneyModel` | `subkind` | A Journey Model and Plan Description that intentionally organises an educational experience and has at least one Educational Purpose. |
 | `HeroicNarrativeLearningJourneyModel` | `subkind` | A Heroic Narrative Journey Model and Learning Journey Model whose identity includes one Journey Narrative, at least two connected Stage Specifications, at least one challenged stage, at least one Educational Purpose, at least one Intended Learning Transformation, and one Closure Specification. |
-| `StageSpecification` | `subkind` | A Plan Description that specifies one stage belonging to a Journey Model and may be linked to other Stage Specifications through directlyPrecedesStage. |
+| `StageSpecification` | `subkind` | A Description that characterises a model-specific stage of a Journey Model, whether as a descriptive pattern or as a prescribed part of a plan, and may be linked to other Stage Specifications through directlyPrecedesStage. |
 | `JourneyNarrative` | `subkind` | Narrative Content that organises the narrative progression of a Narrative Journey Model as a whole. |
 | `NarrativeFraming` | `subkind` | Narrative Content that gives one HLJ Stage Specification its local narrative context and connects it to the wider journey. |
 | `IntendedTransformation` | `subkind` | A Goal Description prescribed by a Journey Model that specifies a transformation the model is intended to bring about. |
@@ -65,4 +65,4 @@ This document is generated from the English `description` values in the canonica
 
 | Class | OntoUML stereotype | Definition |
 |---|---|---|
-| `HLJStageSpecification` | `subkind` | A Stage Specification in the Heroine's Learning Journey anatomy that contains exactly one Narrative Framing, Mission Specification, Challenge Specification, and Assistance Specification. |
+| `HLJStageSpecification` | `subkind` | A Stage Specification and Plan Description in the Heroine's Learning Journey anatomy that contains exactly one Narrative Framing, Mission Specification, Challenge Specification, and Assistance Specification. |

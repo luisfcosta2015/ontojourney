@@ -1,1236 +1,1703 @@
-{
-  "@context": {
-    "brick": "https://brickschema.org/schema/Brick#",
-    "csvw": "http://www.w3.org/ns/csvw#",
-    "dc": "http://purl.org/dc/elements/1.1/",
-    "dcam": "http://purl.org/dc/dcam/",
-    "dcat": "http://www.w3.org/ns/dcat#",
-    "dcmitype": "http://purl.org/dc/dcmitype/",
-    "dcterms": "http://purl.org/dc/terms/",
-    "doap": "http://usefulinc.com/ns/doap#",
-    "foaf": "http://xmlns.com/foaf/0.1/",
-    "geo": "http://www.opengis.net/ont/geosparql#",
-    "gufo": "http://purl.org/nemo/gufo#",
-    "odrl": "http://www.w3.org/ns/odrl/2/",
-    "org": "http://www.w3.org/ns/org#",
-    "owl": "http://www.w3.org/2002/07/owl#",
-    "prof": "http://www.w3.org/ns/dx/prof/",
-    "prov": "http://www.w3.org/ns/prov#",
-    "qb": "http://purl.org/linked-data/cube#",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "schema": "https://schema.org/",
-    "sh": "http://www.w3.org/ns/shacl#",
-    "skos": "http://www.w3.org/2004/02/skos/core#",
-    "sosa": "http://www.w3.org/ns/sosa/",
-    "ssn": "http://www.w3.org/ns/ssn/",
-    "time": "http://www.w3.org/2006/time#",
-    "vann": "http://purl.org/vocab/vann/",
-    "void": "http://rdfs.org/ns/void#",
-    "wgs": "https://www.w3.org/2003/01/geo/wgs84_pos#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
-  },
-  "@graph": [
-    {
-      "@id": "https://w3id.org/ontojourney/core#satisfiesIntendedTransformation",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#RealizedTransformation"
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "satisfiesIntendedTransformation"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#IntendedTransformation"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#MissionSpecification",
-      "@type": [
-        "gufo:SubKind",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A Normative Description that states what the Learner is invited or expected to pursue within an HLJ stage and may combine a desired result with directions for action."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "MissionSpecification"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#NormativeDescription"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#NarrativeJourneyExecution",
-      "@type": [
-        "gufo:EventType",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A Journey Execution of a Narrative Journey Model in which the performed stages enact a narratively organised journey."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "NarrativeJourneyExecution"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#JourneyExecution"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#Description",
-      "@type": [
-        "gufo:SubKind",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "An Information Object that expresses a conceptualization of entities or configurations and provides criteria for interpreting or assessing them."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Description"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#InformationObject"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#PlanDescription",
-      "@type": [
-        "gufo:SubKind",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A Normative Description that prescribes or organises intended actions and events towards a purpose."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "PlanDescription"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#NormativeDescription"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#directlyPrecedesStage",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#StageSpecification"
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "directlyPrecedesStage"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#StageSpecification"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#JourneyNarrative",
-      "@type": [
-        "gufo:SubKind",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "Narrative Content that organises the narrative progression of a Narrative Journey Model as a whole."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "JourneyNarrative"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#NarrativeContent"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#StageSpecification",
-      "@type": [
-        "gufo:SubKind",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A Plan Description that specifies one stage belonging to a Journey Model and may be linked to other Stage Specifications through directlyPrecedesStage."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "StageSpecification"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#PlanDescription"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#ClosureSpecification",
-      "@type": [
-        "gufo:SubKind",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A Condition Description defined by a Journey Model that states the condition under which an execution of the model counts as having reached closure."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "ClosureSpecification"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#ConditionDescription"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core",
-      "@type": "owl:Ontology",
-      "dcterms:creator": "Luis Felipe Coimbra Costa",
-      "dcterms:description": {
-        "@language": "en",
-        "@value": "A reference ontology for narrative-heroic learning journeys, modeled in OntoUML and grounded in UFO."
-      },
-      "dcterms:issued": {
-        "@type": "xsd:date",
-        "@value": "2026-08-21"
-      },
-      "dcterms:license": {
-        "@id": "https://creativecommons.org/licenses/by/4.0/"
-      },
-      "dcterms:modified": {
-        "@type": "xsd:date",
-        "@value": "2026-08-21"
-      },
-      "dcterms:title": {
-        "@language": "en",
-        "@value": "OntoJourney Core"
-      },
-      "owl:imports": {
-        "@id": "gufo:"
-      },
-      "owl:priorVersion": {
-        "@id": "https://w3id.org/ontojourney/core/0.9"
-      },
-      "owl:versionIRI": {
-        "@id": "https://w3id.org/ontojourney/core/0.9.1"
-      },
-      "owl:versionInfo": "0.9.1",
-      "vann:preferredNamespacePrefix": "oj",
-      "vann:preferredNamespaceUri": "https://w3id.org/ontojourney/core#"
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#StageExecution",
-      "@type": [
-        "gufo:EventType",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "An event within a Journey Execution that enacts one Stage Specification belonging to the executed Journey Model."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "StageExecution"
-      },
-      "rdfs:subClassOf": {
-        "@id": "gufo:Event"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#isTransformationOf",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#RealizedTransformation"
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "isTransformationOf"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#Person"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#hasEducationalPurpose",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#LearningJourneyModel"
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "hasEducationalPurpose"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#EducationalPurpose"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#ChallengeEncounter",
-      "@type": [
-        "gufo:EventType",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "An event within an HLJ Stage Execution in which the specified challenge of that stage is faced, whether or not it is successfully addressed."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "ChallengeEncounter"
-      },
-      "rdfs:subClassOf": {
-        "@id": "gufo:Event"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#HeroicNarrativeJourneyModel",
-      "@type": [
-        "gufo:SubKind",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A Narrative Journey Model that frames a meaningful progression through demanding stages towards transformation and closure as a heroic trajectory."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "HeroicNarrativeJourneyModel"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#NarrativeJourneyModel"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#JourneyExecution",
-      "@type": [
-        "gufo:EventType",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A complex event in which one Journey Model is enacted in a particular context through one or more Stage Executions."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "JourneyExecution"
-      },
-      "rdfs:subClassOf": {
-        "@id": "gufo:Event"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#hasStageExecution",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#JourneyExecution"
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "hasStageExecution"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#StageExecution"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#Protagonist",
-      "@type": [
-        "gufo:Role",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A historical role instantiated by a Person through participation as the focal subject of a Heroic Narrative Journey Execution."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Protagonist"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#Person"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#TransformationEvent",
-      "@type": [
-        "gufo:EventType",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "An event within a Journey Execution that brings about one Realized Transformation."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "TransformationEvent"
-      },
-      "rdfs:subClassOf": {
-        "@id": "gufo:Event"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#hasChallenge",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#StageSpecification"
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "hasChallenge"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#ChallengeSpecification"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#ChallengeSpecification",
-      "@type": [
-        "gufo:SubKind",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A Normative Description assigned to a Stage Specification that describes a demand, obstacle, problem, task, or condition that makes progression demanding."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "ChallengeSpecification"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#NormativeDescription"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#NarrativeJourneyModel",
-      "@type": [
-        "gufo:SubKind",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A Journey Model whose overall progression is organised by exactly one Journey Narrative."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "NarrativeJourneyModel"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#JourneyModel"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#LearningJourneyModel",
-      "@type": [
-        "gufo:SubKind",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A Journey Model and Plan Description that intentionally organises an educational experience and has at least one Educational Purpose."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "LearningJourneyModel"
-      },
-      "rdfs:subClassOf": [
-        {
-          "@id": "https://w3id.org/ontojourney/core#JourneyModel"
-        },
-        {
-          "@id": "https://w3id.org/ontojourney/core#PlanDescription"
-        }
-      ]
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#AssistanceProvision",
-      "@type": [
-        "gufo:EventType",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "An event within an HLJ Stage Execution in which assistance specified for that stage is provided."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "AssistanceProvision"
-      },
-      "rdfs:subClassOf": {
-        "@id": "gufo:Event"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#hasAssistance",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#HLJStageSpecification"
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "hasAssistance"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#AssistanceSpecification"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#definesClosure",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#JourneyModel"
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "definesClosure"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#ClosureSpecification"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#isEncounterOf",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#ChallengeEncounter"
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "isEncounterOf"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#ChallengeSpecification"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#RealizedTransformation",
-      "@type": [
-        "gufo:SituationType",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A situation brought about by one or more Transformation Events that represents an actual change concerning exactly one Person and satisfies one Intended Transformation."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "RealizedTransformation"
-      },
-      "rdfs:subClassOf": {
-        "@id": "gufo:Situation"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#NarrativeFraming",
-      "@type": [
-        "gufo:SubKind",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "Narrative Content that gives one HLJ Stage Specification its local narrative context and connects it to the wider journey."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "NarrativeFraming"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#NarrativeContent"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#AssistanceSpecification",
-      "@type": [
-        "gufo:SubKind",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A Normative Description of support intended to be made available within an HLJ Stage Specification."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "AssistanceSpecification"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#NormativeDescription"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#HeroicNarrativeJourneyExecution",
-      "@type": [
-        "gufo:EventType",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A Narrative Journey Execution of a Heroic Narrative Journey Model that constitutes one focal heroic trajectory with exactly one Protagonist."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "HeroicNarrativeJourneyExecution"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#NarrativeJourneyExecution"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#ConditionDescription",
-      "@type": [
-        "gufo:SubKind",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A Normative Description that specifies a condition against which a situation can be assessed."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "ConditionDescription"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#NormativeDescription"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#NormativeDescription",
-      "@type": [
-        "gufo:SubKind",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A Description that prescribes, permits, or evaluates possible actions or situations instead of merely characterising them."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "NormativeDescription"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#Description"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#satisfiesClosureSpecification",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#ClosureSituation"
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "satisfiesClosureSpecification"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#ClosureSpecification"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#HLJStageSpecification",
-      "@type": [
-        "gufo:SubKind",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A Stage Specification in the Heroine's Learning Journey anatomy that contains exactly one Narrative Framing, Mission Specification, Challenge Specification, and Assistance Specification."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "HLJStageSpecification"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#StageSpecification"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#producesClosure",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#JourneyExecution"
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "producesClosure"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#ClosureSituation"
-      },
-      "rdfs:subPropertyOf": {
-        "@id": "gufo:broughtAbout"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#isExecutionOfJourneyModel",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#JourneyExecution"
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "isExecutionOfJourneyModel"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#JourneyModel"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#SuccessfulHeroicNarrativeLearningJourneyExecution",
-      "@type": [
-        "gufo:EventType",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A Heroic Narrative Learning Journey Execution that produces a Closure Situation satisfying the executed model's Closure Specification and at least one Realized Transformation of the focal Person satisfying an Intended Learning Transformation prescribed by that model."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "SuccessfulHeroicNarrativeLearningJourneyExecution"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyExecution"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#hasAssistanceProvision",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#HLJStageExecution"
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "hasAssistanceProvision"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#AssistanceProvision"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#prescribesTransformation",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#JourneyModel"
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "prescribesTransformation"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#IntendedTransformation"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#isExecutionOfStageSpecification",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#StageExecution"
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "isExecutionOfStageSpecification"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#StageSpecification"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#Learner",
-      "@type": [
-        "gufo:Role",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A historical role instantiated by a Person through participation in a Learning Journey Execution."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Learner"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#Person"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#IntendedTransformation",
-      "@type": [
-        "gufo:SubKind",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A Goal Description prescribed by a Journey Model that specifies a transformation the model is intended to bring about."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "IntendedTransformation"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#GoalDescription"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#InformationObject",
-      "@type": [
-        "gufo:Kind",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "An entity whose identity is determined by its informational content and that may be expressed through different physical or digital carriers."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "InformationObject"
-      },
-      "rdfs:subClassOf": {
-        "@id": "gufo:FunctionalComplex"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#GoalDescription",
-      "@type": [
-        "gufo:SubKind",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A Normative Description whose propositional content describes a situation intended to be attained."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "GoalDescription"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#NormativeDescription"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyModel",
-      "@type": [
-        "gufo:SubKind",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A Heroic Narrative Journey Model and Learning Journey Model whose identity includes one Journey Narrative, at least two connected Stage Specifications, at least one challenged stage, at least one Educational Purpose, at least one Intended Learning Transformation, and one Closure Specification."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "HeroicNarrativeLearningJourneyModel"
-      },
-      "rdfs:subClassOf": [
-        {
-          "@id": "https://w3id.org/ontojourney/core#HeroicNarrativeJourneyModel"
-        },
-        {
-          "@id": "https://w3id.org/ontojourney/core#LearningJourneyModel"
-        }
-      ]
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#addressesChallenge",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#ChallengePerformance"
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "addressesChallenge"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#ChallengeSpecification"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#hasNarrative",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#NarrativeJourneyModel"
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "hasNarrative"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#JourneyNarrative"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#NarrativeContent",
-      "@type": [
-        "gufo:SubKind",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "An Information Object that organises characters, events, or themes as narrative content, independently of the medium through which it is expressed."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "NarrativeContent"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#InformationObject"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#producesTransformation",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#TransformationEvent"
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "producesTransformation"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#RealizedTransformation"
-      },
-      "rdfs:subPropertyOf": {
-        "@id": "gufo:broughtAbout"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#LearningJourneyExecution",
-      "@type": [
-        "gufo:EventType",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A Journey Execution of a Learning Journey Model in which at least one Person participates as Learner."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "LearningJourneyExecution"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#JourneyExecution"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#HLJStageExecution",
-      "@type": [
-        "gufo:EventType",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A Stage Execution of an HLJ Stage Specification that may include Challenge Encounters, Challenge Performances, and Assistance Provisions connected to specifications of that same stage."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "HLJStageExecution"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#StageExecution"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#ChallengePerformance",
-      "@type": [
-        "gufo:EventType",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "An event within an HLJ Stage Execution in which action is directed towards the specified challenge of that stage; its occurrence does not by itself imply success."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "ChallengePerformance"
-      },
-      "rdfs:subClassOf": {
-        "@id": "gufo:Event"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#EducationalPurpose",
-      "@type": [
-        "gufo:SubKind",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
+[
+  {
+    "@id": "https://w3id.org/ontojourney/core#EducationalPurpose",
+    "@type": [
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
         "@language": "en",
         "@value": "A Goal Description that states an educational aim of a Learning Journey Model."
-      },
-      "rdfs:label": {
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
         "@language": "en",
         "@value": "EducationalPurpose"
-      },
-      "rdfs:subClassOf": {
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
         "@id": "https://w3id.org/ontojourney/core#GoalDescription"
       }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#Person",
-      "@type": [
-        "gufo:Kind",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyModel",
+    "@type": [
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
         "@language": "en",
-        "@value": "A human individual who may participate in Journey Executions and whose identity is preserved across the historical roles Protagonist and Learner."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "Person"
-      },
-      "rdfs:subClassOf": {
-        "@id": "gufo:FunctionalComplex"
+        "@value": "A Heroic Narrative Journey Model and Learning Journey Model whose identity includes one Journey Narrative, at least two connected Stage Specifications, at least one challenged stage, at least one Educational Purpose, at least one Intended Learning Transformation, and one Closure Specification."
       }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#hasNarrativeFraming",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#HLJStageSpecification"
-      },
-      "rdfs:label": {
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
         "@language": "en",
-        "@value": "hasNarrativeFraming"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#NarrativeFraming"
+        "@value": "HeroicNarrativeLearningJourneyModel"
       }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#participatesAsProtagonistIn",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#Protagonist"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#HeroicNarrativeJourneyModel"
       },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "participatesAsProtagonistIn"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#HeroicNarrativeJourneyExecution"
-      },
-      "rdfs:subPropertyOf": {
-        "@id": "gufo:participatedIn"
+      {
+        "@id": "https://w3id.org/ontojourney/core#LearningJourneyModel"
       }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#hasChallengePerformance",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#HLJStageExecution"
-      },
-      "rdfs:label": {
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#LearningJourneyModel",
+    "@type": [
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
         "@language": "en",
-        "@value": "hasChallengePerformance"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#ChallengePerformance"
+        "@value": "A Journey Model and Plan Description that intentionally organises an educational experience and has at least one Educational Purpose."
       }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#JourneyModel",
-      "@type": [
-        "gufo:SubKind",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
         "@language": "en",
-        "@value": "A Description that characterises a reusable journey pattern through one or more Stage Specifications and one Closure Specification, and may prescribe Intended Transformations."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "JourneyModel"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#Description"
+        "@value": "LearningJourneyModel"
       }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyExecution",
-      "@type": [
-        "gufo:EventType",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A Heroic Narrative Journey Execution and Learning Journey Execution of one Heroic Narrative Learning Journey Model, with exactly one focal Person participating as both Protagonist and Learner."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "HeroicNarrativeLearningJourneyExecution"
-      },
-      "rdfs:subClassOf": [
-        {
-          "@id": "https://w3id.org/ontojourney/core#HeroicNarrativeJourneyExecution"
-        },
-        {
-          "@id": "https://w3id.org/ontojourney/core#LearningJourneyExecution"
-        }
-      ]
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#ClosureSituation",
-      "@type": [
-        "gufo:SituationType",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "A situation brought about by a Journey Execution that satisfies a Closure Specification; in a successful execution, that specification is defined by the executed model."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "ClosureSituation"
-      },
-      "rdfs:subClassOf": {
-        "@id": "gufo:Situation"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#hasTransformationEvent",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#JourneyExecution"
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "hasTransformationEvent"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#TransformationEvent"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#realizesAssistance",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#AssistanceProvision"
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "realizesAssistance"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#AssistanceSpecification"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#IntendedLearningTransformation",
-      "@type": [
-        "gufo:SubKind",
-        "owl:Class",
-        "owl:NamedIndividual"
-      ],
-      "rdfs:comment": {
-        "@language": "en",
-        "@value": "An Intended Transformation that specifies a learning-related change to be pursued through a learning journey."
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "IntendedLearningTransformation"
-      },
-      "rdfs:subClassOf": {
-        "@id": "https://w3id.org/ontojourney/core#IntendedTransformation"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#hasChallengeEncounter",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#HLJStageExecution"
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "hasChallengeEncounter"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#ChallengeEncounter"
-      }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#hasStage",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
         "@id": "https://w3id.org/ontojourney/core#JourneyModel"
       },
-      "rdfs:label": {
+      {
+        "@id": "https://w3id.org/ontojourney/core#PlanDescription"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#ClosureSituation",
+    "@type": [
+      "http://purl.org/nemo/gufo#SituationType",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A situation brought about by a Journey Execution that satisfies a Closure Specification; in a successful execution, that specification is defined by the executed model."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "ClosureSituation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#Situation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#NarrativeContent",
+    "@type": [
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An Information Object that organises characters, events, or themes as narrative content, independently of the medium through which it is expressed."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "NarrativeContent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#InformationObject"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#RealizedTransformation",
+    "@type": [
+      "http://purl.org/nemo/gufo#SituationType",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A situation brought about by one or more Transformation Events that represents an actual change concerning exactly one Person and satisfies one Intended Transformation."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "RealizedTransformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#Situation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#Learner",
+    "@type": [
+      "http://purl.org/nemo/gufo#Role",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A historical role instantiated by a Person through participation in a Learning Journey Execution."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Learner"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#Person"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#hasStageExecution",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#JourneyExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "hasStageExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#StageExecution"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#LearningJourneyExecution",
+    "@type": [
+      "http://purl.org/nemo/gufo#EventType",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A Journey Execution of a Learning Journey Model in which at least one Person participates as Learner."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "LearningJourneyExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#JourneyExecution"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#definesClosure",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#JourneyModel"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "definesClosure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#ClosureSpecification"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#AssistanceProvision",
+    "@type": [
+      "http://purl.org/nemo/gufo#EventType",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An event within an HLJ Stage Execution in which assistance specified for that stage is provided."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "AssistanceProvision"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#Event"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#hasStage",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#JourneyModel"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
         "@language": "en",
         "@value": "hasStage"
-      },
-      "rdfs:range": {
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
         "@id": "https://w3id.org/ontojourney/core#StageSpecification"
       }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#hasMission",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#HLJStageSpecification"
-      },
-      "rdfs:label": {
-        "@language": "en",
-        "@value": "hasMission"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#MissionSpecification"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#addressesChallenge",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#ChallengePerformance"
       }
-    },
-    {
-      "@id": "https://w3id.org/ontojourney/core#participatesAsLearnerIn",
-      "@type": "owl:ObjectProperty",
-      "rdfs:domain": {
-        "@id": "https://w3id.org/ontojourney/core#Learner"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "addressesChallenge"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#ChallengeSpecification"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#NarrativeJourneyExecution",
+    "@type": [
+      "http://purl.org/nemo/gufo#EventType",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A Journey Execution of a Narrative Journey Model in which the performed stages enact a narratively organised journey."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "NarrativeJourneyExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#JourneyExecution"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#isTransformationOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#RealizedTransformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "isTransformationOf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#Person"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#HLJStageSpecification",
+    "@type": [
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A Stage Specification and Plan Description in the Heroine's Learning Journey anatomy that contains exactly one Narrative Framing, Mission Specification, Challenge Specification, and Assistance Specification."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "HLJStageSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#PlanDescription"
       },
-      "rdfs:label": {
+      {
+        "@id": "https://w3id.org/ontojourney/core#StageSpecification"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#hasTransformationEvent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#JourneyExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "hasTransformationEvent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#TransformationEvent"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#HeroicNarrativeJourneyModel",
+    "@type": [
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A Narrative Journey Model that frames a meaningful progression through demanding stages towards transformation and closure as a heroic trajectory."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "HeroicNarrativeJourneyModel"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#NarrativeJourneyModel"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#satisfiesIntendedTransformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#RealizedTransformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "satisfiesIntendedTransformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#IntendedTransformation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#participatesAsLearnerIn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#Learner"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
         "@language": "en",
         "@value": "participatesAsLearnerIn"
-      },
-      "rdfs:range": {
-        "@id": "https://w3id.org/ontojourney/core#LearningJourneyExecution"
-      },
-      "rdfs:subPropertyOf": {
-        "@id": "gufo:participatedIn"
       }
-    }
-  ]
-}
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#LearningJourneyExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#participatedIn"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#JourneyExecution",
+    "@type": [
+      "http://purl.org/nemo/gufo#EventType",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A complex event in which one Journey Model is enacted in a particular context through one or more Stage Executions."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "JourneyExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#Event"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#ClosureSpecification",
+    "@type": [
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A Condition Description defined by a Journey Model that states the condition under which an execution of the model counts as having reached closure."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "ClosureSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#ConditionDescription"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#IntendedLearningTransformation",
+    "@type": [
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An Intended Transformation that specifies a learning-related change to be pursued through a learning journey."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "IntendedLearningTransformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#IntendedTransformation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#producesTransformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#TransformationEvent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "producesTransformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#RealizedTransformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#broughtAbout"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#ChallengePerformance",
+    "@type": [
+      "http://purl.org/nemo/gufo#EventType",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An event within an HLJ Stage Execution in which action is directed towards the specified challenge of that stage; its occurrence does not by itself imply success."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "ChallengePerformance"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#Event"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#hasChallengePerformance",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#HLJStageExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "hasChallengePerformance"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#ChallengePerformance"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#GoalDescription",
+    "@type": [
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A Normative Description whose propositional content describes a situation intended to be attained."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "GoalDescription"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#NormativeDescription"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#hasChallengeEncounter",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#HLJStageExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "hasChallengeEncounter"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#ChallengeEncounter"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#participatesAsProtagonistIn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#Protagonist"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "participatesAsProtagonistIn"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#HeroicNarrativeJourneyExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#participatedIn"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#isExecutionOfJourneyModel",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#JourneyExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "isExecutionOfJourneyModel"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#JourneyModel"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#InformationObject",
+    "@type": [
+      "http://purl.org/nemo/gufo#Kind",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An entity whose identity is determined by its informational content and that may be expressed through different physical or digital carriers."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "InformationObject"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#FunctionalComplex"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#AssistanceSpecification",
+    "@type": [
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A Normative Description of support intended to be made available within an HLJ Stage Specification."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "AssistanceSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#NormativeDescription"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#directlyPrecedesStage",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#StageSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "directlyPrecedesStage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#StageSpecification"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#PlanDescription",
+    "@type": [
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A Normative Description that prescribes or organises intended actions and events towards a purpose."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "PlanDescription"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#NormativeDescription"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#ChallengeSpecification",
+    "@type": [
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A Normative Description assigned to a Stage Specification that describes a demand, obstacle, problem, task, or condition that makes progression demanding."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "ChallengeSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#NormativeDescription"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#Person",
+    "@type": [
+      "http://purl.org/nemo/gufo#Kind",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A human individual who may participate in Journey Executions and whose identity is preserved across the historical roles Protagonist and Learner."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Person"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#FunctionalComplex"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#IntendedTransformation",
+    "@type": [
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A Goal Description prescribed by a Journey Model that specifies a transformation the model is intended to bring about."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "IntendedTransformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#GoalDescription"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#hasEducationalPurpose",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#LearningJourneyModel"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "hasEducationalPurpose"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#EducationalPurpose"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#Description",
+    "@type": [
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An Information Object that expresses a conceptualization of entities or configurations and provides criteria for interpreting or assessing them."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Description"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#InformationObject"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#hasAssistance",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#HLJStageSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "hasAssistance"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#AssistanceSpecification"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Luis Felipe Coimbra Costa"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "A reference ontology for narrative-heroic learning journeys, modeled in OntoUML and grounded in UFO."
+      }
+    ],
+    "http://purl.org/dc/terms/identifier": [
+      {
+        "@value": "10.5281/zenodo.24420185"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-11-21"
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-11-21"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "OntoJourney Core"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespacePrefix": [
+      {
+        "@value": "oj"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespaceUri": [
+      {
+        "@value": "https://w3id.org/ontojourney/core#"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "http://purl.org/nemo/gufo#"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#priorVersion": [
+      {
+        "@id": "https://w3id.org/ontojourney/core/0.9.1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionIRI": [
+      {
+        "@id": "https://w3id.org/ontojourney/core/0.9.2"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+      {
+        "@value": "0.9.2"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#HLJStageExecution",
+    "@type": [
+      "http://purl.org/nemo/gufo#EventType",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A Stage Execution of an HLJ Stage Specification that may include Challenge Encounters, Challenge Performances, and Assistance Provisions connected to specifications of that same stage."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "HLJStageExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#StageExecution"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#prescribesTransformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#JourneyModel"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "prescribesTransformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#IntendedTransformation"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#hasNarrativeFraming",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#HLJStageSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "hasNarrativeFraming"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#NarrativeFraming"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#hasMission",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#HLJStageSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "hasMission"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#MissionSpecification"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#ConditionDescription",
+    "@type": [
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A Normative Description that specifies a condition against which a situation can be assessed."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "ConditionDescription"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#NormativeDescription"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#MissionSpecification",
+    "@type": [
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A Normative Description that states what the Learner is invited or expected to pursue within an HLJ stage and may combine a desired result with directions for action."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "MissionSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#NormativeDescription"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#NarrativeFraming",
+    "@type": [
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Narrative Content that gives one HLJ Stage Specification its local narrative context and connects it to the wider journey."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "NarrativeFraming"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#NarrativeContent"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#realizesAssistance",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#AssistanceProvision"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "realizesAssistance"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#AssistanceSpecification"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyExecution",
+    "@type": [
+      "http://purl.org/nemo/gufo#EventType",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A Heroic Narrative Journey Execution and Learning Journey Execution of one Heroic Narrative Learning Journey Model, with exactly one focal Person participating as both Protagonist and Learner."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "HeroicNarrativeLearningJourneyExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#HeroicNarrativeJourneyExecution"
+      },
+      {
+        "@id": "https://w3id.org/ontojourney/core#LearningJourneyExecution"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#JourneyNarrative",
+    "@type": [
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Narrative Content that organises the narrative progression of a Narrative Journey Model as a whole."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "JourneyNarrative"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#NarrativeContent"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#SuccessfulHeroicNarrativeLearningJourneyExecution",
+    "@type": [
+      "http://purl.org/nemo/gufo#EventType",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A Heroic Narrative Learning Journey Execution that produces a Closure Situation satisfying the executed model's Closure Specification and at least one Realized Transformation of the focal Person satisfying an Intended Learning Transformation prescribed by that model."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "SuccessfulHeroicNarrativeLearningJourneyExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#HeroicNarrativeLearningJourneyExecution"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#producesClosure",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#JourneyExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "producesClosure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#ClosureSituation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#broughtAbout"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#hasNarrative",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#NarrativeJourneyModel"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "hasNarrative"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#JourneyNarrative"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#JourneyModel",
+    "@type": [
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A Description that characterises a reusable journey pattern through one or more Stage Specifications and one Closure Specification, and may prescribe Intended Transformations."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "JourneyModel"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#Description"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#HeroicNarrativeJourneyExecution",
+    "@type": [
+      "http://purl.org/nemo/gufo#EventType",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A Narrative Journey Execution of a Heroic Narrative Journey Model that constitutes one focal heroic trajectory with exactly one Protagonist."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "HeroicNarrativeJourneyExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#NarrativeJourneyExecution"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#Protagonist",
+    "@type": [
+      "http://purl.org/nemo/gufo#Role",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A historical role instantiated by a Person through participation as the focal subject of a Heroic Narrative Journey Execution."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Protagonist"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#Person"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#NormativeDescription",
+    "@type": [
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A Description that prescribes, permits, or evaluates possible actions or situations instead of merely characterising them."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "NormativeDescription"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#Description"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#ChallengeEncounter",
+    "@type": [
+      "http://purl.org/nemo/gufo#EventType",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An event within an HLJ Stage Execution in which the specified challenge of that stage is faced, whether or not it is successfully addressed."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "ChallengeEncounter"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#Event"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#NarrativeJourneyModel",
+    "@type": [
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A Journey Model whose overall progression is organised by exactly one Journey Narrative."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "NarrativeJourneyModel"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#JourneyModel"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#StageExecution",
+    "@type": [
+      "http://purl.org/nemo/gufo#EventType",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An event within a Journey Execution that enacts one Stage Specification belonging to the executed Journey Model."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "StageExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#Event"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#isEncounterOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#ChallengeEncounter"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "isEncounterOf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#ChallengeSpecification"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#hasAssistanceProvision",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#HLJStageExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "hasAssistanceProvision"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#AssistanceProvision"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#TransformationEvent",
+    "@type": [
+      "http://purl.org/nemo/gufo#EventType",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An event within a Journey Execution that brings about one Realized Transformation."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "TransformationEvent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/nemo/gufo#Event"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#satisfiesClosureSpecification",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#ClosureSituation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "satisfiesClosureSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#ClosureSpecification"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#hasChallenge",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#StageSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "hasChallenge"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#ChallengeSpecification"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#StageSpecification",
+    "@type": [
+      "http://purl.org/nemo/gufo#SubKind",
+      "http://www.w3.org/2002/07/owl#Class",
+      "http://www.w3.org/2002/07/owl#NamedIndividual"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A Description that characterises a model-specific stage of a Journey Model, whether as a descriptive pattern or as a prescribed part of a plan, and may be linked to other Stage Specifications through directlyPrecedesStage."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "StageSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#Description"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/ontojourney/core#isExecutionOfStageSpecification",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#StageExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "isExecutionOfStageSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/ontojourney/core#StageSpecification"
+      }
+    ]
+  }
+]

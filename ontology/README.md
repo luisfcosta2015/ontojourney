@@ -1,39 +1,9 @@
-# OntoJourney Core v0.9.1
+# OntoJourney Core v0.9.2
 
-This release contains the OntoJourney formal source, exchange model, RDF
-serializations, SHACL shapes, class definitions, reproducibility fixtures,
-validation records, checksums, and citation metadata. It preserves the 40
-classes, 27 relations, and 33 generalizations of v0.9.0 while tightening the
-constraints required by the manuscript.
+40 classes, 27 relations, 34 generalizations. StageSpecification specialises Description; HLJStageSpecification also specialises PlanDescription. Identifiers, stereotypes and association multiplicities remain unchanged; generic-stage entailments change. Core SHACL is unchanged. The optional experimental completeness overlay is not part of normative Core SHACL.
 
-- Ontology IRI: `https://w3id.org/ontojourney/core`
-- Entity namespace: `https://w3id.org/ontojourney/core#`
-- Version IRI: `https://w3id.org/ontojourney/core/0.9.1`
-- Release date: 21 August 2026
-- License: CC BY 4.0
+Version IRI: https://w3id.org/ontojourney/core/0.9.2
+DOI: https://doi.org/10.5281/zenodo.24420185
+License: CC BY 4.0
 
-The canonical definitions are the English `description` blocks in
-`core.tonto`. `CLASS_DEFINITIONS.md` and the appendix source are generated from
-the OntoUML JSON; the RDF serializations expose the same text as
-`rdfs:comment` annotations. `CONSTRAINTS.md` explains the division of work
-between Tonto, OWL/gUFO, and SHACL.
-
-## Local validation
-
-With Tonto CLI and the Python packages pinned in
-`reproducible/requirements-validation.txt`, run:
-
-```text
-tonto-cli validate reproducible
-python reproducible/tests/audit_generated_json.py
-python reproducible/tests/audit_release_consistency.py
-python reproducible/tests/run_shacl_tests.py
-```
-
-The remote OntoUML API and HermiT results are recorded in `validation/`.
-
-`reproducible/scripts/finalize_release_artifacts.py` adds the version metadata
-and canonical class comments after the gUFO transformation.
-`reproducible/scripts/generate_class_documentation.py` regenerates the Markdown
-glossary and LaTeX appendix from the OntoUML JSON. The checksum manifest must be
-regenerated last with `reproducible/scripts/update_checksums.py`.
+Run the original structural and SHACL audits plus `reproducible/evaluation/run_evaluation.py` using the pinned dependencies. The original positive graph is incomplete under the experimental overlay; the completed synthetic example is not learner observation data. The PlantUML view was manually aligned to the verified taxonomic delta. The local HermiT input and independently transformed CI graph share SHA-256 `f3b12bad9bb39d78d59e6a5d413a9885dd6e3c888ca7086f7c0ba132c63834e8`. No independent expert evaluation or learning effectiveness is established. Case 01 data remain excluded pending redistribution review.

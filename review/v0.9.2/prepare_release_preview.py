@@ -9,7 +9,7 @@ from rdflib.namespace import OWL,DCTERMS
 from rdflib.compare import isomorphic
 
 ROOT=Path(__file__).resolve().parent
-BASE=ROOT.parents[1]/"ontology"
+BASE=ROOT.parents[1]/"public/artifacts/0.9.1"
 INPUT=ROOT/"candidate-output"
 OUT=ROOT/"release-preview"
 DEST=OUT/"ontojourney-core-v0.9.2"

@@ -1,0 +1,341 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/ontojourney/audit#addressesChallengeForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#ChallengeSpecification> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path <https://w3id.org/ontojourney/core#addressesChallenge> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#ChallengePerformance> .
+
+<https://example.org/ontojourney/audit#addressesChallengeInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#ChallengePerformance> ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#addressesChallenge> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#ChallengeSpecification> .
+
+<https://example.org/ontojourney/audit#definesClosureForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#ClosureSpecification> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path <https://w3id.org/ontojourney/core#definesClosure> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#JourneyModel> .
+
+<https://example.org/ontojourney/audit#definesClosureInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#JourneyModel> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#definesClosure> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#ClosureSpecification> .
+
+<https://example.org/ontojourney/audit#directlyPrecedesStageForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#StageSpecification> ;
+            sh:path <https://w3id.org/ontojourney/core#directlyPrecedesStage> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#StageSpecification> .
+
+<https://example.org/ontojourney/audit#directlyPrecedesStageInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#StageSpecification> ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#directlyPrecedesStage> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#StageSpecification> .
+
+<https://example.org/ontojourney/audit#hasAssistanceForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#AssistanceSpecification> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path <https://w3id.org/ontojourney/core#hasAssistance> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#HLJStageSpecification> .
+
+<https://example.org/ontojourney/audit#hasAssistanceInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#HLJStageSpecification> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#hasAssistance> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#AssistanceSpecification> .
+
+<https://example.org/ontojourney/audit#hasAssistanceProvisionForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#AssistanceProvision> ;
+            sh:path <https://w3id.org/ontojourney/core#hasAssistanceProvision> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#HLJStageExecution> .
+
+<https://example.org/ontojourney/audit#hasAssistanceProvisionInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#HLJStageExecution> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#hasAssistanceProvision> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#AssistanceProvision> .
+
+<https://example.org/ontojourney/audit#hasChallengeEncounterForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#ChallengeEncounter> ;
+            sh:path <https://w3id.org/ontojourney/core#hasChallengeEncounter> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#HLJStageExecution> .
+
+<https://example.org/ontojourney/audit#hasChallengeEncounterInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#HLJStageExecution> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#hasChallengeEncounter> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#ChallengeEncounter> .
+
+<https://example.org/ontojourney/audit#hasChallengeForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#ChallengeSpecification> ;
+            sh:path <https://w3id.org/ontojourney/core#hasChallenge> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#StageSpecification> .
+
+<https://example.org/ontojourney/audit#hasChallengeInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#StageSpecification> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#hasChallenge> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#ChallengeSpecification> .
+
+<https://example.org/ontojourney/audit#hasChallengePerformanceForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#ChallengePerformance> ;
+            sh:path <https://w3id.org/ontojourney/core#hasChallengePerformance> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#HLJStageExecution> .
+
+<https://example.org/ontojourney/audit#hasChallengePerformanceInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#HLJStageExecution> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#hasChallengePerformance> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#ChallengePerformance> .
+
+<https://example.org/ontojourney/audit#hasEducationalPurposeForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#EducationalPurpose> ;
+            sh:minCount 1 ;
+            sh:path <https://w3id.org/ontojourney/core#hasEducationalPurpose> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#LearningJourneyModel> .
+
+<https://example.org/ontojourney/audit#hasEducationalPurposeInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#LearningJourneyModel> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#hasEducationalPurpose> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#EducationalPurpose> .
+
+<https://example.org/ontojourney/audit#hasMissionForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#MissionSpecification> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path <https://w3id.org/ontojourney/core#hasMission> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#HLJStageSpecification> .
+
+<https://example.org/ontojourney/audit#hasMissionInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#HLJStageSpecification> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#hasMission> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#MissionSpecification> .
+
+<https://example.org/ontojourney/audit#hasNarrativeForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#JourneyNarrative> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path <https://w3id.org/ontojourney/core#hasNarrative> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#NarrativeJourneyModel> .
+
+<https://example.org/ontojourney/audit#hasNarrativeFramingForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#NarrativeFraming> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path <https://w3id.org/ontojourney/core#hasNarrativeFraming> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#HLJStageSpecification> .
+
+<https://example.org/ontojourney/audit#hasNarrativeFramingInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#HLJStageSpecification> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#hasNarrativeFraming> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#NarrativeFraming> .
+
+<https://example.org/ontojourney/audit#hasNarrativeInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#NarrativeJourneyModel> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#hasNarrative> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#JourneyNarrative> .
+
+<https://example.org/ontojourney/audit#hasStageExecutionForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#StageExecution> ;
+            sh:minCount 1 ;
+            sh:path <https://w3id.org/ontojourney/core#hasStageExecution> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#JourneyExecution> .
+
+<https://example.org/ontojourney/audit#hasStageExecutionInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#JourneyExecution> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#hasStageExecution> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#StageExecution> .
+
+<https://example.org/ontojourney/audit#hasStageForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#StageSpecification> ;
+            sh:minCount 1 ;
+            sh:path <https://w3id.org/ontojourney/core#hasStage> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#JourneyModel> .
+
+<https://example.org/ontojourney/audit#hasStageInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#JourneyModel> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#hasStage> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#StageSpecification> .
+
+<https://example.org/ontojourney/audit#hasTransformationEventForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#TransformationEvent> ;
+            sh:path <https://w3id.org/ontojourney/core#hasTransformationEvent> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#JourneyExecution> .
+
+<https://example.org/ontojourney/audit#hasTransformationEventInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#JourneyExecution> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#hasTransformationEvent> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#TransformationEvent> .
+
+<https://example.org/ontojourney/audit#isEncounterOfForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#ChallengeSpecification> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path <https://w3id.org/ontojourney/core#isEncounterOf> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#ChallengeEncounter> .
+
+<https://example.org/ontojourney/audit#isEncounterOfInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#ChallengeEncounter> ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#isEncounterOf> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#ChallengeSpecification> .
+
+<https://example.org/ontojourney/audit#isExecutionOfJourneyModelForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#JourneyModel> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path <https://w3id.org/ontojourney/core#isExecutionOfJourneyModel> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#JourneyExecution> .
+
+<https://example.org/ontojourney/audit#isExecutionOfJourneyModelInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#JourneyExecution> ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#isExecutionOfJourneyModel> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#JourneyModel> .
+
+<https://example.org/ontojourney/audit#isExecutionOfStageSpecificationForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#StageSpecification> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path <https://w3id.org/ontojourney/core#isExecutionOfStageSpecification> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#StageExecution> .
+
+<https://example.org/ontojourney/audit#isExecutionOfStageSpecificationInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#StageExecution> ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#isExecutionOfStageSpecification> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#StageSpecification> .
+
+<https://example.org/ontojourney/audit#isTransformationOfForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#Person> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path <https://w3id.org/ontojourney/core#isTransformationOf> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#RealizedTransformation> .
+
+<https://example.org/ontojourney/audit#isTransformationOfInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#RealizedTransformation> ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#isTransformationOf> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#Person> .
+
+<https://example.org/ontojourney/audit#participatesAsLearnerInForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#LearningJourneyExecution> ;
+            sh:minCount 1 ;
+            sh:path <https://w3id.org/ontojourney/core#participatesAsLearnerIn> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#Learner> .
+
+<https://example.org/ontojourney/audit#participatesAsLearnerInInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#Learner> ;
+            sh:minCount 1 ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#participatesAsLearnerIn> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#LearningJourneyExecution> .
+
+<https://example.org/ontojourney/audit#participatesAsProtagonistInForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#HeroicNarrativeJourneyExecution> ;
+            sh:minCount 1 ;
+            sh:path <https://w3id.org/ontojourney/core#participatesAsProtagonistIn> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#Protagonist> .
+
+<https://example.org/ontojourney/audit#participatesAsProtagonistInInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#Protagonist> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#participatesAsProtagonistIn> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#HeroicNarrativeJourneyExecution> .
+
+<https://example.org/ontojourney/audit#prescribesTransformationForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#IntendedTransformation> ;
+            sh:path <https://w3id.org/ontojourney/core#prescribesTransformation> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#JourneyModel> .
+
+<https://example.org/ontojourney/audit#prescribesTransformationInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#JourneyModel> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#prescribesTransformation> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#IntendedTransformation> .
+
+<https://example.org/ontojourney/audit#producesClosureForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#ClosureSituation> ;
+            sh:maxCount 1 ;
+            sh:path <https://w3id.org/ontojourney/core#producesClosure> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#JourneyExecution> .
+
+<https://example.org/ontojourney/audit#producesClosureInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#JourneyExecution> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#producesClosure> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#ClosureSituation> .
+
+<https://example.org/ontojourney/audit#producesTransformationForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#RealizedTransformation> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path <https://w3id.org/ontojourney/core#producesTransformation> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#TransformationEvent> .
+
+<https://example.org/ontojourney/audit#producesTransformationInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#TransformationEvent> ;
+            sh:minCount 1 ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#producesTransformation> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#RealizedTransformation> .
+
+<https://example.org/ontojourney/audit#realizesAssistanceForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#AssistanceSpecification> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path <https://w3id.org/ontojourney/core#realizesAssistance> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#AssistanceProvision> .
+
+<https://example.org/ontojourney/audit#realizesAssistanceInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#AssistanceProvision> ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#realizesAssistance> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#AssistanceSpecification> .
+
+<https://example.org/ontojourney/audit#satisfiesClosureSpecificationForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#ClosureSpecification> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path <https://w3id.org/ontojourney/core#satisfiesClosureSpecification> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#ClosureSituation> .
+
+<https://example.org/ontojourney/audit#satisfiesClosureSpecificationInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#ClosureSituation> ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#satisfiesClosureSpecification> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#ClosureSpecification> .
+
+<https://example.org/ontojourney/audit#satisfiesIntendedTransformationForwardShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#IntendedTransformation> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path <https://w3id.org/ontojourney/core#satisfiesIntendedTransformation> ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#RealizedTransformation> .
+
+<https://example.org/ontojourney/audit#satisfiesIntendedTransformationInverseShape> a sh:NodeShape ;
+    sh:property [ sh:class <https://w3id.org/ontojourney/core#RealizedTransformation> ;
+            sh:path [ sh:inversePath <https://w3id.org/ontojourney/core#satisfiesIntendedTransformation> ] ] ;
+    sh:targetClass <https://w3id.org/ontojourney/core#IntendedTransformation> .
+

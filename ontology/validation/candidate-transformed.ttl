@@ -1,0 +1,281 @@
+@prefix oj: <https://w3id.org/ontojourney/core#>.
+@prefix gufo: <http://purl.org/nemo/gufo#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+<https://w3id.org/ontojourney/core> rdf:type owl:Ontology;
+    owl:imports gufo:.
+oj:InformationObject rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "InformationObject"@en;
+    rdfs:comment "An entity whose identity is determined by its informational content and that may be expressed through different physical or digital carriers."@en.
+oj:Description rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Description"@en;
+    rdfs:comment "An Information Object that expresses a conceptualization of entities or configurations and provides criteria for interpreting or assessing them."@en.
+oj:NarrativeContent rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "NarrativeContent"@en;
+    rdfs:comment "An Information Object that organises characters, events, or themes as narrative content, independently of the medium through which it is expressed."@en.
+oj:NormativeDescription rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "NormativeDescription"@en;
+    rdfs:comment "A Description that prescribes, permits, or evaluates possible actions or situations instead of merely characterising them."@en.
+oj:PlanDescription rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "PlanDescription"@en;
+    rdfs:comment "A Normative Description that prescribes or organises intended actions and events towards a purpose."@en.
+oj:GoalDescription rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "GoalDescription"@en;
+    rdfs:comment "A Normative Description whose propositional content describes a situation intended to be attained."@en.
+oj:ConditionDescription rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "ConditionDescription"@en;
+    rdfs:comment "A Normative Description that specifies a condition against which a situation can be assessed."@en.
+oj:JourneyModel rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "JourneyModel"@en;
+    rdfs:comment "A Description that characterises a reusable journey pattern through one or more Stage Specifications and one Closure Specification, and may prescribe Intended Transformations."@en.
+oj:NarrativeJourneyModel rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "NarrativeJourneyModel"@en;
+    rdfs:comment "A Journey Model whose overall progression is organised by exactly one Journey Narrative."@en.
+oj:HeroicNarrativeJourneyModel rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "HeroicNarrativeJourneyModel"@en;
+    rdfs:comment "A Narrative Journey Model that frames a meaningful progression through demanding stages towards transformation and closure as a heroic trajectory."@en.
+oj:LearningJourneyModel rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "LearningJourneyModel"@en;
+    rdfs:comment "A Journey Model and Plan Description that intentionally organises an educational experience and has at least one Educational Purpose."@en.
+oj:HeroicNarrativeLearningJourneyModel rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "HeroicNarrativeLearningJourneyModel"@en;
+    rdfs:comment "A Heroic Narrative Journey Model and Learning Journey Model whose identity includes one Journey Narrative, at least two connected Stage Specifications, at least one challenged stage, at least one Educational Purpose, at least one Intended Learning Transformation, and one Closure Specification."@en.
+oj:StageSpecification rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "StageSpecification"@en;
+    rdfs:comment "A Description that characterises a model-specific stage of a Journey Model, whether as a descriptive pattern or as a prescribed part of a plan, and may be linked to other Stage Specifications through directlyPrecedesStage."@en.
+oj:JourneyNarrative rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "JourneyNarrative"@en;
+    rdfs:comment "Narrative Content that organises the narrative progression of a Narrative Journey Model as a whole."@en.
+oj:NarrativeFraming rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "NarrativeFraming"@en;
+    rdfs:comment "Narrative Content that gives one HLJ Stage Specification its local narrative context and connects it to the wider journey."@en.
+oj:IntendedTransformation rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "IntendedTransformation"@en;
+    rdfs:comment "A Goal Description prescribed by a Journey Model that specifies a transformation the model is intended to bring about."@en.
+oj:IntendedLearningTransformation rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "IntendedLearningTransformation"@en;
+    rdfs:comment "An Intended Transformation that specifies a learning-related change to be pursued through a learning journey."@en.
+oj:EducationalPurpose rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "EducationalPurpose"@en;
+    rdfs:comment "A Goal Description that states an educational aim of a Learning Journey Model."@en.
+oj:MissionSpecification rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "MissionSpecification"@en;
+    rdfs:comment "A Normative Description that states what the Learner is invited or expected to pursue within an HLJ stage and may combine a desired result with directions for action."@en.
+oj:ClosureSpecification rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "ClosureSpecification"@en;
+    rdfs:comment "A Condition Description defined by a Journey Model that states the condition under which an execution of the model counts as having reached closure."@en.
+oj:ChallengeSpecification rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "ChallengeSpecification"@en;
+    rdfs:comment "A Normative Description assigned to a Stage Specification that describes a demand, obstacle, problem, task, or condition that makes progression demanding."@en.
+oj:AssistanceSpecification rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "AssistanceSpecification"@en;
+    rdfs:comment "A Normative Description of support intended to be made available within an HLJ Stage Specification."@en.
+oj:JourneyExecution rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Event;
+    rdfs:label "JourneyExecution"@en;
+    rdfs:comment "A complex event in which one Journey Model is enacted in a particular context through one or more Stage Executions."@en.
+oj:NarrativeJourneyExecution rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:label "NarrativeJourneyExecution"@en;
+    rdfs:comment "A Journey Execution of a Narrative Journey Model in which the performed stages enact a narratively organised journey."@en.
+oj:HeroicNarrativeJourneyExecution rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:label "HeroicNarrativeJourneyExecution"@en;
+    rdfs:comment "A Narrative Journey Execution of a Heroic Narrative Journey Model that constitutes one focal heroic trajectory with exactly one Protagonist."@en.
+oj:LearningJourneyExecution rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:label "LearningJourneyExecution"@en;
+    rdfs:comment "A Journey Execution of a Learning Journey Model in which at least one Person participates as Learner."@en.
+oj:HeroicNarrativeLearningJourneyExecution rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:label "HeroicNarrativeLearningJourneyExecution"@en;
+    rdfs:comment "A Heroic Narrative Journey Execution and Learning Journey Execution of one Heroic Narrative Learning Journey Model, with exactly one focal Person participating as both Protagonist and Learner."@en.
+oj:SuccessfulHeroicNarrativeLearningJourneyExecution rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:label "SuccessfulHeroicNarrativeLearningJourneyExecution"@en;
+    rdfs:comment "A Heroic Narrative Learning Journey Execution that produces a Closure Situation satisfying the executed model's Closure Specification and at least one Realized Transformation of the focal Person satisfying an Intended Learning Transformation prescribed by that model."@en.
+oj:StageExecution rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Event;
+    rdfs:label "StageExecution"@en;
+    rdfs:comment "An event within a Journey Execution that enacts one Stage Specification belonging to the executed Journey Model."@en.
+oj:HLJStageExecution rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:label "HLJStageExecution"@en;
+    rdfs:comment "A Stage Execution of an HLJ Stage Specification that may include Challenge Encounters, Challenge Performances, and Assistance Provisions connected to specifications of that same stage."@en.
+oj:TransformationEvent rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Event;
+    rdfs:label "TransformationEvent"@en;
+    rdfs:comment "An event within a Journey Execution that brings about one Realized Transformation."@en.
+oj:ChallengeEncounter rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Event;
+    rdfs:label "ChallengeEncounter"@en;
+    rdfs:comment "An event within an HLJ Stage Execution in which the specified challenge of that stage is faced, whether or not it is successfully addressed."@en.
+oj:ChallengePerformance rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Event;
+    rdfs:label "ChallengePerformance"@en;
+    rdfs:comment "An event within an HLJ Stage Execution in which action is directed towards the specified challenge of that stage; its occurrence does not by itself imply success."@en.
+oj:AssistanceProvision rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Event;
+    rdfs:label "AssistanceProvision"@en;
+    rdfs:comment "An event within an HLJ Stage Execution in which assistance specified for that stage is provided."@en.
+oj:RealizedTransformation rdf:type owl:Class, gufo:SituationType, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Situation;
+    rdfs:label "RealizedTransformation"@en;
+    rdfs:comment "A situation brought about by one or more Transformation Events that represents an actual change concerning exactly one Person and satisfies one Intended Transformation."@en.
+oj:ClosureSituation rdf:type owl:Class, gufo:SituationType, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Situation;
+    rdfs:label "ClosureSituation"@en;
+    rdfs:comment "A situation brought about by a Journey Execution that satisfies a Closure Specification; in a successful execution, that specification is defined by the executed model."@en.
+oj:Person rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Person"@en;
+    rdfs:comment "A human individual who may participate in Journey Executions and whose identity is preserved across the historical roles Protagonist and Learner."@en.
+oj:Protagonist rdf:type owl:Class, gufo:Role, owl:NamedIndividual;
+    rdfs:label "Protagonist"@en;
+    rdfs:comment "A historical role instantiated by a Person through participation as the focal subject of a Heroic Narrative Journey Execution."@en.
+oj:Learner rdf:type owl:Class, gufo:Role, owl:NamedIndividual;
+    rdfs:label "Learner"@en;
+    rdfs:comment "A historical role instantiated by a Person through participation in a Learning Journey Execution."@en.
+oj:HLJStageSpecification rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "HLJStageSpecification"@en;
+    rdfs:comment "A Stage Specification and Plan Description in the Heroine's Learning Journey anatomy that contains exactly one Narrative Framing, Mission Specification, Challenge Specification, and Assistance Specification."@en.
+oj:Description rdfs:subClassOf oj:InformationObject.
+oj:NarrativeContent rdfs:subClassOf oj:InformationObject.
+oj:NormativeDescription rdfs:subClassOf oj:Description.
+oj:PlanDescription rdfs:subClassOf oj:NormativeDescription.
+oj:GoalDescription rdfs:subClassOf oj:NormativeDescription.
+oj:ConditionDescription rdfs:subClassOf oj:NormativeDescription.
+oj:JourneyModel rdfs:subClassOf oj:Description.
+oj:NarrativeJourneyModel rdfs:subClassOf oj:JourneyModel.
+oj:HeroicNarrativeJourneyModel rdfs:subClassOf oj:NarrativeJourneyModel.
+oj:LearningJourneyModel rdfs:subClassOf oj:JourneyModel, oj:PlanDescription.
+oj:HeroicNarrativeLearningJourneyModel rdfs:subClassOf oj:HeroicNarrativeJourneyModel, oj:LearningJourneyModel.
+oj:StageSpecification rdfs:subClassOf oj:Description.
+oj:JourneyNarrative rdfs:subClassOf oj:NarrativeContent.
+oj:NarrativeFraming rdfs:subClassOf oj:NarrativeContent.
+oj:IntendedTransformation rdfs:subClassOf oj:GoalDescription.
+oj:IntendedLearningTransformation rdfs:subClassOf oj:IntendedTransformation.
+oj:EducationalPurpose rdfs:subClassOf oj:GoalDescription.
+oj:MissionSpecification rdfs:subClassOf oj:NormativeDescription.
+oj:ClosureSpecification rdfs:subClassOf oj:ConditionDescription.
+oj:ChallengeSpecification rdfs:subClassOf oj:NormativeDescription.
+oj:AssistanceSpecification rdfs:subClassOf oj:NormativeDescription.
+oj:NarrativeJourneyExecution rdfs:subClassOf oj:JourneyExecution.
+oj:HeroicNarrativeJourneyExecution rdfs:subClassOf oj:NarrativeJourneyExecution.
+oj:LearningJourneyExecution rdfs:subClassOf oj:JourneyExecution.
+oj:HeroicNarrativeLearningJourneyExecution rdfs:subClassOf oj:HeroicNarrativeJourneyExecution, oj:LearningJourneyExecution.
+oj:SuccessfulHeroicNarrativeLearningJourneyExecution rdfs:subClassOf oj:HeroicNarrativeLearningJourneyExecution.
+oj:HLJStageExecution rdfs:subClassOf oj:StageExecution.
+oj:Protagonist rdfs:subClassOf oj:Person.
+oj:Learner rdfs:subClassOf oj:Person.
+oj:HLJStageSpecification rdfs:subClassOf oj:StageSpecification, oj:PlanDescription.
+oj:hasStage rdf:type owl:ObjectProperty;
+    rdfs:domain oj:JourneyModel;
+    rdfs:range oj:StageSpecification;
+    rdfs:label "hasStage"@en.
+oj:directlyPrecedesStage rdf:type owl:ObjectProperty;
+    rdfs:domain oj:StageSpecification;
+    rdfs:range oj:StageSpecification;
+    rdfs:label "directlyPrecedesStage"@en.
+oj:hasNarrative rdf:type owl:ObjectProperty;
+    rdfs:domain oj:NarrativeJourneyModel;
+    rdfs:range oj:JourneyNarrative;
+    rdfs:label "hasNarrative"@en.
+oj:prescribesTransformation rdf:type owl:ObjectProperty;
+    rdfs:domain oj:JourneyModel;
+    rdfs:range oj:IntendedTransformation;
+    rdfs:label "prescribesTransformation"@en.
+oj:hasEducationalPurpose rdf:type owl:ObjectProperty;
+    rdfs:domain oj:LearningJourneyModel;
+    rdfs:range oj:EducationalPurpose;
+    rdfs:label "hasEducationalPurpose"@en.
+oj:definesClosure rdf:type owl:ObjectProperty;
+    rdfs:domain oj:JourneyModel;
+    rdfs:range oj:ClosureSpecification;
+    rdfs:label "definesClosure"@en.
+oj:isExecutionOfJourneyModel rdf:type owl:ObjectProperty;
+    rdfs:domain oj:JourneyExecution;
+    rdfs:range oj:JourneyModel;
+    rdfs:label "isExecutionOfJourneyModel"@en.
+oj:hasStageExecution rdf:type owl:ObjectProperty;
+    rdfs:domain oj:JourneyExecution;
+    rdfs:range oj:StageExecution;
+    rdfs:label "hasStageExecution"@en.
+oj:isExecutionOfStageSpecification rdf:type owl:ObjectProperty;
+    rdfs:domain oj:StageExecution;
+    rdfs:range oj:StageSpecification;
+    rdfs:label "isExecutionOfStageSpecification"@en.
+oj:participatesAsProtagonistIn rdf:type owl:ObjectProperty;
+    rdfs:domain oj:Protagonist;
+    rdfs:range oj:HeroicNarrativeJourneyExecution;
+    rdfs:label "participatesAsProtagonistIn"@en;
+    rdfs:subPropertyOf gufo:participatedIn.
+oj:participatesAsLearnerIn rdf:type owl:ObjectProperty;
+    rdfs:domain oj:Learner;
+    rdfs:range oj:LearningJourneyExecution;
+    rdfs:label "participatesAsLearnerIn"@en;
+    rdfs:subPropertyOf gufo:participatedIn.
+oj:hasTransformationEvent rdf:type owl:ObjectProperty;
+    rdfs:domain oj:JourneyExecution;
+    rdfs:range oj:TransformationEvent;
+    rdfs:label "hasTransformationEvent"@en.
+oj:producesTransformation rdf:type owl:ObjectProperty;
+    rdfs:domain oj:TransformationEvent;
+    rdfs:range oj:RealizedTransformation;
+    rdfs:label "producesTransformation"@en;
+    rdfs:subPropertyOf gufo:broughtAbout.
+oj:satisfiesIntendedTransformation rdf:type owl:ObjectProperty;
+    rdfs:domain oj:RealizedTransformation;
+    rdfs:range oj:IntendedTransformation;
+    rdfs:label "satisfiesIntendedTransformation"@en.
+oj:isTransformationOf rdf:type owl:ObjectProperty;
+    rdfs:domain oj:RealizedTransformation;
+    rdfs:range oj:Person;
+    rdfs:label "isTransformationOf"@en.
+oj:producesClosure rdf:type owl:ObjectProperty;
+    rdfs:domain oj:JourneyExecution;
+    rdfs:range oj:ClosureSituation;
+    rdfs:label "producesClosure"@en;
+    rdfs:subPropertyOf gufo:broughtAbout.
+oj:satisfiesClosureSpecification rdf:type owl:ObjectProperty;
+    rdfs:domain oj:ClosureSituation;
+    rdfs:range oj:ClosureSpecification;
+    rdfs:label "satisfiesClosureSpecification"@en.
+oj:hasNarrativeFraming rdf:type owl:ObjectProperty;
+    rdfs:domain oj:HLJStageSpecification;
+    rdfs:range oj:NarrativeFraming;
+    rdfs:label "hasNarrativeFraming"@en.
+oj:hasMission rdf:type owl:ObjectProperty;
+    rdfs:domain oj:HLJStageSpecification;
+    rdfs:range oj:MissionSpecification;
+    rdfs:label "hasMission"@en.
+oj:hasAssistance rdf:type owl:ObjectProperty;
+    rdfs:domain oj:HLJStageSpecification;
+    rdfs:range oj:AssistanceSpecification;
+    rdfs:label "hasAssistance"@en.
+oj:hasChallenge rdf:type owl:ObjectProperty;
+    rdfs:domain oj:StageSpecification;
+    rdfs:range oj:ChallengeSpecification;
+    rdfs:label "hasChallenge"@en.
+oj:hasChallengeEncounter rdf:type owl:ObjectProperty;
+    rdfs:domain oj:HLJStageExecution;
+    rdfs:range oj:ChallengeEncounter;
+    rdfs:label "hasChallengeEncounter"@en.
+oj:hasChallengePerformance rdf:type owl:ObjectProperty;
+    rdfs:domain oj:HLJStageExecution;
+    rdfs:range oj:ChallengePerformance;
+    rdfs:label "hasChallengePerformance"@en.
+oj:hasAssistanceProvision rdf:type owl:ObjectProperty;
+    rdfs:domain oj:HLJStageExecution;
+    rdfs:range oj:AssistanceProvision;
+    rdfs:label "hasAssistanceProvision"@en.
+oj:isEncounterOf rdf:type owl:ObjectProperty;
+    rdfs:domain oj:ChallengeEncounter;
+    rdfs:range oj:ChallengeSpecification;
+    rdfs:label "isEncounterOf"@en.
+oj:addressesChallenge rdf:type owl:ObjectProperty;
+    rdfs:domain oj:ChallengePerformance;
+    rdfs:range oj:ChallengeSpecification;
+    rdfs:label "addressesChallenge"@en.
+oj:realizesAssistance rdf:type owl:ObjectProperty;
+    rdfs:domain oj:AssistanceProvision;
+    rdfs:range oj:AssistanceSpecification;
+    rdfs:label "realizesAssistance"@en.

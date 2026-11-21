@@ -26,13 +26,20 @@ jobs:
         run: python ontology/reproducible/tests/audit_release_consistency.py
       - name: Run SHACL positive and negative tests
         run: python ontology/reproducible/tests/run_shacl_tests.py
+      - name: Evaluate competency queries and optional completeness
+        run: python ontology/reproducible/evaluation/run_evaluation.py
       - name: Build and verify release package
         run: python scripts/build_release.py
+      - name: Verify immutable historic release directories
+        run: |
+          for version in 0.9.0 0.9.1; do
+            (cd "public/artifacts/$version" && sha256sum --check SHA256SUMS)
+          done
       - name: Verify release checksums and archive integrity
-        working-directory: public/artifacts/0.9.1
+        working-directory: public/artifacts/0.9.2
         run: |
           sha256sum --check SHA256SUMS
-          unzip -t ontojourney-core-v0.9.1.zip
+          unzip -t ontojourney-core-v0.9.2.zip
 
   documentation:
     runs-on: ubuntu-latest

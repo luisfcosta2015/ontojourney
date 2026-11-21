@@ -1,0 +1,14 @@
+{
+  "baseline": {
+    "same_named_vocabulary": true,
+    "same_axiom_graph_excluding_annotations_and_release_metadata": true,
+    "transformed_only_triples": 0,
+    "expected_only_triples": 0
+  },
+  "candidate": {
+    "same_named_vocabulary": true,
+    "same_axiom_graph_excluding_annotations_and_release_metadata": true,
+    "transformed_only_triples": 0,
+    "expected_only_triples": 0
+  }
+}

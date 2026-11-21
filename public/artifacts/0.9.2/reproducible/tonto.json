@@ -1,0 +1,13 @@
+{
+  "projectName": "OntoJourneyCore",
+  "displayName": "OntoJourney Core",
+  "authors": [
+    "Luis Felipe Coimbra Costa"
+  ],
+  "license": "CC-BY-4.0",
+  "version": "0.9.2",
+  "publisher": "OntoJourney Project",
+  "dependencies": {},
+  "outFolder": "generated",
+  "description": "OntoJourney Core v0.9.2: descriptive stages and planned HLJ stages."
+}

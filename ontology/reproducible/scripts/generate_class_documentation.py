@@ -153,7 +153,7 @@ def load_classes() -> dict[str, dict[str, object]]:
 
 def generate_markdown(classes: dict[str, dict[str, object]]) -> str:
     lines = [
-        "# OntoJourney Core v0.9.1 — class definitions",
+        "# OntoJourney Core v0.9.2 — class definitions",
         "",
         "This document is generated from the English `description` values in the canonical Tonto model. Do not edit it independently.",
         "",
@@ -184,7 +184,7 @@ def generate_latex(classes: dict[str, dict[str, object]]) -> str:
         r"\setlength{\LTright}{0pt}",
         r"\setlength{\tabcolsep}{4pt}",
         r"\renewcommand{\arraystretch}{1.12}",
-        r"\captionof{table}{Definitions of the 40 classes in OntoJourney Core v0.9.1.}",
+        r"\captionof{table}{Definitions of the 40 classes in OntoJourney Core v0.9.2.}",
         r"\label{tab:ontojourney-class-definitions}",
         r"\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.27\textwidth}>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.49\textwidth}@{}}",
         r"\toprule",

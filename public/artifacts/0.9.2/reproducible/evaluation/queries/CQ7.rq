@@ -1,0 +1,4 @@
+PREFIX oj: <https://w3id.org/ontojourney/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?execution ?model ?person WHERE { ?execution a/rdfs:subClassOf* oj:SuccessfulHeroicNarrativeLearningJourneyExecution ; oj:isExecutionOfJourneyModel ?model ; oj:producesClosure/oj:satisfiesClosureSpecification ?closure ; oj:hasTransformationEvent/oj:producesTransformation ?realized . ?model oj:definesClosure ?closure ; oj:prescribesTransformation ?intended . ?intended a/rdfs:subClassOf* oj:IntendedLearningTransformation . ?realized oj:satisfiesIntendedTransformation ?intended ; oj:isTransformationOf ?person . ?person oj:participatesAsProtagonistIn ?execution ; oj:participatesAsLearnerIn ?execution }

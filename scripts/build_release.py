@@ -2,18 +2,17 @@ from __future__ import annotations
 
 from hashlib import sha256
 from pathlib import Path, PurePosixPath
-import shutil
 import zipfile
 
 
 ROOT = Path(__file__).resolve().parents[1]
 ONTOLOGY = ROOT / "ontology"
 PUBLIC = ROOT / "public"
-VERSION = "0.9.1"
+VERSION = "0.9.2"
 PACKAGE_NAME = f"ontojourney-core-v{VERSION}"
 OUT = PUBLIC / "artifacts" / VERSION
 ARCHIVE_NAME = f"{PACKAGE_NAME}.zip"
-ARCHIVE_TIMESTAMP = (2026, 8, 21, 0, 0, 0)
+ARCHIVE_TIMESTAMP = (2026, 11, 21, 0, 0, 0)
 
 
 def digest(path: Path) -> str:
@@ -128,18 +127,15 @@ def verify_archive(source: Path, archive: Path) -> None:
 def main() -> None:
     source_entries = verify_manifest(ONTOLOGY)
 
-    if OUT.exists():
-        shutil.rmtree(OUT)
-    shutil.copytree(ONTOLOGY, OUT)
-    verify_manifest(OUT)
-
-    archive = OUT / ARCHIVE_NAME
-    archived_files = write_archive(ONTOLOGY, archive)
-    verify_archive(ONTOLOGY, archive)
-
-    with (OUT / "SHA256SUMS").open("a", encoding="utf-8") as stream:
-        stream.write(f"{digest(archive)}  {ARCHIVE_NAME}\n")
+    # Verify the frozen archive; never recreate or overwrite it.
     public_entries = verify_manifest(OUT)
+    archive = OUT / ARCHIVE_NAME
+    verify_archive(ONTOLOGY, archive)
+    for path in package_files(ONTOLOGY):
+        if path.name == "SHA256SUMS":
+            continue
+        assert (OUT / path.relative_to(ONTOLOGY)).read_bytes() == path.read_bytes()
+    archived_files = len(package_files(ONTOLOGY))
 
     print(
         f"Published {source_entries} checksummed files plus SHA256SUMS; "

@@ -1,0 +1,10 @@
+@prefix ex: <https://example.org/test#> .
+@prefix oj: <https://w3id.org/ontojourney/core#> .
+
+ex:invalidModel
+    a oj:HeroicNarrativeLearningJourneyModel ;
+    oj:hasStage ex:onlyStage .
+
+ex:onlyStage
+    a oj:HLJStageSpecification ;
+    oj:directlyPrecedesStage ex:onlyStage .

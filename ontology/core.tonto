@@ -63,8 +63,8 @@ subkind HeroicNarrativeLearningJourneyModel specializes HeroicNarrativeJourneyMo
 // Model-level specifications
 // -----------------------------------------------------------------------------
 
-subkind StageSpecification specializes PlanDescription {
-  description { @en "A Plan Description that specifies one stage belonging to a Journey Model and may be linked to other Stage Specifications through directlyPrecedesStage." }
+subkind StageSpecification specializes Description {
+  description { @en "A Description that characterises a model-specific stage of a Journey Model, whether as a descriptive pattern or as a prescribed part of a plan, and may be linked to other Stage Specifications through directlyPrecedesStage." }
 }
 
 subkind JourneyNarrative specializes NarrativeContent {
@@ -235,8 +235,8 @@ relation ClosureSituation [0..*] -- satisfiesClosureSpecification -- [1] Closure
 // HLJ stage anatomy
 // -----------------------------------------------------------------------------
 
-subkind HLJStageSpecification specializes StageSpecification {
-  description { @en "A Stage Specification in the Heroine's Learning Journey anatomy that contains exactly one Narrative Framing, Mission Specification, Challenge Specification, and Assistance Specification." }
+subkind HLJStageSpecification specializes StageSpecification, PlanDescription {
+  description { @en "A Stage Specification and Plan Description in the Heroine's Learning Journey anatomy that contains exactly one Narrative Framing, Mission Specification, Challenge Specification, and Assistance Specification." }
 }
 
 @aggregation relation HLJStageSpecification [1] <>-- hasNarrativeFraming -- [1] NarrativeFraming
