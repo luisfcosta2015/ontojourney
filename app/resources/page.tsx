@@ -16,7 +16,7 @@ import {
 export const metadata: Metadata = {
   title: "Resources and citation",
   description:
-    "Download OntoJourney Core v0.9.1 in Tonto, OntoUML JSON, RDF, and SHACL formats, with checksums and citation metadata.",
+    "Download OntoJourney Core v0.9.2 in Tonto, OntoUML JSON, RDF, and SHACL formats, with checksums and citation metadata.",
 };
 
 const downloads = [
@@ -28,6 +28,7 @@ const downloads = [
   ["OntoUML JSON", "OntoUML model exchange project", "OntoJourneyCore.json"],
   ["Tonto source", "Canonical textual conceptual model", "core.tonto"],
   ["SHACL shapes", "Operational constraint graph", "ontojourney-core.shacl.ttl"],
+  ["Experimental completeness profile", "Optional SHACL overlay; combine with Core", "reproducible/shacl/structural-completeness-experimental.ttl"],
   ["Checksums", "SHA-256 manifest for release files", "SHA256SUMS"],
 ];
 
@@ -118,7 +119,7 @@ export default function ResourcesPage() {
   title   = {OntoJourney: An Ontology of Narrative-Heroic Learning Journeys},
   year    = {2026},
   version = {${VERSION}},
-  doi     = {10.5281/zenodo.22043806},
+  doi     = {10.5281/zenodo.24420185},
   publisher = {Zenodo},
   url     = {${VERSION_IRI}},
   license = {CC-BY-4.0}

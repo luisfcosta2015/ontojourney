@@ -1,4 +1,4 @@
-const checks = ["Tonto", "OntoUML API", "SHACL", "HermiT"];
+const checks = ["Tonto", "local OntoUML verification", "SHACL", "HermiT"];
 
 export function ValidationStrip() {
   return (

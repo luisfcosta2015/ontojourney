@@ -7,7 +7,7 @@ import { ENTITY_NAMESPACE, VERSION, assetUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Model overview",
   description:
-    "Public OntoJourney Core v0.9.1 statistics, representations, namespace, and generated term reference.",
+    "Public OntoJourney Core v0.9.2 statistics, representations, namespace, and generated term reference.",
 };
 
 const layers = [
@@ -23,13 +23,13 @@ export default function ModelPage() {
       <PageHero
         eyebrow="Model overview"
         title="Inspect the public model from its generated vocabulary."
-        lead={`OntoJourney Core v${VERSION} publishes 40 domain classes, 27 relation records, and 33 generalization records. Its term explorer is generated from the versioned OntoUML JSON rather than maintained as a second model.`}
+        lead={`OntoJourney Core v${VERSION} publishes 40 domain classes, 27 relation records, and 34 generalization records. Its term explorer is generated from the versioned OntoUML JSON rather than maintained as a second model.`}
       />
 
       <section className="stat-grid" aria-label="Public model statistics">
         <div className="stat"><strong>40</strong><span>Domain classes</span></div>
         <div className="stat"><strong>27</strong><span>Relations</span></div>
-        <div className="stat"><strong>33</strong><span>Generalizations</span></div>
+        <div className="stat"><strong>34</strong><span>Generalizations</span></div>
         <div className="stat"><strong>1</strong><span>Stable entity namespace</span></div>
       </section>
 
