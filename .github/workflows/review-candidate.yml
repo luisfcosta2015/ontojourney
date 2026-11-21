@@ -26,3 +26,25 @@ jobs:
         run: npx --yes --package=tonto-cli@0.4.13 tonto-cli generate review/v0.9.2/tonto-project
       - name: Verify generated JSON exists
         run: test -s review/v0.9.2/tonto-project/generated/OntoJourneyCore.json
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Install pinned validation libraries
+        run: pip install -r ontology/reproducible/requirements-validation.txt
+      - name: Install local OntoUML library
+        run: npm install --prefix review/v0.9.2 --ignore-scripts --no-audit --no-fund ontouml-js@0.4.1
+      - name: Verify and transform regenerated JSON
+        run: node review/v0.9.2/transform.cjs
+      - name: Build and validate candidate RDF and SHACL
+        run: |
+          set -o pipefail
+          python review/v0.9.2/build_and_test.py | tee review/v0.9.2/candidate-output/ci-validation.log
+      - name: Hash candidate outputs
+        working-directory: review/v0.9.2/candidate-output
+        run: sha256sum * > SHA256SUMS
+      - name: Upload unpublished candidate evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: ontojourney-v0.9.2-rc-ci
+          path: review/v0.9.2/candidate-output/
+          if-no-files-found: error

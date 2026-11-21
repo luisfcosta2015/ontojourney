@@ -1,0 +1,4 @@
+PREFIX oj: <https://w3id.org/ontojourney/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?stage ?framing ?challenge ?assistance ?mission WHERE { ?stage a/rdfs:subClassOf* oj:HLJStageSpecification . OPTIONAL { ?stage oj:hasNarrativeFraming ?framing } OPTIONAL { ?stage oj:hasChallenge ?challenge } OPTIONAL { ?stage oj:hasAssistance ?assistance } OPTIONAL { ?stage oj:hasMission ?mission } }

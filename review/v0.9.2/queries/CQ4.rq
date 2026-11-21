@@ -1,0 +1,4 @@
+PREFIX oj: <https://w3id.org/ontojourney/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?execution ?model ?stageExecution ?stage WHERE { ?execution a/rdfs:subClassOf* oj:JourneyExecution ; oj:isExecutionOfJourneyModel ?model ; oj:hasStageExecution ?stageExecution . ?stageExecution oj:isExecutionOfStageSpecification ?stage . ?model oj:hasStage ?stage }

@@ -1,0 +1,4 @@
+PREFIX oj: <https://w3id.org/ontojourney/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?stageExecution ?event ?specification ?relation WHERE { ?stageExecution a/rdfs:subClassOf* oj:HLJStageExecution ; oj:isExecutionOfStageSpecification ?stage . VALUES (?has ?relation ?specified) { (oj:hasChallengeEncounter oj:isEncounterOf oj:hasChallenge) (oj:hasChallengePerformance oj:addressesChallenge oj:hasChallenge) (oj:hasAssistanceProvision oj:realizesAssistance oj:hasAssistance) } ?stageExecution ?has ?event . ?event ?relation ?specification . ?stage ?specified ?specification }
