@@ -92,7 +92,8 @@ EXPECTED_GENERALIZATIONS = {
     ("LearningJourneyModel", "PlanDescription"),
     ("HeroicNarrativeLearningJourneyModel", "HeroicNarrativeJourneyModel"),
     ("HeroicNarrativeLearningJourneyModel", "LearningJourneyModel"),
-    ("StageSpecification", "PlanDescription"),
+    ("StageSpecification", "Description"),
+    ("HLJStageSpecification", "PlanDescription"),
     ("JourneyNarrative", "NarrativeContent"),
     ("NarrativeFraming", "NarrativeContent"),
     ("IntendedTransformation", "GoalDescription"),
@@ -150,7 +151,7 @@ def main() -> None:
 
     assert len(classes) == 40
     assert len(relations) == 27
-    assert len(generalizations) == 33
+    assert len(generalizations) == 34
     class_names = {class_["name"] for class_ in classes}
     relation_names = {relation["name"] for relation in relations}
     actual_generalizations = {
@@ -206,8 +207,8 @@ def main() -> None:
 
     print(
         "Generated JSON audit passed: "
-        "40 domain classes, 27 relations, 33 generalizations, "
-        "40 English class descriptions, and all v0.9.1 identity assertions satisfied."
+        "40 domain classes, 27 relations, 34 generalizations, "
+        "40 English class descriptions, and all v0.9.2 identity assertions satisfied."
     )
 
 

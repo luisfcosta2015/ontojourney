@@ -8,7 +8,7 @@ import { ENTITY_NAMESPACE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Term reference",
   description:
-    "Search the 40 classes and 27 relations in OntoJourney Core v0.9.1, with class definitions, OntoUML stereotypes, generalizations, endpoints, cardinalities, and canonical IRIs.",
+    "Search the 40 classes and 27 relations in OntoJourney Core v0.9.2, with class definitions, OntoUML stereotypes, generalizations, endpoints, cardinalities, and canonical IRIs.",
 };
 
 export default function ReferencePage() {

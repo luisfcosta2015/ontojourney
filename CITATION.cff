@@ -5,11 +5,11 @@ type: software
 authors:
   - family-names: "Costa"
     given-names: "Luis Felipe Coimbra"
-version: 0.9.1
-date-released: "2026-08-21"
-doi: 10.5281/zenodo.22043806
+version: 0.9.2
+date-released: "2026-11-21"
+doi: 10.5281/zenodo.24420185
 repository-code: "https://github.com/luisfcosta2015/ontojourney"
-url: "https://w3id.org/ontojourney/core/0.9.1"
+url: "https://w3id.org/ontojourney/core/0.9.2"
 license: CC-BY-4.0
 keywords:
   - ontology

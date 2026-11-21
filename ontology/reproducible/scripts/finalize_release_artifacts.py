@@ -15,10 +15,10 @@ TURTLE_FILE = ROOT / "generated" / "OntoJourneyCore.ttl"
 
 ONTOLOGY_IRI = URIRef("https://w3id.org/ontojourney/core")
 ENTITY_NAMESPACE = Namespace("https://w3id.org/ontojourney/core#")
-VERSION_IRI = URIRef("https://w3id.org/ontojourney/core/0.9.1")
-PRIOR_VERSION_IRI = URIRef("https://w3id.org/ontojourney/core/0.9")
-VERSION_INFO = "0.9.1"
-ISSUED = Literal("2026-08-21", datatype=XSD.date)
+VERSION_IRI = URIRef("https://w3id.org/ontojourney/core/0.9.2")
+PRIOR_VERSION_IRI = URIRef("https://w3id.org/ontojourney/core/0.9.1")
+VERSION_INFO = "0.9.2"
+ISSUED = Literal("2026-11-21", datatype=XSD.date)
 PRIMITIVE_DATATYPES = {
     "number",
     "string",
@@ -75,10 +75,11 @@ def main() -> None:
     definitions = load_class_definitions()
     graph = Graph().parse(TURTLE_FILE, format="turtle")
 
+    graph.set((ONTOLOGY_IRI, DCTERMS.identifier, Literal("10.5281/zenodo.24420185")))
     graph.set((ONTOLOGY_IRI, OWL.versionIRI, VERSION_IRI))
     graph.set((ONTOLOGY_IRI, OWL.versionInfo, Literal(VERSION_INFO)))
     graph.set((ONTOLOGY_IRI, OWL.priorVersion, PRIOR_VERSION_IRI))
-    graph.set((ONTOLOGY_IRI, DCTERMS.issued, ISSUED))
+    graph.remove((ONTOLOGY_IRI, DCTERMS.issued, None))
     graph.set((ONTOLOGY_IRI, DCTERMS.modified, ISSUED))
 
     for name, definition in definitions.items():
@@ -108,7 +109,7 @@ def main() -> None:
     )
 
     print(
-        "Release artifacts finalized: version 0.9.1, "
+        "Release artifacts finalized: version 0.9.2, "
         "40 English class definitions, and four RDF serializations."
     )
 

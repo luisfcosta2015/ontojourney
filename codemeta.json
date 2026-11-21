@@ -2,12 +2,12 @@
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
   "name": "OntoJourney",
-  "identifier": "https://doi.org/10.5281/zenodo.22043806",
+  "identifier": "https://doi.org/10.5281/zenodo.24420185",
   "description": "A reference ontology for narrative-heroic learning journeys, modeled in OntoUML and grounded in UFO.",
-  "version": "0.9.1",
-  "datePublished": "2026-08-21",
+  "version": "0.9.2",
+  "datePublished": "2026-11-21",
   "codeRepository": "https://github.com/luisfcosta2015/ontojourney",
-  "url": "https://w3id.org/ontojourney/core/0.9.1",
+  "url": "https://w3id.org/ontojourney/core/0.9.2",
   "license": "https://spdx.org/licenses/CC-BY-4.0",
   "author": [
     {

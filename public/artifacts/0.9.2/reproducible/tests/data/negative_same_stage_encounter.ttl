@@ -1,0 +1,31 @@
+@prefix ex: <https://example.org/test#> .
+@prefix oj: <https://w3id.org/ontojourney/core#> .
+
+ex:model
+    a oj:JourneyModel ;
+    oj:hasStage ex:stageA, ex:stageB .
+
+ex:stageA
+    a oj:HLJStageSpecification ;
+    oj:hasChallenge ex:challengeA .
+
+ex:stageB
+    a oj:HLJStageSpecification ;
+    oj:hasChallenge ex:challengeB .
+
+ex:challengeA a oj:ChallengeSpecification .
+ex:challengeB a oj:ChallengeSpecification .
+
+ex:execution
+    a oj:JourneyExecution ;
+    oj:isExecutionOfJourneyModel ex:model ;
+    oj:hasStageExecution ex:stageExecution .
+
+ex:stageExecution
+    a oj:HLJStageExecution ;
+    oj:isExecutionOfStageSpecification ex:stageA ;
+    oj:hasChallengeEncounter ex:encounter .
+
+ex:encounter
+    a oj:ChallengeEncounter ;
+    oj:isEncounterOf ex:challengeB .

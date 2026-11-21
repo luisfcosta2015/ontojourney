@@ -1,0 +1,4 @@
+PREFIX oj: <https://w3id.org/ontojourney/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?model ?intended ?execution ?realized ?person WHERE { ?model oj:prescribesTransformation ?intended . OPTIONAL { ?execution oj:isExecutionOfJourneyModel ?model ; oj:hasTransformationEvent/oj:producesTransformation ?realized . ?realized oj:satisfiesIntendedTransformation ?intended ; oj:isTransformationOf ?person . ?person oj:participatesAsProtagonistIn ?execution ; oj:participatesAsLearnerIn ?execution } }

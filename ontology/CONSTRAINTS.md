@@ -1,4 +1,4 @@
-# OntoJourney Core v0.9.1 — constraint policy
+# OntoJourney Core v0.9.2 — constraint policy
 
 OntoJourney uses three complementary representations. The Tonto source records the conceptual taxonomy, relation stereotypes, and multiplicities. The gUFO-aligned RDF serializations expose the taxonomy and relation domains and ranges under open-world semantics. The SHACL graph operationalizes selected cardinality and cross-path requirements that must reject incomplete or incoherent instance data.
 
@@ -43,3 +43,6 @@ A `SuccessfulHeroicNarrativeLearningJourneyExecution`:
 
 The v0.9.1 suite contains one conforming graph and nine deliberately invalid graphs. The invalid fixtures isolate focal identity and successful realization, model structure, the intended-learning-transformation requirement, execution–model typing, model–stage coherence, the HLJ stage type, and the three same-stage paths. Passing these fixtures demonstrates the implemented behavior of the shapes; it is not an exhaustive proof for every possible RDF graph.
 
+
+## Optional experimental completeness overlay
+The additional graph at `reproducible/shacl/structural-completeness-experimental.ttl` checks 54 association ends for type and multiplicity. Combine it with Core SHACL when complete structural data are required. It is not normative Core SHACL. The original positive fixture conforms to Core but omits seven required links detected by the overlay.

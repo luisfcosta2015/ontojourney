@@ -5,11 +5,13 @@ import { PageHero } from "@/components/page-hero";
 import {
   CONCEPT_DOI,
   REPOSITORY_URL,
-  VERSION,
-  VERSION_DOI,
-  VERSION_IRI,
   assetUrl,
 } from "@/lib/site";
+
+// Historical release identifiers must not follow lib/site.ts's latest version.
+const VERSION = "0.9.1";
+const VERSION_DOI = "https://doi.org/10.5281/zenodo.22043806";
+const VERSION_IRI = "https://w3id.org/ontojourney/core/0.9.1";
 
 export const metadata: Metadata = {
   title: "Release 0.9.1",
@@ -68,7 +70,7 @@ export default function ReleasePage() {
                 OntoUML API input hash:
                 <code>2465501b7152b50e5c6c01197d47dbc45df591010757b4ecc2453d5761b8436d</code>.
               </p>
-              <Link className="button button--secondary" href="/validation/">Inspect validation evidence</Link>
+              <Link className="button button--secondary" href="/validation/">Current validation overview</Link>
             </section>
 
             <section id="identifiers">

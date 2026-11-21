@@ -3,16 +3,14 @@
 [![Pages](https://github.com/luisfcosta2015/ontojourney/actions/workflows/pages.yml/badge.svg)](https://github.com/luisfcosta2015/ontojourney/actions/workflows/pages.yml)
 [![Validation](https://github.com/luisfcosta2015/ontojourney/actions/workflows/validate.yml/badge.svg)](https://github.com/luisfcosta2015/ontojourney/actions/workflows/validate.yml)
 [![License: CC BY 4.0](https://img.shields.io/badge/ontology%20%26%20docs-CC%20BY%204.0-8d4e32.svg)](LICENSE)
-[![Version: 0.9.1](https://img.shields.io/badge/core-v0.9.1-462542.svg)](https://w3id.org/ontojourney/core/0.9.1)
+[![Version: 0.9.2](https://img.shields.io/badge/core-v0.9.2-462542.svg)](https://w3id.org/ontojourney/core/0.9.2)
 [![Concept DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21802020.svg)](https://doi.org/10.5281/zenodo.21802020)
 
 **OntoJourney is a public ontology for narrative-heroic learning journeys. Its
 OntoUML representation uses UFO as a foundational basis.**
 
-Core v0.9.1 publishes 40 domain classes, 27 relations, 33 generalizations, and
-368 RDF triples. This compatible update adds English definitions for all 40
-classes and strengthens the SHACL constraints while preserving every public
-class IRI, relation IRI, and generalization from v0.9.0. The repository combines
+Core v0.9.2 publishes 40 domain classes, 27 relations, 34 generalizations, and
+370 RDF triples. This update distinguishes descriptive stage patterns from planned HLJ stages. It preserves all class and relation IRIs but changes generic-stage entailments. Core SHACL is unchanged; an optional completeness profile is included. The repository combines
 the conceptual source, OntoUML exchange model, Web serializations, SHACL shapes,
 test fixtures, validation records, checksums, and citation metadata.
 
@@ -21,29 +19,29 @@ test fixtures, validation records, checksums, and citation metadata.
 - Website: <https://luisfcosta2015.github.io/ontojourney/>
 - Ontology IRI: <https://w3id.org/ontojourney/core>
 - Entity namespace: `https://w3id.org/ontojourney/core#`
-- Version IRI: <https://w3id.org/ontojourney/core/0.9.1>
-- Version DOI: <https://doi.org/10.5281/zenodo.22043806>
+- Version IRI: <https://w3id.org/ontojourney/core/0.9.2>
+- Version DOI: <https://doi.org/10.5281/zenodo.24420185>
 - Concept DOI for all versions: <https://doi.org/10.5281/zenodo.21802020>
-- Release: [Core v0.9.1](https://github.com/luisfcosta2015/ontojourney/releases/tag/v0.9.1)
+- Release: [Core v0.9.2](https://github.com/luisfcosta2015/ontojourney/releases/tag/v0.9.2)
 
-The version DOI identifies the archived v0.9.1 package. The concept DOI
+The version DOI identifies the archived v0.9.2 package. The concept DOI
 represents all OntoJourney versions and resolves to the latest record.
 
 ## Validation status
 
-Version 0.9.1 passed:
+Version 0.9.2 passed:
 
 - local Tonto source validation;
 - OntoUML JSON structural auditing, including all 40 class definitions;
 - cross-format definition and release-consistency checks;
 - gUFO-aligned RDF parsing and isomorphism checks across four serializations;
 - one conforming and nine deliberately invalid SHACL fixtures;
-- remote OntoUML API verification with no reported violations; and
+- local OntoUML verification and transformation with no reported violations; and
 - HermiT 1.4.5.456 classification through ROBOT 1.9.10, with no reported
   inconsistency or unsatisfiable OntoJourney class or object property.
 
-The OntoUML API result is tied to SHA-256
-`2465501b7152b50e5c6c01197d47dbc45df591010757b4ecc2453d5761b8436d`.
+The HermiT transformation input is tied to SHA-256
+`f3b12bad9bb39d78d59e6a5d413a9885dd6e3c888ca7086f7c0ba132c63834e8`.
 See [`ontology/validation`](ontology/validation/) for the public technical
 records and the limits of each check.
 
@@ -74,6 +72,7 @@ python3 -m venv .venv
 .venv/bin/python ontology/reproducible/tests/audit_generated_json.py
 .venv/bin/python ontology/reproducible/tests/audit_release_consistency.py
 .venv/bin/python ontology/reproducible/tests/run_shacl_tests.py
+.venv/bin/python ontology/reproducible/evaluation/run_evaluation.py
 ```
 
 The deliberately invalid SHACL fixtures must report `conforms=False`; their
@@ -98,11 +97,11 @@ deploys it from `main`.
 ## Cite
 
 > Costa, Luis Felipe Coimbra. 2026. *OntoJourney: An Ontology of
-> Narrative-Heroic Learning Journeys*. OntoJourney Core v0.9.1.
-> Zenodo. <https://doi.org/10.5281/zenodo.22043806>.
+> Narrative-Heroic Learning Journeys*. OntoJourney Core v0.9.2.
+> Zenodo. <https://doi.org/10.5281/zenodo.24420185>.
 
 Use the version DOI to cite the exact archived package. The version IRI
-<https://w3id.org/ontojourney/core/0.9.1> identifies the corresponding
+<https://w3id.org/ontojourney/core/0.9.2> identifies the corresponding
 ontology release through W3ID. The concept DOI
 <https://doi.org/10.5281/zenodo.21802020> represents the collection of all
 OntoJourney versions.

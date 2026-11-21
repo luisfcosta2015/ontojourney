@@ -102,7 +102,7 @@ JourneyModel <|-- LearningJourneyModel
 PlanDescription <|-- LearningJourneyModel
 "HeroicNarrativeJourneyModel" <|-- "HeroicNarrativeLearningJourneyModel"
 LearningJourneyModel <|-- "HeroicNarrativeLearningJourneyModel"
-PlanDescription <|-- StageSpecification
+Description <|-- StageSpecification
 NarrativeContent <|-- "JourneyNarrative"
 NarrativeContent <|-- "NarrativeFraming"
 GoalDescription <|-- IntendedTransformation
@@ -122,6 +122,7 @@ StageExecution <|-- HLJStageExecution
 Person <|-- "Protagonist"
 Person <|-- "Learner"
 StageSpecification <|-- HLJStageSpecification
+PlanDescription <|-- HLJStageSpecification
 JourneyModel "1" o-- "1..*" StageSpecification : <back:WhiteSmoke>hasStage</back> >
 StageSpecification "0..*" -- "0..*" StageSpecification : <back:WhiteSmoke>directlyPrecedesStage</back> >
 NarrativeJourneyModel "1" o-- "1" "JourneyNarrative" : <back:WhiteSmoke>hasNarrative</back> >

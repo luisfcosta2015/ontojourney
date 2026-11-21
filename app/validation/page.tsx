@@ -6,16 +6,16 @@ import { VERSION, assetUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Validation",
   description:
-    "Technical validation records for OntoJourney Core v0.9.1 across source, structure, RDF, SHACL, the OntoUML API, and HermiT.",
+    "Technical validation records for OntoJourney Core v0.9.2 across source, structure, RDF, SHACL, local OntoUML verification, and HermiT.",
 };
 
 const checks = [
-  ["Tonto source", "Local CLI validation of the canonical source", "Passed", "21 Aug 2026"],
-  ["OntoUML JSON", "40 classes and definitions, 27 relations, and 33 generalizations", "Passed", "21 Aug 2026"],
-  ["gUFO / RDF", "Four isomorphic serializations with 368 triples", "Passed", "21 Aug 2026"],
-  ["SHACL", "One conforming fixture and nine deliberately invalid fixtures", "Passed", "21 Aug 2026"],
-  ["OntoUML API", "HTTP 200 with an empty violation list", "Passed", "21 Aug 2026"],
-  ["HermiT / ROBOT", "Classification completed; no inconsistency or unsatisfiable OntoJourney term", "Passed", "21 Aug 2026"],
+  ["Tonto source", "Local CLI validation of the canonical source", "Passed", "21 Nov 2026"],
+  ["OntoUML JSON", "40 classes and definitions, 27 relations, and 34 generalizations", "Passed", "21 Nov 2026"],
+  ["gUFO / RDF", "Four isomorphic serializations with 370 triples", "Passed", "21 Nov 2026"],
+  ["SHACL", "One conforming fixture and nine deliberately invalid fixtures", "Passed", "21 Nov 2026"],
+  ["OntoUML verification", "Local ontouml-js verification and transformation", "Passed", "21 Nov 2026"],
+  ["HermiT / ROBOT", "Classification completed; no inconsistency or unsatisfiable OntoJourney term", "Passed", "21 Nov 2026"],
 ];
 
 const evidence = [
@@ -23,7 +23,7 @@ const evidence = [
   ["Structural audit", "Confirms expected counts, references, endpoints, and generation integrity in the OntoUML JSON."],
   ["RDF parsing", "Confirms that the public Turtle serialization parses and exposes the expected graph structure."],
   ["SHACL fixtures", "Confirms that the published shapes accept the conforming fixture and reject the intended invalid fixtures."],
-  ["Remote verification", "Records the official OntoUML API response for the submitted model hash."],
+  ["Local verification", "Records the local OntoUML verification and transformation."],
   ["Logical classification", "Records the Protégé/HermiT result for the imported gUFO-aligned ontology."],
 ];
 
@@ -33,7 +33,7 @@ export default function ValidationPage() {
       <PageHero
         eyebrow="Validation"
         title="Six checks, with evidence and explicit limits."
-        lead="The release separates source validation, structural auditing, RDF parsing, constraint behavior, remote model verification, and logical classification. Each check addresses a different technical question."
+        lead="The release separates source validation, structural auditing, RDF parsing, constraint behavior, local model verification, and logical classification. Each check addresses a different technical question."
       />
 
       <section className="section" aria-labelledby="status-title">
@@ -46,9 +46,9 @@ export default function ValidationPage() {
               </h2>
             </div>
             <p>
-              The OntoUML API record is tied to SHA-256
-              <code>2465501b7152b50e5c6c01197d47dbc45df591010757b4ecc2453d5761b8436d</code>
-              of the submitted OntoUML JSON.
+              The transformed OWL classified by HermiT is tied to SHA-256
+              <code>f3b12bad9bb39d78d59e6a5d413a9885dd6e3c888ca7086f7c0ba132c63834e8</code>
+              of the transformed OWL.
             </p>
           </div>
           <div className="data-table-wrap">
@@ -68,7 +68,7 @@ export default function ValidationPage() {
           </div>
           <div className="button-row" style={{ marginTop: "1.5rem" }}>
             <a className="button button--primary" href={assetUrl(`/artifacts/${VERSION}/VALIDATION_REPORT.md`)}>Open validation report <span aria-hidden="true">→</span></a>
-            <a className="button button--secondary" href={assetUrl(`/artifacts/${VERSION}/validation/ontouml-api-response-v0.9.1.json`)}>Raw API response</a>
+            <a className="button button--secondary" href={assetUrl(`/artifacts/${VERSION}/validation/candidate-verify.json`)}>Local verification result</a>
           </div>
         </div>
       </section>
@@ -111,7 +111,8 @@ export default function ValidationPage() {
 .venv/bin/pip install -r ontology/reproducible/requirements-validation.txt
 .venv/bin/python ontology/reproducible/tests/audit_generated_json.py
 .venv/bin/python ontology/reproducible/tests/audit_release_consistency.py
-.venv/bin/python ontology/reproducible/tests/run_shacl_tests.py`}</code></pre>
+.venv/bin/python ontology/reproducible/tests/run_shacl_tests.py
+.venv/bin/python ontology/reproducible/evaluation/run_evaluation.py`}</code></pre>
             <p>
               The nine invalid SHACL fixtures are expected to report
               <code>conforms=False</code>; rejection is their passing outcome.

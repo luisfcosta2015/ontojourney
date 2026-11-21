@@ -54,10 +54,10 @@ export default function Home() {
               </a>
               <a
                 className="button button--secondary"
-                href={assetUrl("/artifacts/0.9.1/ontojourney-core-v0.9.1.zip")}
+                href={assetUrl("/artifacts/0.9.2/ontojourney-core-v0.9.2.zip")}
                 download
               >
-                Download v0.9.1 <span aria-hidden="true">↓</span>
+                Download v0.9.2 <span aria-hidden="true">↓</span>
               </a>
             </div>
           </div>
@@ -137,11 +137,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="stat-grid" aria-label="OntoJourney Core v0.9.1 statistics">
+      <section className="stat-grid" aria-label="OntoJourney Core v0.9.2 statistics">
         <div className="stat"><strong>40</strong><span>Domain classes</span></div>
         <div className="stat"><strong>27</strong><span>Relations</span></div>
-        <div className="stat"><strong>33</strong><span>Generalizations</span></div>
-        <div className="stat"><strong>368</strong><span>Published RDF triples</span></div>
+        <div className="stat"><strong>34</strong><span>Generalizations</span></div>
+        <div className="stat"><strong>370</strong><span>Published RDF triples</span></div>
       </section>
 
       <section className="section" aria-labelledby="release-title">
@@ -149,13 +149,13 @@ export default function Home() {
           <div>
             <p className="eyebrow">Current public release</p>
             <h2 className="section-title" id="release-title">
-              OntoJourney Core v0.9.1
+              OntoJourney Core v0.9.2
             </h2>
           </div>
           <div>
             <p className="lead">
               The release passed the planned source, structural, RDF, SHACL,
-              OntoUML API, and HermiT checks. The version DOI identifies the
+              local OntoUML verification, and HermiT checks. The version DOI identifies the
               exact archived package, while the Zenodo concept DOI identifies
               the project collection.
             </p>
@@ -163,7 +163,7 @@ export default function Home() {
               <Link className="button button--primary" href="/validation/">
                 Review validation <span aria-hidden="true">→</span>
               </Link>
-              <Link className="button button--secondary" href="/releases/0.9.1/">
+              <Link className="button button--secondary" href="/releases/0.9.2/">
                 Release notes
               </Link>
               <a className="button button--secondary" href={CONCEPT_DOI}>

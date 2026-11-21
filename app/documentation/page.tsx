@@ -7,7 +7,7 @@ import { CANONICAL_IRI, ENTITY_NAMESPACE, VERSION_IRI } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Documentation",
   description:
-    "Public scope, release structure, identifiers, and reuse guidance for OntoJourney Core v0.9.1.",
+    "Public scope, release structure, identifiers, and reuse guidance for OntoJourney Core v0.9.2.",
 };
 
 const toc = [
@@ -108,7 +108,7 @@ export default function DocumentationPage() {
             <p>
               The W3ID resolver is active and uses immutable version-specific
               routes. <code>/core/0.9</code> remains assigned to v0.9.0,
-              <code>/core/0.9.1</code> identifies this release, and the
+              <code>/core/0.9.1</code> remains assigned to v0.9.1, <code>/core/0.9.2</code> identifies this release, and the
               unversioned <code>/core</code> route is updated only after the
               corresponding GitHub Pages artifacts are available.
             </p>

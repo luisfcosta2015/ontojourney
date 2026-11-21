@@ -251,8 +251,8 @@
     "name": "HLJStageSpecification",
     "kind": "class",
     "stereotype": "subkind",
-    "definition": "A Stage Specification in the Heroine's Learning Journey anatomy that contains exactly one Narrative Framing, Mission Specification, Challenge Specification, and Assistance Specification.",
-    "detail": "Specializes StageSpecification.",
+    "definition": "A Stage Specification and Plan Description in the Heroine's Learning Journey anatomy that contains exactly one Narrative Framing, Mission Specification, Challenge Specification, and Assistance Specification.",
+    "detail": "Specializes StageSpecification and PlanDescription.",
     "iri": "https://w3id.org/ontojourney/core#HLJStageSpecification"
   },
   {
@@ -515,8 +515,8 @@
     "name": "StageSpecification",
     "kind": "class",
     "stereotype": "subkind",
-    "definition": "A Plan Description that specifies one stage belonging to a Journey Model and may be linked to other Stage Specifications through directlyPrecedesStage.",
-    "detail": "Specializes PlanDescription.",
+    "definition": "A Description that characterises a model-specific stage of a Journey Model, whether as a descriptive pattern or as a prescribed part of a plan, and may be linked to other Stage Specifications through directlyPrecedesStage.",
+    "detail": "Specializes Description.",
     "iri": "https://w3id.org/ontojourney/core#StageSpecification"
   },
   {

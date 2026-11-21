@@ -17,13 +17,13 @@ sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[1]
 RELEASE_ROOT = ROOT.parent
 ONTOLOGY_IRI = URIRef("https://w3id.org/ontojourney/core")
-VERSION_IRI = URIRef("https://w3id.org/ontojourney/core/0.9.1")
+VERSION_IRI = URIRef("https://w3id.org/ontojourney/core/0.9.2")
 CORE = Namespace("https://w3id.org/ontojourney/core#")
 
 SOURCE_FILE = ROOT / "src" / "core.tonto"
 GENERATED_JSON = ROOT / "generated" / "OntoJourneyCore.json"
 GENERATED_TURTLE = ROOT / "generated" / "OntoJourneyCore.ttl"
-SHACL_FILE = ROOT / "shacl" / "ontojourney-core-v0.9.1.shacl.ttl"
+SHACL_FILE = ROOT / "shacl" / "ontojourney-core-v0.9.2.shacl.ttl"
 
 SERIALIZATIONS = (
     (RELEASE_ROOT / "ontojourney-core.ttl", "turtle"),
@@ -111,18 +111,14 @@ def assert_rdf(definitions: dict[str, str]) -> None:
     graphs: list[Graph] = []
     for path, format_ in SERIALIZATIONS:
         graph = Graph().parse(path, format=format_)
-        assert len(graph) == 368, (path.name, len(graph))
+        assert len(graph) == 370, (path.name, len(graph))
         assert (ONTOLOGY_IRI, OWL.versionIRI, VERSION_IRI) in graph
-        assert (ONTOLOGY_IRI, OWL.versionInfo, Literal("0.9.1")) in graph
-        assert (
-            ONTOLOGY_IRI,
-            DCTERMS.issued,
-            Literal("2026-08-21", datatype=XSD.date),
-        ) in graph
+        assert (ONTOLOGY_IRI, OWL.versionInfo, Literal("0.9.2")) in graph
+        assert (ONTOLOGY_IRI, DCTERMS.issued, Literal("2026-11-21", datatype=XSD.date)) in graph
         assert (
             ONTOLOGY_IRI,
             DCTERMS.modified,
-            Literal("2026-08-21", datatype=XSD.date),
+            Literal("2026-11-21", datatype=XSD.date),
         ) in graph
         assert all((CORE[name], RDF.type, OWL.Class) in graph for name in definitions)
         rdf_definitions = {
@@ -155,14 +151,14 @@ def main() -> None:
     assert_rdf(definitions)
 
     codemeta = json.loads((RELEASE_ROOT / "codemeta.json").read_text(encoding="utf-8"))
-    assert codemeta["version"] == "0.9.1"
-    assert codemeta["datePublished"] == "2026-08-21"
+    assert codemeta["version"] == "0.9.2"
+    assert codemeta["datePublished"] == "2026-11-21"
     assert "developmentStatus" not in codemeta
 
     print(
         "Release consistency audit passed: canonical source copies match; "
         "40 definitions agree across Tonto, OntoUML JSON, four isomorphic RDF "
-        "serializations, Markdown, and LaTeX; version metadata is 0.9.1."
+        "serializations, Markdown, and LaTeX; version metadata is 0.9.2."
     )
 
 
