@@ -48,3 +48,13 @@ jobs:
           name: ontojourney-v0.9.2-rc-ci
           path: review/v0.9.2/candidate-output/
           if-no-files-found: error
+      - name: Assemble and audit full unpublished release preview
+        run: python review/v0.9.2/prepare_release_preview.py
+      - name: Upload review package (not a release)
+        uses: actions/upload-artifact@v4
+        with:
+          name: ontojourney-v0.9.2-release-preview
+          path: |
+            review/v0.9.2/release-preview/ontojourney-core-v0.9.2-PREVIEW.zip
+            review/v0.9.2/release-preview/SHA256SUMS
+          if-no-files-found: error
